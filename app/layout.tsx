@@ -1,6 +1,6 @@
 import { ReactLenis } from "lenis/react";
 import type { Metadata } from "next";
-import { Inter, Martian_Mono } from "next/font/google";
+import { Inter, Martian_Mono, Oswald } from "next/font/google";
 import "./globals.css";
 
 const martian = Martian_Mono({
@@ -10,6 +10,11 @@ const martian = Martian_Mono({
 
 const inter = Inter({
 	variable: "--font-inter",
+	subsets: ["cyrillic", "latin"],
+});
+
+const oswald = Oswald({
+	variable: "--font-oswald",
 	subsets: ["cyrillic", "latin"],
 });
 
@@ -26,7 +31,7 @@ export default function RootLayout({
 	return (
 		<html lang="ru">
 			<body
-				className={`${martian.variable} ${inter.variable} antialiased bg-back`}
+				className={`${martian.variable} ${inter.variable} ${oswald.variable} antialiased bg-back`}
 			>
 				<ReactLenis
 					options={{

@@ -7,10 +7,8 @@ const Duo = () => {
 	const ref = useRef(null);
 	const { scrollY } = useScroll();
 
-	// Tyler едет быстрее
 	const tylerY = useTransform(scrollY, [0, 1000], [0, -200]); // больше сдвиг
 
-	// Josh едет медленнее
 	const joshY = useTransform(scrollY, [0, 1000], [0, -80]); // меньше сдвиг
 
 	return (
@@ -41,7 +39,7 @@ const Duo = () => {
 				className="absolute   left-[47%] translate-x-[-50%] lg:bottom-0 lg:top-[unset] top-0 z-20"
 			>
 				<Image
-					src="/img/tylerMain.png"
+					src="/img/tylerTest.png"
 					alt="Next.js Logo"
 					quality={100}
 					priority={true}

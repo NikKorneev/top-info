@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Background = () => {
 	return (
-		<div className="w-full h-[115vh] overflow-hidden -z-20 pointer-events-none">
+		<div className="w-full h-[115vh] overflow-x-hidden pointer-events-none top-0 absolute">
 			<div className="absolute w-full overflow-hidden h-screen -z-20 mask  top-0">
 				<motion.img
 					src="/icons/a.svg"
@@ -45,7 +45,7 @@ const anima1 = {
 	},
 	transition: {
 		repeat: Infinity,
-		duration: 3.5,
+		duration: 3,
 		ease: "linear",
 	},
 };
@@ -57,7 +57,7 @@ const anima2 = {
 	},
 	transition: {
 		repeat: Infinity,
-		duration: 5.5,
+		duration: 4.5,
 		ease: "linear",
 	},
 };
@@ -68,7 +68,7 @@ const anima3 = {
 	},
 	transition: {
 		repeat: Infinity,
-		duration: 2.5,
+		duration: 2,
 		ease: "linear",
 	},
 };
@@ -80,7 +80,7 @@ const anima4 = {
 	},
 	transition: {
 		repeat: Infinity,
-		duration: 3.5,
+		duration: 3,
 		ease: "linear",
 	},
 };

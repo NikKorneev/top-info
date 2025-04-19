@@ -7,6 +7,75 @@ html {
 	scroll-behavior: smooth;
 }
 
+@layer utilities {
+	.text-gradient {
+		background: linear-gradient(
+			0deg,
+			rgba(247, 247, 247, 0.38) 0%,
+			rgba(0, 0, 0, 1) 22%,
+			rgba(0, 0, 0, 1) 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.info-card {
+		background-image: url("../public/img/card.png");
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "first first second third" "fourth fourth fivth fivth";
+		& > *:nth-child(1) {
+			grid-area: first;
+		}
+		& > *:nth-child(2) {
+			grid-area: second;
+		}
+		& > *:nth-child(3) {
+			grid-area: third;
+		}
+		& > *:nth-child(4) {
+			grid-area: fourth;
+		}
+		& > *:nth-child(5) {
+			grid-area: fivth;
+		}
+	}
+	.info-grid-md {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas: "first first second third" "fourth fourth fivth fivth";
+		& > *:nth-child(1) {
+			grid-area: first;
+		}
+		& > *:nth-child(2) {
+			grid-area: second;
+		}
+		& > *:nth-child(3) {
+			grid-area: third;
+		}
+		& > *:nth-child(4) {
+			grid-area: fourth;
+		}
+		& > *:nth-child(5) {
+			grid-area: fivth;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.info-grid {
+			grid-template-areas: "first first first first" "second second third third" "fourth fourth fivth fivth";
+		}
+	}
+	@media (max-width: 540px) {
+		.info-grid {
+			grid-template-areas: "first first first first" "second second second second" "third third third third" "fourth fourth fourth fourth" "fivth fivth fivth fivth";
+		}
+	}
+}
+
 .header {
 	backdrop-filter: blur(20px);
 	background-color: rgba(0, 0, 0, 0.315);
@@ -21,6 +90,43 @@ html {
 .mask {
 	mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 	-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.menu {
+	cursor: pointer;
+	width: 30px;
+	height: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.menu span {
+	background-color: #ffffff;
+	height: 2px;
+	width: 20px;
+	transition: transform 0.3s ease-in-out;
+	&:nth-child(1) {
+		transform-origin: top left;
+	}
+	&:nth-child(2) {
+		transform-origin: bottom left;
+	}
+	&:nth-child(3) {
+		transform-origin: bottom left;
+	}
+}
+
+.menu.open span {
+	&:nth-child(1) {
+		width: 26px;
+		transform: rotate(46deg);
+	}
+	&:nth-child(3) {
+		width: 26px;
+		transform: rotate(-46deg);
+	}
+	&:nth-child(2) {
+		transform: scale(0);
+	}
 }
 
 .noise {
@@ -169,8 +275,11 @@ html {
 	--color-mainRed: #cf2f2f;
 	--color-mainYellow: #ffd800;
 	--color-back: #231f20;
+	--color-grayMain: #dfdfdf;
+
 	--font-martian: var(--font-martian);
 	--font-inter: var(--font-inter);
+	--font-oswald: var(--font-oswald);
 }
 
 :root {
