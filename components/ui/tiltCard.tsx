@@ -60,7 +60,6 @@ const Card = ({ children, className }: Props) => {
 				transformPerspective: rotations.z * 100,
 			}}
 			style={{
-				backgroundColor: "#C2B8F0",
 				boxShadow:
 					"0 0 0 1px rgba(0, 0, 0, 0.105), 0 9px 20px 0 rgba(0, 0, 0, 0.02), 0 1px 2px 0 rgba(0, 0, 0, 0.106)",
 
