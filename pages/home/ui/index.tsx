@@ -1,4 +1,5 @@
 import Header from "@/components/ui/header";
+import About from "./components/about";
 import Background from "./components/background";
 import Btn from "./components/button";
 import Duo from "./components/duo";
@@ -15,6 +16,7 @@ const HomePage = () => {
 				<Background />
 			</div>
 			<Info />
+			<About />
 			{/* <ParallaxSection /> */}
 		</>
 	);
