@@ -7,14 +7,14 @@ const Duo = () => {
 	const ref = useRef(null);
 	const { scrollY } = useScroll();
 
-	const tylerY = useTransform(scrollY, [0, 1000], [0, -200]); // больше сдвиг
+	const tylerY = useTransform(scrollY, [0, 1000], [0, -100]); // больше сдвиг
 
 	const joshY = useTransform(scrollY, [0, 1000], [0, -80]); // меньше сдвиг
 
 	return (
 		<div
 			ref={ref}
-			className="lg:absolute top-0 w-full overflow-hidden lg:h-[125vh] h-fit scale-100  xl:scale-100 pointer-events-none"
+			className="lg:absolute absolute max-md:bottom-0  md:top-0 w-full  overflow-hidden lg:h-[125vh] h-fit  pointer-events-none"
 		>
 			<Image
 				src="/img/tylerMain.png"
@@ -36,7 +36,7 @@ const Duo = () => {
 					y: 0,
 					opacity: 1,
 				}}
-				className="absolute   left-[47%] translate-x-[-50%] lg:bottom-0 lg:top-[unset] top-0 z-20"
+				className="absolute   left-[47%] translate-x-[-50%] lg:bottom-0 lg:top-[unset] bottom-0 z-20"
 			>
 				<Image
 					src="/img/tylerTest.png"
@@ -46,7 +46,7 @@ const Duo = () => {
 					loading="eager"
 					width={789}
 					height={859}
-					// className="absolute  left-[47%] translate-x-[-50%] bottom-0 z-20"
+					className="max-md:scale-125"
 				/>
 				<motion.p
 					animate={{
@@ -77,7 +77,7 @@ const Duo = () => {
 					y: 0,
 					opacity: 1,
 				}}
-				className="absolute left-[47%] translate-x-[-50%] lg:bottom-0 top-0 lg:top-[unset] z-10"
+				className="absolute left-[47%] translate-x-[-50%] lg:bottom-0 lg:top-[unset] z-10 bottom-0"
 			>
 				<Image
 					src="/img/joshMain.png"
@@ -87,6 +87,7 @@ const Duo = () => {
 					loading="eager"
 					width={789}
 					height={859}
+					className="max-md:scale-125"
 				/>
 				<motion.p
 					animate={{

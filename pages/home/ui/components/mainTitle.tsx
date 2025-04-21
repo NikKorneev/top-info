@@ -10,7 +10,7 @@ const MainTitle = () => {
 	const scale = useTransform(scrollY, [0, 1000], [1, 0.7]);
 	return (
 		<div
-			className="container mx-auto  pt-28 relative flex lg:items-end items-center flex-col"
+			className="container mx-auto  pt-28 max-sm:pt-44 relative flex lg:items-end items-center flex-col"
 			ref={ref}
 		>
 			<motion.div
@@ -38,13 +38,13 @@ const MainTitle = () => {
 				twenty Øne pilØts
 			</motion.h1>
 
-			<div className="absolute bottom-0 left-0 right-0 flex justify-between text-sm font-light text-[#ffffff44]">
-				<div className="flex flex-col gap-[12px]">
+			<div className="absolute bottom-0 left-0 right-0 flex justify-between text-sm font-light text-[#ffffff44] max-md:relative max-md:gap-[20vw] max-md:mt-6">
+				<div className="flex flex-col gap-[12px] max-md:text-[12px] max-md:gap-1.5">
 					<p>Regional at Best</p>
 					<p>Vessel</p>
 					<p>Blurryface</p>
 				</div>
-				<div className="flex flex-col gap-[12px]">
+				<div className="flex flex-col gap-[12px] max-md:text-[12px] max-md:gap-1.5">
 					<p>Trench</p>
 					<p>Scaled and Icy</p>
 					<p>Clancy</p>

@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Background = () => {
 	return (
-		<div className="w-full h-[115vh] overflow-x-hidden pointer-events-none top-0 absolute">
+		<div className="w-full h-[115vh]  overflow-x-hidden pointer-events-none top-0 absolute">
 			<div className="absolute w-full overflow-hidden h-screen -z-20 mask  top-0">
 				<motion.img
 					src="/icons/a.svg"

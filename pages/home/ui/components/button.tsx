@@ -12,7 +12,7 @@ const Btn = () => {
 		<motion.div
 			style={{ y: titleY }}
 			ref={ref}
-			className="flex justify-center relative z-50 pt-72 max-lg:hidden"
+			className="flex justify-center relative z-50 lg:pt-72 lg:pb-0 pt-5 pb-96 sm:pb-20 sm:pt-72"
 		>
 			<Button className="bg-mainYellow py-[25px] px-[42px] ">
 				<p className="text-black font-martian text-[16px] uppercase">

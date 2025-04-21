@@ -35,6 +35,7 @@ const InfoCard = ({
 				scale: 1,
 				transition: { duration: 0.5 },
 			}}
+			viewport={{ once: true }}
 			className={`${color ? color : "bg-grayMain "} py-8 flex flex-col justify-between w-full h-full ${className ? className : ""}`}
 		>
 			<div className="px-8 flex justify-between mb-auto max-sm:flex-col max-sm:items-start max-sm:justify-baseline">

@@ -7,7 +7,7 @@ import MainTitle from "./components/mainTitle";
 const HomePage = () => {
 	return (
 		<>
-			<div className="relative min-h-screen font-martian">
+			<div className="relative lg:min-h-screen font-martian">
 				<Header />
 				<MainTitle />
 				<Btn />
