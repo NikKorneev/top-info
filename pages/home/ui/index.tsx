@@ -5,6 +5,8 @@ import Btn from "./components/button";
 import Duo from "./components/duo";
 import Info from "./components/info";
 import MainTitle from "./components/mainTitle";
+import ParticipantSection from "./components/participant";
+import Quote from "./components/quote";
 const HomePage = () => {
 	return (
 		<>
@@ -17,6 +19,12 @@ const HomePage = () => {
 			</div>
 			<Info />
 			<About />
+			<div className="my-40">
+				<Quote />
+			</div>
+			<div>
+				<ParticipantSection />
+			</div>
 			{/* <ParallaxSection /> */}
 		</>
 	);

@@ -18,7 +18,7 @@ const About = () => {
 		return () => clearInterval(interval);
 	}, []);
 	return (
-		<div className="container mx-auto grid  grid-cols-[1fr_2fr_2fr] gap-4 max-lg:grid-cols-[1fr_2fr] max-lg:pt-20 max-sm:grid-cols-[1fr_2fr] max-sm:px-4">
+		<div className="container mx-auto grid pt-20  grid-cols-[1fr_2fr_2fr] gap-4 max-lg:grid-cols-[1fr_2fr] max-lg:pt-20 max-sm:grid-cols-[1fr_2fr] max-sm:px-4">
 			<Card>
 				<div className="bg-gray-600/25 h-[525px] max-lg:h-[425px] w-full">
 					<AnimatePresence mode="wait">
