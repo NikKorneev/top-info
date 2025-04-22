@@ -6,7 +6,7 @@ const Header = () => {
 	const [menuIsOpened, setMenuIsOpened] = useState(false);
 	return (
 		<header className="header">
-			<div className="container mx-auto items-center flex justify-between max-sm:px-3">
+			<div className="container mx-auto items-center flex justify-between 2xl:px-0 md:px-4  max-sm:px-3">
 				<Image
 					src={"/top-logo.svg"}
 					width={64}

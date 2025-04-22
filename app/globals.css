@@ -19,6 +19,13 @@ html {
 		-webkit-text-fill-color: transparent;
 	}
 
+	@media (min-width: 720px) {
+		.container {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+
 	.info-card {
 		background-image: url("../public/img/card.png");
 	}

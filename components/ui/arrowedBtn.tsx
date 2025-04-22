@@ -10,7 +10,7 @@ const ArrowedBtn = ({ onClick, color, children }: Props) => {
 	return (
 		<Button
 			onClick={onClick}
-			className={`border-2 ${color ? "border-[" + color + "]" : "border-mainRed"} bg-transparent py-[18px] hover:bg-mainYellow`}
+			className={`border-2 ${color ? "border-[" + color + "]" : "border-mainRed"} bg-transparent py-[22px] hover:bg-mainYellow`}
 		>
 			<p
 				className={`${color ? "text-[" + color + "]" : "text-mainRed"} font-martian uppercase`}
