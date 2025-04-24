@@ -1,5 +1,6 @@
 import Header from "@/components/ui/header";
 import About from "./components/about";
+import Albums from "./components/albums";
 import Background from "./components/background";
 import Btn from "./components/button";
 import Duo from "./components/duo";
@@ -25,6 +26,10 @@ const HomePage = () => {
 			<div>
 				<ParticipantSection />
 			</div>
+			<div className="mt-40">
+				<Albums />
+			</div>
+
 			{/* <ParallaxSection /> */}
 		</>
 	);

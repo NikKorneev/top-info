@@ -26,6 +26,21 @@ html {
 		}
 	}
 
+	.album-card {
+		width: 100%;
+		border: 1px solid;
+		border-image-slice: 1;
+		border-width: 1px;
+		background-color: #27272a;
+		border-image-source: linear-gradient(
+			200deg,
+			#ffffff83,
+			#ffffff27,
+			#ffffff48,
+			#ffffffbe
+		);
+	}
+
 	.info-card {
 		background-image: url("../public/img/card.png");
 	}
