@@ -16,10 +16,10 @@ const Header = () => {
 				/>
 				<nav className="flex items-center gap-8">
 					<ul className="hidden md:flex gap-8 text-[#ffffffd3] uppercase font-normal xl:text-[18px] text-sm sm:text-[16px] *:transition-colors *:cursor-pointer *:hover:text-mainYellow">
-						<li>Главная</li>
-						<li>Новости</li>
-						<li>Альбомы</li>
-						<li>Мерч</li>
+						<li className="menu-item">Главная</li>
+						<li className="menu-item">Новости</li>
+						<li className="menu-item">Альбомы</li>
+						<li className="menu-item">Мерч</li>
 					</ul>
 					<div
 						className={`menu flex md:hidden  ${menuIsOpened ? "open" : ""}`}

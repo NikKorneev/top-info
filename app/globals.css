@@ -8,6 +8,25 @@ html {
 }
 
 @layer utilities {
+	.menu-item {
+		position: relative;
+		&:after {
+			content: "";
+			width: 100%;
+			transform: scaleX(0);
+			height: 2px;
+			position: absolute;
+			bottom: -5px;
+			transform-origin: center;
+			background-color: var(--color-mainYellow);
+			display: block;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover:after {
+			transform: scaleX(100%);
+		}
+	}
 	.text-gradient {
 		background: linear-gradient(
 			0deg,

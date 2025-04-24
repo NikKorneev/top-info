@@ -110,20 +110,38 @@ const items: Item[] = [
 const Albums = () => {
 	const [selected, setSelected] = useState<null | Item>(null);
 	return (
-		<>
+		<section>
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
 				<div className="container mx-auto font-martian">
 					<div>
-						<h3 className="text-mainRed text-5xl max-sm:text-4xl font-extrabold">
+						<motion.h3
+							initial={{ y: -100, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							transition={{ duration: 0.35 }}
+							viewport={{ once: true, margin: "-250px" }}
+							className="text-mainRed text-5xl max-sm:text-4xl font-extrabold uppercase"
+						>
 							Дискография
-						</h3>
-						<p className="text-[18px] font-light text-[#D9D9D9] pt-2">
+						</motion.h3>
+						<motion.p
+							initial={{ y: -50, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							transition={{ duration: 0.45, delay: 0.2 }}
+							viewport={{ once: true, margin: "-250px" }}
+							className="text-[18px] font-light text-[#D9D9D9] pt-2"
+						>
 							Кликните на обложку, чтобы узнать подробности
 							альбома
-						</p>
+						</motion.p>
 					</div>
-					<div className="grid grid-cols-[1fr_1fr_1fr] lg:gap-5 sm:gap-3 max-sm:grid-cols-1 mt-10">
-						<div className="w-full h-full relative aspect-square">
+					<div className="grid grid-cols-[1fr_1fr_1fr] lg:gap-5 sm:gap-3 max-sm:grid-cols-1 mt-10 overflow-hidden">
+						<motion.div
+							className="w-full h-full relative aspect-square"
+							initial={{ x: -300, opacity: 0 }}
+							whileInView={{ x: 0, opacity: 1 }}
+							transition={{ duration: 0.45, delay: 0.2 }}
+							viewport={{ once: true, margin: "-250px" }}
+						>
 							<Image
 								src={items[0].image}
 								loading="lazy"
@@ -131,8 +149,14 @@ const Albums = () => {
 								alt="albums"
 								className="object-cover h-[412px] max-lg:w-[200px] max-lg:h-full max-sm:w-full max-sm:h-[200px]"
 							/>
-						</div>
-						<div className="font-martian album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
+						</motion.div>
+						<motion.div
+							className="font-martian album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2"
+							initial={{ x: 400, opacity: 0 }}
+							whileInView={{ x: 0, opacity: 1 }}
+							transition={{ duration: 0.35, delay: 0.35 }}
+							viewport={{ once: true, margin: "-250px" }}
+						>
 							<h5 className="text-mainRed text-[36px] font-extrabold">
 								{items[0].title}
 							</h5>
@@ -145,14 +169,14 @@ const Albums = () => {
 							<div className="mt-auto pt-4">
 								<ArrowedBtn>Страница альбома</ArrowedBtn>
 							</div>
-						</div>
+						</motion.div>
 					</div>
 					<div className="grid  grid-cols-3 max-sm:grid-cols-2 mt-5 lg:gap-5 gap-3">
 						{[...items].splice(1).map((item) => (
 							<motion.div
 								key={item.id}
 								layoutId={`card-${item.id}`}
-								className={`aspect-square rounded-xl cursor-pointer relative transition-[scale] hover:scale-105`}
+								className={`aspect-square rounded-xl cursor-pointer relative transition-[scale] hover:scale-105 `}
 								onClick={() => setSelected(item)}
 							>
 								<Image
@@ -160,7 +184,7 @@ const Albums = () => {
 									loading="lazy"
 									fill
 									alt="albums"
-									className="object-cover "
+									className="object-cover hover:grayscale-100 hover:opacity-95 transition-all"
 								/>
 							</motion.div>
 						))}
@@ -221,19 +245,11 @@ const Albums = () => {
 									</div>
 								</div>
 							</div>
-							{/* <div className="p-6">
-								<h2 className="text-2xl font-bold">
-									{selected.title}
-								</h2>
-								<p className="mt-2 text-gray-700">
-									{selected.desc}
-								</p>
-							</div> */}
 						</motion.div>
 					</motion.div>
 				)}
 			</AnimatePresence>
-		</>
+		</section>
 	);
 };
 
