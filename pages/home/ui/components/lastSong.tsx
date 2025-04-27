@@ -6,7 +6,7 @@ import { useState } from "react";
 const LastSong = () => {
 	const [isOpened, setOpened] = useState(false);
 	return (
-		<section>
+		<section className="overflow-hidden relative">
 			<div className="container mx-auto py-20 font-martian max-sm:px-4">
 				<div className="flex w-full items-center justify-between">
 					<h5 className="font-extrabold text-5xl uppercase text-mainRed max-sm:text-4xl">
@@ -30,6 +30,8 @@ const LastSong = () => {
 					/>
 				</motion.div>
 			</div>
+			<div className="bg-mainRed/50 blur-3xl size-[300px] rounded-full absolute -right-[150px] -top-[150px]" />
+			<div className="bg-mainRed/50 blur-3xl size-[300px] rounded-full absolute right-[20%] bottom-[150px] -z-10" />
 
 			<AnimatePresence>
 				{isOpened && (

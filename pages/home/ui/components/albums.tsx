@@ -118,7 +118,7 @@ const Albums = () => {
 							initial={{ y: -100, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ duration: 0.35 }}
-							viewport={{ once: true, margin: "-250px" }}
+							viewport={{ once: true, amount: 1 }}
 							className="text-mainRed text-5xl max-sm:text-4xl font-extrabold uppercase"
 						>
 							Дискография
@@ -127,7 +127,7 @@ const Albums = () => {
 							initial={{ y: -50, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ duration: 0.45, delay: 0.2 }}
-							viewport={{ once: true, margin: "-250px" }}
+							viewport={{ once: true, amount: 0.9 }}
 							className="text-[18px] font-light text-[#D9D9D9] pt-2"
 						>
 							Кликните на обложку, чтобы узнать подробности
@@ -135,13 +135,7 @@ const Albums = () => {
 						</motion.p>
 					</div>
 					<div className="grid grid-cols-[1fr_1fr_1fr] lg:gap-5 sm:gap-3 max-sm:grid-cols-1 mt-10 overflow-hidden">
-						<motion.div
-							className="w-full h-full relative aspect-square"
-							initial={{ x: -300, opacity: 0 }}
-							whileInView={{ x: 0, opacity: 1 }}
-							transition={{ duration: 0.45, delay: 0.2 }}
-							viewport={{ once: true, margin: "-250px" }}
-						>
+						<div className="w-full h-full relative aspect-square">
 							<Image
 								src={items[0].image}
 								loading="lazy"
@@ -149,14 +143,8 @@ const Albums = () => {
 								alt="albums"
 								className="object-cover h-[412px] max-lg:w-[200px] max-lg:h-full max-sm:w-full max-sm:h-[200px]"
 							/>
-						</motion.div>
-						<motion.div
-							className="font-martian album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2"
-							initial={{ x: 400, opacity: 0 }}
-							whileInView={{ x: 0, opacity: 1 }}
-							transition={{ duration: 0.35, delay: 0.35 }}
-							viewport={{ once: true, margin: "-250px" }}
-						>
+						</div>
+						<div className="font-martian album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
 							<h5 className="text-mainRed text-[36px] font-extrabold">
 								{items[0].title}
 							</h5>
@@ -169,7 +157,7 @@ const Albums = () => {
 							<div className="mt-auto pt-4">
 								<ArrowedBtn>Страница альбома</ArrowedBtn>
 							</div>
-						</motion.div>
+						</div>
 					</div>
 					<div className="grid  grid-cols-3 max-sm:grid-cols-2 mt-5 lg:gap-5 gap-3">
 						{[...items].splice(1).map((item) => (

@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import About from "./components/about";
 import Albums from "./components/albums";
@@ -32,6 +33,7 @@ const HomePage = () => {
 			</div>
 
 			<LastSong />
+			<Footer />
 
 			{/* <ParallaxSection /> */}
 		</>
