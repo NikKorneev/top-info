@@ -44,7 +44,7 @@ const MainTitle = () => {
 					<p>Vessel</p>
 					<p>Blurryface</p>
 				</div>
-				<div className="flex flex-col gap-[12px] max-md:text-[12px] max-md:gap-1.5">
+				<div className="flex flex-col gap-[12px] text-right  max-md:text-[12px] max-md:gap-1.5">
 					<p>Trench</p>
 					<p>Scaled and Icy</p>
 					<p>Clancy</p>
