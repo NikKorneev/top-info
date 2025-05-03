@@ -11,11 +11,13 @@ import SectionSecondAlbum from "./components/SectionSecondAlbum";
 
 const StoryPage = () => {
 	return (
-		<div className="flex flex-col gap-40">
+		<div className="flex flex-col gap-40 relative">
 			<SectionBanner />
 			<SectionFirstMembers />
 			<SectionFirstAlbum />
-			<SectionName />
+			<div className="bg-[url('/img/clancy-back.png')] bg-cover bg-no-repeat py-20 ">
+				<SectionName />
+			</div>
 			<SectionDuoCreation />
 			<Quote />
 			<SectionSecondAlbum />

@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import { ReactLenis } from "lenis/react";
 import type { Metadata } from "next";
@@ -50,6 +51,9 @@ export default function RootLayout({
 					</div>
 
 					{children}
+					<div className="mt-40">
+						<Footer />
+					</div>
 				</ReactLenis>
 			</body>
 		</html>
