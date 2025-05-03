@@ -10,7 +10,7 @@ const SecondAlbum = () => {
 	return (
 		<section className="story-container">
 			<div className="flex justify-between">
-				<span className="text-grayMain text-2xl">[2013 год]</span>
+				<span className="story-subtitle">[2013 год]</span>
 				<h3 className="title">ВТОРОЙ АЛЬБОМ</h3>
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 max-md:grid-cols-2 max-sm:grid-cols-1 auto-rows-min">

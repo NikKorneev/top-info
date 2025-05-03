@@ -9,7 +9,7 @@ const FirstAlbum = () => {
 		<section className="story-container">
 			<div className="flex justify-between ">
 				<h3 className="title">ПЕРВЫЙ АЛЬБОМ</h3>
-				<p className="text-grayMain text-2xl">[2009 год]</p>
+				<p className="story-subtitle">[2009 год]</p>
 			</div>
 			<div className="mt-10 grid grid-cols-[2fr_2fr_1fr] gap-5 max-lg:grid-cols-2 xl:gap-20 lg:gap-10 max-sm:grid-cols-1 max-sm:gap-10 overflow-hidden">
 				<motion.div

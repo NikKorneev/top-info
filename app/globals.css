@@ -15,6 +15,10 @@ html {
 		@apply font-martian text-4xl font-bold text-mainRed uppercase max-lg:text-3xl max-sm:text-2xl;
 	}
 
+	.story-subtitle {
+		@apply font-martian text-2xl font-light text-grayMain uppercase max-lg:text-xl max-sm:text-[16px];
+	}
+
 	.shadowText {
 		text-shadow: #000000 1px 0 10px;
 	}

@@ -6,7 +6,7 @@ const FirstMembers = () => {
 		<section className="story-container">
 			<div className="flex justify-between">
 				<h2 className="title">КОНЦЕРТЫ В ПОДВАЛАХ</h2>
-				<p className="text-grayMain text-2xl">[2009-2011]</p>
+				<p className="story-subtitle">[2009-2011]</p>
 			</div>
 			<div className="grid grid-cols-3 gap-20 pt-10 max-md:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<TextLined

@@ -7,9 +7,7 @@ const DuoCreation = () => {
 		<section className="story-container">
 			<div className="flex justify-between max-sm:flex-col max-sm:gap-2">
 				<h4 className="title">ФОРМИРОВАНИЕ ДУЭТА</h4>
-				<p className="text-grayMain text-2xl max-sm:text-[16px]">
-					[2011 год]
-				</p>
+				<p className="story-subtitle">[2011 год]</p>
 			</div>
 			<div className="grid grid-cols-3 gap-20 py-10 max-lg:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<div>
