@@ -1,4 +1,5 @@
 import SectionBanner from "./components/banner";
+import SectionAdmire from "./components/SectionAdmire";
 import SectionContract from "./components/SectionContract";
 import SectionDuoCreation from "./components/SectionDuoCreation";
 import SectionFirstAlbum from "./components/SectionFirstAlbum";
@@ -16,6 +17,7 @@ const StoryPage = () => {
 			<SectionDuoCreation />
 			<SectionSecondAlbum />
 			<SectionContract />
+			<SectionAdmire />
 		</div>
 	);
 };

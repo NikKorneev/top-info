@@ -52,14 +52,14 @@ const SectionContract = () => {
 					width={500}
 					height={300}
 					className="object-cover h-[300px] max-sm:w-[550px] max-sm:h-[250px] sm:hidden md:block mx-auto object-top-left"
-					alt="contract"
+					alt="Josh and Tyler picture"
 				/>
 				<Image
 					src="/img/vesselCover.png"
 					width={500}
 					height={500}
 					className="object-cover col-start-2  max-sm:w-[550px] max-md:col-start-2 max-sm:h-[250px] max-sm:mx-auto object-top-left max-sm:col-auto max-sm:row-start-5"
-					alt="contract"
+					alt="Twenty one pilots' vessel album cover"
 				/>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%] sm:col-start-1 md:col-auto sm:row-start-2 md:row-auto">
 					<p>
@@ -82,7 +82,7 @@ const SectionContract = () => {
 				<Image
 					src="/icons/VESSEL.svg"
 					fill
-					alt="vessel"
+					alt="vessel sign"
 					className="-z-10 opacity-50 max-sm:hidden"
 				/>
 			</div>

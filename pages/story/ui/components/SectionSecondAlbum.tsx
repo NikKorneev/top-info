@@ -85,7 +85,7 @@ const SecondAlbum = () => {
 					>
 						<motion.div
 							layoutId="carRadio"
-							className="w-[80vw] aspect-video bg-black/50"
+							className="w-[80vw] aspect-video bg-black/50 relative"
 							onClick={(e) => e.stopPropagation()}
 							transition={{
 								layout: { duration: 0.5, ease: "easeInOut" },
