@@ -1,4 +1,5 @@
 import SectionBanner from "./components/banner";
+import Quote from "./components/quote";
 import SectionAdmire from "./components/SectionAdmire";
 import SectionClancyStory from "./components/SectionClancyStory";
 import SectionContract from "./components/SectionContract";
@@ -16,6 +17,7 @@ const StoryPage = () => {
 			<SectionFirstAlbum />
 			<SectionName />
 			<SectionDuoCreation />
+			<Quote />
 			<SectionSecondAlbum />
 			<SectionContract />
 			<SectionAdmire />

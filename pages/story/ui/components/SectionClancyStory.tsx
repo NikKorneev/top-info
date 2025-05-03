@@ -7,7 +7,8 @@ const SectionClancyStory = () => {
 			<h3 className="title">ИСТОРИЯ КЛЭНСИ</h3>
 			<div className="pt-10 flex flex-col gap-16">
 				<StepCard
-					quote="«Trench — это наше письмо самому себе. Мы создали мир, в котором можно было бы выжить. Иногда, чтобы справиться с собой, нужно придумать другого себя.»"
+					quote="Я тот человек, который должен всё ставить под сомнение, и моя вера — это то, что я всегда подвергал сильным испытаниям. Во время 'Trench' были моменты, когда вы могли видеть, на каком этапе моего сезона сомнений и повторного принятия я находился — и это определённо было сложное время"
+					author="Тайлер Джозеф"
 					albumTitle="Trench"
 					image="/img/trench.png"
 					alt="Twenty One pilots - Trench style"
@@ -41,13 +42,14 @@ const SectionClancyStory = () => {
 					</div>
 				</StepCard>
 				<StepCard
-					quote="«Scaled and Icy — это наш способ спрятаться. Мы поняли, что если не можем победить страх, мы его перекрасим.»"
+					author="Тайлер Джозеф"
+					quote="Мы всегда писали песни для шоу, а не наоборот. Но мне всегда было интересно, каково это - написать альбом, который никогда не существовал в концертной обстановке."
 					albumTitle="Scaled And Icy"
 					image="/img/scaledAndIcy.png"
 					alt="Twenty One pilots - Scaled And Icy style"
 					paragraphs={[
 						"Новый альбом вышел цветным, легким, даже почти жизнерадостным — на первый взгляд. Альбом был записан дистанционно, во время пандемии. Тайлер — в подвале своего дома. Джош — на другой стороне страны.",
-						"Музыка стала легче: синтезаторы, фанковая ритмика, мелодичность. Но — как и всегда у них — за внешним фасадом скрывается глубокая внутренняя драма. Треки рассказывают о тревоге, неуверенности, попытке казаться “нормальным” в ненормальном мире.",
+						"Музыка стала легче: синтезаторы, фанковая ритмика, мелодичность.Но — как и всегда у них — за внешним фасадом скрывается глубокая внутренняя драма.Треки рассказывают о тревоге, неуверенности, попытке казаться “нормальным” в ненормальном мире.",
 					]}
 				>
 					<div className="xl:max-w-[300px]">
@@ -64,7 +66,8 @@ const SectionClancyStory = () => {
 					</div>
 				</StepCard>
 				<StepCard
-					quote="«Clancy — это конец. Но не потому, что история закончилась. А потому, что мы готовы передать её дальше — тебе.»"
+					quote="Многое из того, кем мы являемся как люди, и многое из того, кем мы являемся как группа, проистекает из нашей личной неуверенности в себе, в своей музыке или в том, как мы представляем себя миру."
+					author="Джон Дан"
 					albumTitle="Clancy"
 					image="/img/clancy.png"
 					alt="Twenty One pilots - Clancy style"
@@ -94,6 +97,7 @@ const SectionClancyStory = () => {
 };
 
 type StepCardProps = {
+	author: string;
 	paragraphs: string[];
 	albumTitle: string;
 	image: string;
@@ -107,6 +111,7 @@ const StepCard = ({
 	image,
 	alt,
 	quote,
+	author,
 	paragraphs,
 	children,
 }: StepCardProps) => {
@@ -150,10 +155,10 @@ const StepCard = ({
 
 			<div className="flex flex-col gap-2 border-l-2 border-mainYellow pl-3">
 				<p className="text-white leading-[160%] lg:max-w-[700px]">
-					{quote}
+					“{quote}”
 				</p>
 				<span className="text-grayMain font-extralight">
-					— Тайлер Джозеф
+					— {author}
 				</span>
 			</div>
 		</div>
