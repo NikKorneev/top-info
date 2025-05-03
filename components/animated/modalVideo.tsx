@@ -6,9 +6,10 @@ import { LuLoaderCircle } from "react-icons/lu";
 type Props = {
 	setOpened: Dispatch<SetStateAction<boolean>>;
 	url: string;
+	layoutId: string;
 };
 
-const ModalVideo = ({ setOpened, url }: Props) => {
+const ModalVideo = ({ setOpened, url, layoutId }: Props) => {
 	const [loading, setLoading] = useState(true);
 	return (
 		<motion.div
@@ -19,7 +20,7 @@ const ModalVideo = ({ setOpened, url }: Props) => {
 			onClick={() => setOpened(false)}
 		>
 			<motion.div
-				layoutId="stressedOut"
+				layoutId={layoutId}
 				className="w-[80vw] aspect-video bg-black/50"
 				onClick={(e) => e.stopPropagation()}
 				transition={{

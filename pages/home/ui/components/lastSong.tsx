@@ -1,4 +1,5 @@
 "use client";
+import ModalVideo from "@/components/animated/modalVideo";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
@@ -35,31 +36,11 @@ const LastSong = () => {
 
 			<AnimatePresence>
 				{isOpened && (
-					<motion.div
-						initial={{ opacity: 0, filter: "blur(100px)" }}
-						animate={{ opacity: 1, filter: "blur(0px)" }}
-						exit={{ opacity: 0 }}
-						className="fixed top-0 left-0 w-full h-screen z-[100] bg-black/60 flex items-center justify-center"
-						onClick={() => setOpened(false)}
-					>
-						<motion.div
-							layoutId="lastSong"
-							className="w-[80vw] aspect-video bg-black/50"
-							onClick={(e) => e.stopPropagation()}
-							transition={{
-								layout: { duration: 0.5, ease: "easeInOut" },
-							}}
-						>
-							<iframe
-								className="w-full h-full"
-								src="https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
-								title="YouTube video player"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerPolicy="strict-origin-when-cross-origin"
-								allowFullScreen
-							></iframe>
-						</motion.div>
-					</motion.div>
+					<ModalVideo
+						setOpened={setOpened}
+						url="https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
+						layoutId="lastSong"
+					/>
 				)}
 			</AnimatePresence>
 		</section>

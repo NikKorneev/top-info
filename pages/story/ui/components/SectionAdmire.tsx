@@ -82,6 +82,7 @@ const SectionAdmire = () => {
 			<AnimatePresence>
 				{isOpened && (
 					<ModalVideo
+						layoutId="stressedOut"
 						setOpened={setOpened}
 						url="https://www.youtube.com/embed/pXRviuL6vMY?si=cjGiOtODhbVH4icr"
 					/>
