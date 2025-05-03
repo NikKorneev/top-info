@@ -44,7 +44,7 @@ const LastSong = () => {
 					>
 						<motion.div
 							layoutId="lastSong"
-							className="w-[80vw] aspect-video"
+							className="w-[80vw] aspect-video bg-black/50"
 							onClick={(e) => e.stopPropagation()}
 							transition={{
 								layout: { duration: 0.5, ease: "easeInOut" },

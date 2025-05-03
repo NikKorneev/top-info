@@ -3,7 +3,7 @@ import TextLined from "./textLined";
 
 const Name = () => {
 	return (
-		<section className="container mx-auto pt-30 font-martian max-sm:px-4">
+		<section className="story-container">
 			<div className="flex justify-between">
 				<p className="title">НАЗВАНИЕ ГРУППЫ</p>
 			</div>
@@ -29,7 +29,7 @@ const Name = () => {
 						src={"/img/naming-2.png"}
 						fill
 						quality={100}
-						className="object-cover"
+						className="object-cover object-top"
 						alt={"Naming"}
 					/>
 				</div>
