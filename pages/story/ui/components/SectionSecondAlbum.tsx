@@ -21,7 +21,7 @@ const SecondAlbum = () => {
 						выход альбома “Regional At best”
 					</p>
 				</div>
-				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%]">
+				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%]">
 					<p>
 						В 2011 году вышел второй, полностью независимый альбом —
 						“Regional at Best”.
@@ -31,7 +31,7 @@ const SecondAlbum = () => {
 						заложил фундамент звучания группы.
 					</p>
 				</div>
-				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%]">
+				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%]">
 					<p>
 						Именно тогда родилась песня “Car Radio”, которую фанаты
 						называют гимном одиночества и внутренней борьбы.

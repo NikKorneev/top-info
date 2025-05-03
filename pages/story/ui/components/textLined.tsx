@@ -67,7 +67,7 @@ const TextLined = ({
 					<p
 						key={i}
 						ref={(el) => (paragraphRefs.current[i] = el)}
-						className={`${itemsClass} text-grayMain leading-[150%] opacity-0  transition-all duration-300 max-lg:text-[14px]`}
+						className={`${itemsClass} text-grayMain leading-[160%] opacity-0  transition-all duration-300 max-lg:text-[14px]`}
 					>
 						{p}
 					</p>

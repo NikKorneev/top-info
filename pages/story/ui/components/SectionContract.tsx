@@ -32,7 +32,7 @@ const SectionContract = () => {
 						</ArrowedBtn>
 					</div>
 				</div>
-				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%] ">
+				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] ">
 					<p>
 						К концу 2011 года дуэт уже невозможно было игнорировать.
 						Независимая группа из Огайо, собирающая залы без помощи
@@ -61,7 +61,7 @@ const SectionContract = () => {
 					className="object-cover col-start-2  max-sm:w-[550px] max-md:col-start-2 max-sm:h-[250px] max-sm:mx-auto object-top-left max-sm:col-auto max-sm:row-start-5"
 					alt="Twenty one pilots' vessel album cover"
 				/>
-				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%] sm:col-start-1 md:col-auto sm:row-start-2 md:row-auto">
+				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] sm:col-start-1 md:col-auto sm:row-start-2 md:row-auto">
 					<p>
 						Так появился альбом “Vessel”. Он вышел 8 января 2013
 						года и стал мостом между сырой эмоцией раннего периода и

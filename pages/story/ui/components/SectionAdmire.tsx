@@ -23,7 +23,7 @@ const SectionAdmire = () => {
 						alt="Blurryface sign"
 					/>
 				</div>
-				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%] ">
+				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] ">
 					<p>
 						В мае 2015 года выходит Blurryface — альбом-концепт, в
 						котором появляется персонаж, олицетворяющий внутренние
@@ -36,7 +36,7 @@ const SectionAdmire = () => {
 						начинают работать как единая художественная вселенная.
 					</p>
 				</div>
-				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[150%] ">
+				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] ">
 					<p>
 						Но особенно — «Stressed Out», ставшая глобальным хитом и
 						открывшая группу миллионам новых слушателей. С её
