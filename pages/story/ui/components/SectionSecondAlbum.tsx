@@ -14,9 +14,9 @@ const SecondAlbum = () => {
 				<h3 className="title">ВТОРОЙ АЛЬБОМ</h3>
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 max-md:grid-cols-2 max-sm:grid-cols-1 auto-rows-min">
-				<div className="w-full py-4">
+				<div className="w-full">
 					<span className="text-mainYellow">июнь 2011 года</span>
-					<p className="text-white mt-2.5">
+					<p className="text-white mt-1.5">
 						выход альбома “Regional At best”
 					</p>
 				</div>
@@ -45,6 +45,7 @@ const SecondAlbum = () => {
 						src="/img/regionalAtBest.jpg"
 						width={300}
 						height={300}
+						loading="lazy"
 						alt="regional at best cover"
 					/>
 					<span className="text-grayMain">
@@ -64,6 +65,8 @@ const SecondAlbum = () => {
 						src="/img/carRadioCover.jpg"
 						width={1200}
 						height={500}
+						loading="lazy"
+						quality={100}
 						alt="car radio cover"
 					/>
 					<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-mainYellow text-5xl">
