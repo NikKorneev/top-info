@@ -1,5 +1,4 @@
 import Footer from "@/components/ui/footer";
-import Header from "@/components/ui/header";
 import About from "./components/about";
 import Albums from "./components/albums";
 import Background from "./components/background";
@@ -14,7 +13,6 @@ const HomePage = () => {
 	return (
 		<>
 			<div className="relative lg:min-h-screen font-martian">
-				<Header />
 				<MainTitle />
 				<Btn />
 				<Duo />

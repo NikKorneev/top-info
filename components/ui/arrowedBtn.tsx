@@ -17,6 +17,7 @@ const ArrowedBtn = ({ onClick, color, children }: Props) => {
 			>
 				{children}
 			</p>
+
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="16"

@@ -8,6 +8,19 @@ html {
 }
 
 @layer utilities {
+	.title {
+		@apply font-martian text-4xl font-bold text-mainRed uppercase max-lg:text-3xl max-sm:text-2xl;
+	}
+
+	.shadowText {
+		text-shadow: #000000 1px 0 10px;
+	}
+	.animate-scrollbar {
+		animation:
+			var(--animate-pulse) 200ms,
+			var(--animate-bounce) 500ms;
+	}
+
 	.menu-item {
 		position: relative;
 		&:after {

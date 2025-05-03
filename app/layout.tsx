@@ -1,3 +1,4 @@
+import Header from "@/components/ui/header";
 import { ReactLenis } from "lenis/react";
 import type { Metadata } from "next";
 import { Inter, Martian_Mono, Oswald } from "next/font/google";
@@ -44,6 +45,10 @@ export default function RootLayout({
 					}}
 					root
 				>
+					<div className="relative">
+						<Header />
+					</div>
+
 					{children}
 				</ReactLenis>
 			</body>
