@@ -164,7 +164,7 @@ const Albums = () => {
 							<motion.div
 								key={item.id}
 								layoutId={`card-${item.id}`}
-								className={`aspect-square rounded-xl cursor-pointer relative transition-[scale] hover:scale-105 `}
+								className={`aspect-square rounded-xl cursor-pointer relative transition-colors hover:border-4 hover:border-grayMain`}
 								onClick={() => setSelected(item)}
 							>
 								<Image
@@ -172,7 +172,7 @@ const Albums = () => {
 									loading="lazy"
 									fill
 									alt="albums"
-									className="object-cover hover:grayscale-100 hover:opacity-95 transition-all"
+									className="object-cover  hover:scale-[98%]  transition-transform"
 								/>
 							</motion.div>
 						))}

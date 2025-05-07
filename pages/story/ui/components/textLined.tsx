@@ -1,9 +1,11 @@
 "use client";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP);
 
 const TextLined = ({
 	paragraphs,
@@ -23,7 +25,7 @@ const TextLined = ({
 	const textMaskRef = useRef(null);
 	const paragraphRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
-	useEffect(() => {
+	useGSAP(() => {
 		const total = paragraphs.length;
 
 		gsap.fromTo(

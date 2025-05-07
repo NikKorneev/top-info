@@ -21,8 +21,10 @@ const StoryPage = () => {
 			<SectionDuoCreation />
 			<Quote />
 			<SectionSecondAlbum />
+
 			<SectionContract />
 			<SectionAdmire />
+
 			<SectionClancyStory />
 		</div>
 	);

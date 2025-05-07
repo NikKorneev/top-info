@@ -27,7 +27,7 @@ const LastSong = () => {
 						src="/img/lastSongCover.png"
 						alt="last song"
 						fill
-						className="hover:scale-105 transition-all cursor-pointer hover:grayscale-100"
+						className="hover:border-4 hover:border-grayMain transition-all cursor-pointer "
 					/>
 				</motion.div>
 			</div>

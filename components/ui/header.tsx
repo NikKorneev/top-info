@@ -18,10 +18,14 @@ const Header = () => {
 				<nav className="flex items-center gap-8">
 					<ul className="hidden md:flex gap-8 text-[#ffffffd3] uppercase font-normal xl:text-[18px] text-sm sm:text-[16px] *:transition-colors *:cursor-pointer *:hover:text-mainYellow">
 						<li className="menu-item">
-							<Link href="/">Главная</Link>
+							<Link scroll={true} href="/">
+								Главная
+							</Link>
 						</li>
 						<li className="menu-item">
-							<Link href="/story">История</Link>
+							<Link scroll={true} href="/story">
+								История
+							</Link>
 						</li>
 						<li className="menu-item">Альбомы</li>
 						<li className="menu-item">Мерч</li>
