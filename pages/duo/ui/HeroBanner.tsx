@@ -1,8 +1,13 @@
 "use client";
+import { DuoMember } from "@/types/duoMember";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-const HeroBanner = () => {
+type Props = {
+	info: DuoMember;
+};
+
+const HeroBanner = ({ info }: Props) => {
 	return (
 		<section className="flex gap-5 justify-center font-martian py-10 relative">
 			<motion.div
@@ -10,7 +15,7 @@ const HeroBanner = () => {
 				animate={{ opacity: 1, filter: "blur(0px)" }}
 			>
 				<Image
-					src="/img/tylerAbout.png"
+					src={info.imageUrl}
 					width={417}
 					height={616}
 					className="object-cover "
@@ -22,21 +27,20 @@ const HeroBanner = () => {
 				initial={{ opacity: 0, filter: "blur(50px)" }}
 				animate={{ opacity: 1, filter: "blur(0px)" }}
 			>
-				<h2 className="title mb-5">Тайлер джозеф</h2>
+				<h2 className="title mb-5">{info.name}</h2>
 				<ul className="flex flex-col gap-3">
+					<DataItem title="Полное имя:" descr={info.fullName} />
 					<DataItem
-						title="Полное имя:"
-						descr="Тайлер Роберт Джозеф"
+						title="Дата рождения:"
+						descr={new Date(info.dateOfBirth).toLocaleDateString(
+							"ru-RU"
+						)}
 					/>
-					<DataItem title="Дата рождения:" descr="1 декабря 1988" />
 					<DataItem
 						title="Место рождения:"
-						descr="Колумбус, штат Огайо, США"
+						descr={info.placeOfBirth}
 					/>
-					<DataItem
-						title="Инструменты:"
-						descr="Укулеле, Клавишные, Бас-гитара"
-					/>
+					<DataItem title="Инструменты:" descr={info.instruments} />
 				</ul>
 			</motion.div>
 			<div className="absolute bottom-[-90%] opacity-25 -z-10 right-0 left-0">

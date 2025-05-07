@@ -1,6 +1,6 @@
 import { type SchemaTypeDefinition } from "sanity";
-import { eventType } from "./exampleType";
+import { duoMemberType } from "./duoMemberType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-	types: [eventType],
+	types: [duoMemberType],
 };

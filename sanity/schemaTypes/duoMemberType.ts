@@ -1,17 +1,5 @@
 import { defineField, defineType } from "sanity";
 
-export const eventType = defineType({
-	name: "event",
-	title: "Event",
-	type: "document",
-	fields: [
-		defineField({
-			name: "name",
-			type: "string",
-		}),
-	],
-});
-
 export const duoMemberType = defineType({
 	name: "duoMember",
 	title: "Duo Member",
@@ -22,8 +10,15 @@ export const duoMemberType = defineType({
 			type: "string",
 		}),
 		defineField({
-			name: "image",
-			type: "image",
+			name: "slug",
+			type: "slug",
+			options: {
+				source: "name",
+			},
+		}),
+		defineField({
+			name: "imageUrl",
+			type: "url",
 		}),
 		defineField({
 			name: "fullName",
@@ -40,6 +35,10 @@ export const duoMemberType = defineType({
 		defineField({
 			name: "instruments",
 			type: "string",
+		}),
+		defineField({
+			name: "bio",
+			type: "text",
 		}),
 	],
 });
