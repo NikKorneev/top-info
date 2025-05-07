@@ -1,6 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import { GET_DUO_BY_NAME } from "@/sanity/query/queries";
 import { notFound } from "next/navigation";
+import Content from "./ui/Content";
 import HeroBanner from "./ui/HeroBanner";
 
 const AboutPage = async ({ params }: { params: Promise<{ name: string }> }) => {
@@ -14,6 +15,7 @@ const AboutPage = async ({ params }: { params: Promise<{ name: string }> }) => {
 	return (
 		<main>
 			<HeroBanner info={info[0]} />
+			<Content content={info[0].bio} />
 		</main>
 	);
 };

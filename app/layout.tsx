@@ -1,3 +1,4 @@
+import "easymde/dist/easymde.min.css";
 import type { Metadata } from "next";
 import { Inter, Martian_Mono, Oswald } from "next/font/google";
 import "./globals.css";

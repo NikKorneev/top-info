@@ -38,7 +38,8 @@ export const duoMemberType = defineType({
 		}),
 		defineField({
 			name: "bio",
-			type: "text",
+			description: "A	rich markdown field with image uploading",
+			type: "markdown",
 		}),
 	],
 });
