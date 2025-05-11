@@ -4,6 +4,7 @@ import SectionAdmire from "./components/SectionAdmire";
 import SectionClancyStory from "./components/SectionClancyStory";
 import SectionContract from "./components/SectionContract";
 import SectionDuoCreation from "./components/SectionDuoCreation";
+import LogoReveal from "./components/SectionExpand";
 import SectionFirstAlbum from "./components/SectionFirstAlbum";
 import SectionFirstMembers from "./components/SectionFirstMembers";
 import SectionName from "./components/SectionName";
@@ -11,7 +12,7 @@ import SectionSecondAlbum from "./components/SectionSecondAlbum";
 
 const StoryPage = () => {
 	return (
-		<div className="flex flex-col gap-40 relative">
+		<div className="flex flex-col gap-40 relative mb-[1300px]">
 			<SectionBanner />
 			<SectionFirstMembers />
 			<SectionFirstAlbum />
@@ -26,6 +27,8 @@ const StoryPage = () => {
 			<SectionAdmire />
 
 			<SectionClancyStory />
+
+			<LogoReveal />
 		</div>
 	);
 };

@@ -67,7 +67,7 @@ const SectionClancyStory = () => {
 				</StepCard>
 				<StepCard
 					quote="Многое из того, кем мы являемся как люди, и многое из того, кем мы являемся как группа, проистекает из нашей личной неуверенности в себе, в своей музыке или в том, как мы представляем себя миру."
-					author="Джон Дан"
+					author="Джош Дан"
 					albumTitle="Clancy"
 					image="/img/clancy.png"
 					alt="Twenty One pilots - Clancy style"

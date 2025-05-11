@@ -108,7 +108,6 @@ const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {
 			<div
 				className={`absolute w-[620px] h-[420px] z-[5]   rounded-full blur-3xl top-[28%] right-[15%] ${position == "right" ? "bg-mainYellow/80" : "bg-mainRed/80"}  max-xl:size-[350px] max-lg:hidden `}
 			/>
-
 			<div
 				className={`absolute w-[420px] h-[420px] z-30 top-0 ${position === "right" ? "left-[20%]" : "left-[30%]"} max-xl:size-[350px] max-lg:size-[250px] max-sm:static`}
 			>
@@ -121,6 +120,7 @@ const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {
 					className="w-full h-full object-cover"
 				/>
 			</div>
+
 			<div
 				className={`absolute w-[420px] h-[420px] z-10 ${position == "right" ? "right-0" : "left-0"}  top-[50%] translate-y-[-50%]  max-xl:size-[350px] max-lg:size-[250px] max-sm:hidden`}
 			>
