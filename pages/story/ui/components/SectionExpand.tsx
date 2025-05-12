@@ -9,7 +9,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function LogoReveal() {
+export default function SectionExpand() {
 	const container = useRef(null);
 	const logo = useRef(null);
 	const bg = useRef(null);

@@ -6,10 +6,15 @@ export const metadata: Metadata = {
 	description: "!To do",
 };
 
-const Page = () => {
+const Page = async ({
+	searchParams,
+}: {
+	searchParams: Promise<{ [key: string]: string }>;
+}) => {
+	const id = +(await searchParams).id || 1;
 	return (
 		<main>
-			<StoryPage />
+			<StoryPage id={id} />
 		</main>
 	);
 };

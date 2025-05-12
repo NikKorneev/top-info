@@ -1,16 +1,17 @@
+import Accordion from "@/components/animated/accordion";
 import SectionBanner from "./components/banner";
 import Quote from "./components/quote";
 import SectionAdmire from "./components/SectionAdmire";
 import SectionClancyStory from "./components/SectionClancyStory";
 import SectionContract from "./components/SectionContract";
 import SectionDuoCreation from "./components/SectionDuoCreation";
-import LogoReveal from "./components/SectionExpand";
+import SectionExpand from "./components/SectionExpand";
 import SectionFirstAlbum from "./components/SectionFirstAlbum";
 import SectionFirstMembers from "./components/SectionFirstMembers";
 import SectionName from "./components/SectionName";
 import SectionSecondAlbum from "./components/SectionSecondAlbum";
 
-const StoryPage = () => {
+const StoryPage = ({ id }: { id: number }) => {
 	return (
 		<div className="flex flex-col gap-40 relative mb-[1300px]">
 			<SectionBanner />
@@ -28,7 +29,10 @@ const StoryPage = () => {
 
 			<SectionClancyStory />
 
-			<LogoReveal />
+			<div className="container mx-auto">
+				<Accordion id={id} title={"Интересные факты"} type={"story"} />
+			</div>
+			<SectionExpand />
 		</div>
 	);
 };
