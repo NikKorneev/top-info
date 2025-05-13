@@ -7,7 +7,7 @@ const Name = () => {
 			<div className="flex justify-between">
 				<p className="title">НАЗВАНИЕ ГРУППЫ</p>
 			</div>
-			<div className="grid grid-cols-[1fr_2fr] gap-[80px] pt-10  max-lg:gap-10 max-md:gap-x-5 max-md:gap-y-10 max-md:grid-cols-2 max-sm:grid-cols-1  max-sm:gap-x-5">
+			<div className="grid grid-cols-[1fr_2fr] gap-[80px] pt-10  max-lg:gap-10 max-md:gap-x-5 max-md:gap-y-10 max-lg:grid-cols-2 max-sm:grid-cols-1  max-sm:gap-x-5">
 				<TextLined
 					end="-=55%"
 					paragraphs={[
@@ -18,7 +18,7 @@ const Name = () => {
 						"Группа с самого начала несла в себе этот философский, почти этический посыл — и именно этим отличается от множества других коллективов: они не просто поют, они задают вопросы.",
 					]}
 				/>
-				<div className="grid grid-cols-2 gap-5  max-md:grid-cols-1 max-md:gap-0 max-sm:gap-5">
+				<div className="grid grid-cols-2 gap-5  max-lg:grid-cols-1 max-lg:gap-0 max-sm:gap-5">
 					<Image
 						src={"/img/namin-3.jpg"}
 						width={500}

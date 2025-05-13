@@ -22,7 +22,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.3, delay: 0.2 }}
 					exit={{ y: -400 }}
-					className="relative h-[20vw]  aspect-video"
+					className="relative h-[20vw]  aspect-video  max-md:h-[200px]"
 				>
 					<Image
 						src={image || "/img/naming-4.jpg"}
@@ -30,18 +30,20 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 						alt="interesting fact image"
 						quality={100}
 						loading="lazy"
-						className="object-cover w-full h-full"
+						className="object-cover w-full h-full mask-alpha  mask-b-from-45%  "
 					/>
+					<motion.h3
+						initial={{ opacity: 0, y: 100 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 0.3 }}
+						exit={{ opacity: 0, y: -100 }}
+						className="font-bold absolute bottom-[10px] text-white text-2xl uppercase  pt-6 px-4 line-clamp-1 max-md:text-xl"
+					>
+						{title}
+					</motion.h3>
+					<div className="absolute bottom-0 left-0 w-full h-[1px] bg-white opacity-40"></div>
 				</motion.div>
-				<motion.h3
-					initial={{ opacity: 0, y: 100 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.3 }}
-					exit={{ opacity: 0, y: -100 }}
-					className="font-bold text-white text-2xl uppercase  pt-6 px-4 line-clamp-1 max-md:text-xl"
-				>
-					{title}
-				</motion.h3>
+
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
 					animate={{ opacity: 1, y: 0 }}

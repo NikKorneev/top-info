@@ -52,7 +52,7 @@ const SecondAlbum = () => {
 					<span className="text-grayMain">
 						Обложка альбома “Regional At best”
 					</span>
-					<div className="mt-5 max-sm:mb-10">
+					<div className="mt-5 max-sm:mb-5">
 						<ArrowedBtn>Посмотреть альбом</ArrowedBtn>
 					</div>
 				</div>

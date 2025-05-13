@@ -57,7 +57,7 @@ const Banner = () => {
 					alt={"story banner"}
 					fill
 					quality={100}
-					className="object-cover w-full h-full z-0"
+					className="object-cover w-full h-full z-0   "
 				/>
 			</motion.div>
 		</section>

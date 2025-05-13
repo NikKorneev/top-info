@@ -2,16 +2,22 @@
 import { useUrlParams } from "@/lib/hooks";
 import { AccordionItemType } from "@/types/accordion";
 import clsx from "clsx";
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { LiaEyeSolid } from "react-icons/lia";
 import { RiLoader3Line } from "react-icons/ri";
+import AccordionContent from "./accordionContent";
 
 export const AccordionItems = ({
 	items,
 	id,
+	description,
+	image,
 }: {
 	items: AccordionItemType[];
 	id: number;
+	description?: string;
+	image?: string;
 }) => {
 	const [index, setIndex] = useState(id);
 	const [isLoading, setLoading] = useState(false);
@@ -28,17 +34,36 @@ export const AccordionItems = ({
 	return (
 		<>
 			{items.map((item) => (
-				<AccordionItem
-					onClick={() => {
-						setParam(item.id + "");
-						setIndex(item.id);
-					}}
-					id={item.id + ""}
-					key={item.id}
-					isLoading={item.id == index && isLoading}
-					active={item.id == index}
-					title={item.title}
-				/>
+				<div key={item.id}>
+					<AccordionItem
+						onClick={() => {
+							setParam(item.id + "");
+							setIndex(item.id);
+						}}
+						id={item.id + ""}
+						isLoading={item.id == index && isLoading}
+						active={item.id == index}
+						title={item.title}
+					/>
+					<div className="lg:hidden">
+						<AnimatePresence mode="wait">
+							{item.id == id && (
+								<motion.div
+									initial={{ height: 0, opacity: 0 }}
+									animate={{ opacity: 1, height: "auto" }}
+									exit={{ height: 0, opacity: 0 }}
+								>
+									<AccordionContent
+										{...item}
+										key={item.id + "mobile"}
+										description={description || ""}
+										image={image || ""}
+									/>
+								</motion.div>
+							)}
+						</AnimatePresence>
+					</div>
+				</div>
 			))}
 		</>
 	);
