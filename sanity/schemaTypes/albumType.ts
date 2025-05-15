@@ -24,5 +24,11 @@ export const albumType = defineType({
 			name: "titleSVG",
 			type: "image",
 		}),
+		defineField({
+			name: "songs",
+			title: "Песни",
+			type: "array",
+			of: [{ type: "reference", to: [{ type: "song" }] }],
+		}),
 	],
 });
