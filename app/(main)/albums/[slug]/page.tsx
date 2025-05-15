@@ -17,6 +17,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 				text={info[0].title}
 				image={info[0].imageUrl}
 				className={info[0].classNames}
+				titleSVG={info[0].titleSVG}
 			/>
 		</div>
 	);

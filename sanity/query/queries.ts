@@ -15,4 +15,4 @@ export const GET_FACTS = `*[_type == "interestingFact"] | order(id asc) {id, tit
 
 export const GET_ALBUMS = `*[_type == "album"] | order(id asc) {id, title, imageUrl, slug}`;
 
-export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug]{id, title, imageUrl, classNames}`;
+export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug]{id, title, imageUrl, titleSVG}`;

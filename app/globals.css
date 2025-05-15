@@ -17,6 +17,13 @@ html {
 	.stroke-4 {
 		-webkit-text-stroke: 4px var(--stroke-color);
 	}
+
+	.text-trench {
+		color: #fbe103;
+		--stroke-color: black;
+		-webkit-text-stroke: 5px var(--stroke-color);
+		-webkit-text-stroke-color: black;
+	}
 	.stroke-white {
 		color: transparent;
 		--stroke-color: white;
@@ -367,6 +374,7 @@ html {
 	--color-mainYellow: #ffd800;
 	--color-back: #231f20;
 	--color-grayMain: #dfdfdf;
+	--color-trench: #242020;
 
 	--font-martian: var(--font-martian);
 	--font-inter: var(--font-inter);

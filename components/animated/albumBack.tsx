@@ -1,6 +1,6 @@
 "use client";
+import { urlFor } from "@/sanity/lib/client";
 import { useGSAP } from "@gsap/react";
-import clsx from "clsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "motion/react";
@@ -13,9 +13,10 @@ type Props = {
 	text: string;
 	image?: string;
 	className?: string;
+	titleSVG?: any;
 };
 
-const AlbumBack = ({ text, image, className }: Props) => {
+const AlbumBack = ({ text, image, titleSVG, className }: Props) => {
 	const container = useRef(null);
 	const title = useRef(null);
 
@@ -36,8 +37,6 @@ const AlbumBack = ({ text, image, className }: Props) => {
 
 			tl.to(title.current, {
 				opacity: 0,
-				fontSize: "5vw",
-				ease: "linear",
 			});
 		}, container);
 
@@ -52,16 +51,17 @@ const AlbumBack = ({ text, image, className }: Props) => {
 			animate={{ opacity: 1 }}
 			className="w-full h-screen absolute top-0 left-0 "
 		>
-			<div className="fixed top-[250px] left-1/2  font-martian -translate-x-1/2 -translate-y-1/2">
-				<h1
-					ref={title}
-					className={clsx(
-						" text-[15vw]  font-bold -z-10 uppercase  leading-[100%]",
-						className || "text-mainRed"
-					)}
-				>
-					{text}
-				</h1>
+			<div
+				ref={title}
+				className="fixed top-[250px] left-1/2  font-martian -translate-x-1/2 -translate-y-1/2"
+			>
+				<Image
+					width={933}
+					height={217}
+					src={urlFor(titleSVG).width(933).url()}
+					alt={"album title"}
+				/>
+
 				{image && (
 					<p className="text-black text-5xl max-sm:text-2xl">
 						альбом

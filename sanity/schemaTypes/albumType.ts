@@ -21,8 +21,8 @@ export const albumType = defineType({
 			type: "url",
 		}),
 		defineField({
-			name: "classNames",
-			type: "string",
+			name: "titleSVG",
+			type: "image",
 		}),
 	],
 });
