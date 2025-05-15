@@ -10,7 +10,7 @@ const FirstMembers = () => {
 			</div>
 			<div className="grid grid-cols-3 gap-20 pt-10 max-md:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<TextLined
-					end="-=100%"
+					end="-=60%"
 					paragraphs={[
 						"Всё началось в городе Колумбус, штат Огайо в 2009",
 						"Тайлер Джозеф, вокалист и мультиинструменталист, собрал первую версию группы вместе с друзьями.",

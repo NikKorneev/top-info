@@ -14,7 +14,7 @@ const Duo = () => {
 	return (
 		<div
 			ref={ref}
-			className="lg:absolute absolute max-md:bottom-0  md:top-0 w-full  overflow-hidden lg:h-[125vh] h-fit  pointer-events-none"
+			className="md:bottom-[-20%] md:scale-75 lg:absolute absolute max-md:bottom-0  w-full  overflow-hidden lg:h-[125vh] h-fit  pointer-events-none"
 		>
 			<Image
 				src="/img/tylerMain.png"

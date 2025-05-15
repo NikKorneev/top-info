@@ -4,7 +4,7 @@ const Info = () => {
 	return (
 		<section
 			id="info"
-			className="container max-sm:px-4 info-grid max-lg:py-0 max-md:-mt-10 max-lg:-mt-10 gap-4 mx-auto py-20 relative z-50 grid-rows-[324px]  auto-rows-[324px] "
+			className="container max-sm:px-4 info-grid max-lg:py-0 max-md:-mt-10 max-lg:-mt-10 gap-4 mx-auto pb-20 relative z-50 grid-rows-[324px]  auto-rows-[324px] "
 		>
 			<InfoCard
 				title={"группа в цифрах"}

@@ -19,6 +19,7 @@ type Props = {
 const AlbumBack = ({ text, image, titleSVG, className }: Props) => {
 	const container = useRef(null);
 	const title = useRef(null);
+	const showTitle = text && !titleSVG;
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -53,20 +54,25 @@ const AlbumBack = ({ text, image, titleSVG, className }: Props) => {
 		>
 			<div
 				ref={title}
-				className="fixed top-[250px] left-1/2  font-martian -translate-x-1/2 -translate-y-1/2"
+				className="fixed top-[100px] left-1/2  font-martian -translate-x-1/2 "
 			>
-				<Image
-					width={933}
-					height={217}
-					src={urlFor(titleSVG).width(933).url()}
-					alt={"album title"}
-				/>
-
-				{image && (
-					<p className="text-black text-5xl max-sm:text-2xl">
-						альбом
-					</p>
+				{showTitle && (
+					<h1 className="text-mainRed leading-[100%] font-bold text-[200px] uppercase max-sm:text-2xl">
+						{text}
+					</h1>
 				)}
+				{titleSVG && (
+					<Image
+						width={933}
+						height={217}
+						src={urlFor(titleSVG).width(933).url()}
+						alt={"album title"}
+					/>
+				)}
+
+				<p className="text-black text-5xl max-sm:text-2xl">
+					{showTitle ? "[2009-2024]" : "альбом"}
+				</p>
 			</div>
 			<Image
 				alt={"albums background"}

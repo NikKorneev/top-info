@@ -11,6 +11,7 @@ type Props = {
 	subtitle?: string;
 	className?: string;
 	isHeader?: boolean;
+	animate?: boolean;
 };
 const InfoCard = ({
 	title,

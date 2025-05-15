@@ -8,6 +8,11 @@ html {
 }
 
 @layer utilities {
+	.container {
+		@media (min-width: 96rem /* 1536px */) and (max-width: 1600px) {
+			max-width: 1440px !important;
+		}
+	}
 	.animate-marquee {
 		animation: marquee 15s linear infinite;
 	}
@@ -58,6 +63,9 @@ html {
 
 	.story-container {
 		@apply container mx-auto max-sm:px-4 font-martian;
+		@media (min-width: 96rem /* 1536px */) and (max-width: 1600px) {
+			max-width: 1440px !important;
+		}
 	}
 	.title {
 		@apply font-martian text-4xl font-bold text-mainRed uppercase max-lg:text-3xl max-sm:text-2xl;

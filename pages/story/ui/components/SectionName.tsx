@@ -9,7 +9,6 @@ const Name = () => {
 			</div>
 			<div className="grid grid-cols-[1fr_2fr] gap-[80px] pt-10  max-lg:gap-10 max-md:gap-x-5 max-md:gap-y-10 max-lg:grid-cols-2 max-sm:grid-cols-1  max-sm:gap-x-5">
 				<TextLined
-					end="-=55%"
 					paragraphs={[
 						"Название “Twenty One Pilots” придумал фронтмен группы Тайлер Джозеф, вдохновившись пьесой Артура Миллера «Все мои сыновья».  ",
 						"В центре сюжета — бизнесмен, который продал бракованные детали для военной авиации во время Второй мировой войны, что привело к гибели 21 пилота.",
