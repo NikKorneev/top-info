@@ -3,6 +3,7 @@ import ArrowedBtn from "@/components/ui/arrowedBtn";
 import Card from "@/components/ui/tiltCard";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const images = ["/img/about-1.png", "/img/about-1-2.png"];
@@ -128,9 +129,9 @@ const About = () => {
 							внутренними переживаниями.
 						</p>
 					</div>
-					<div>
+					<Link href="/story">
 						<ArrowedBtn>Читать подробнее</ArrowedBtn>
-					</div>
+					</Link>
 				</div>
 			</div>
 			<div className="absolute right-0 bottom-0 -z-10">

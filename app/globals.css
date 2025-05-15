@@ -8,6 +8,36 @@ html {
 }
 
 @layer utilities {
+	.stroke-1 {
+		-webkit-text-stroke: 1px var(--stroke-color);
+	}
+	.stroke-2 {
+		-webkit-text-stroke: 2px var(--stroke-color);
+	}
+	.stroke-4 {
+		-webkit-text-stroke: 4px var(--stroke-color);
+	}
+	.stroke-white {
+		color: transparent;
+		--stroke-color: white;
+		-webkit-text-stroke-color: white;
+	}
+	.stroke-red {
+		color: transparent;
+		--stroke-color: var(--color-mainRed);
+		-webkit-text-stroke-color: var(--color-mainRed);
+	}
+	.stroke-yellow {
+		color: transparent;
+		--stroke-color: var(--color-mainYellow);
+		-webkit-text-stroke-color: var(--color-mainYellow);
+	}
+	.stroke-black {
+		color: transparent;
+		--stroke-color: var(--color-black);
+		-webkit-text-stroke-color: var(--color-black);
+	}
+
 	.story-container {
 		@apply container mx-auto max-sm:px-4 font-martian;
 	}

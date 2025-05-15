@@ -2,24 +2,32 @@ import Markdown from "react-markdown";
 
 const Content = ({ content }: any) => {
 	return (
-		<div className="max-w-[640px] bg-[#232324] px-6 py-4  shadow-2xl rounded-xl max-sm:max-w-[100%] mt-10 mx-auto">
+		<div className="max-w-[640px] bg-[#232324] px-6 py-4 font-martian  shadow-2xl rounded-xl max-sm:max-w-[100%] mt-10 mx-auto">
 			<Markdown
 				components={{
 					h1: ({ children }) => (
-						<h2 className="title mb-2">{children}</h2>
+						<h2 className="uppercase text-mainRed font-bold mb-2 text-2xl max-sm:text-2xl">
+							{children}
+						</h2>
 					),
 					p: ({ children }) => (
-						<p className="mb-4 text-grayMain leading-[150%]">
+						<p className="mb-4 text-grayMain leading-[160%]">
 							{children}
 						</p>
 					),
-					img: ({ node, ...props }) => (
-						<img
-							{...props}
-							className="rounded-xl max-h-[400px] shadow-md mx-auto my-4 max-w-full"
-							loading="lazy"
-							alt={props.alt || ""}
-						/>
+					img: ({ src, alt, ...props }) => (
+						<>
+							<img
+								src={src}
+								className="rounded-xl max-h-[400px] shadow-md mx-auto my-4 max-w-full"
+								loading="lazy"
+								alt={alt}
+								{...props}
+							/>
+							<span className="text-center block text-grayMain text-[12px]">
+								{alt}
+							</span>
+						</>
 					),
 				}}
 			>

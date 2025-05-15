@@ -2,19 +2,25 @@
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
 const Btn = () => {
 	const ref = useRef(null);
+	const router = useRouter();
 	const { scrollY } = useScroll();
 	const titleY = useTransform(scrollY, [0, 1000], [0, -200]);
+
 	return (
 		<motion.div
 			style={{ y: titleY }}
 			ref={ref}
 			className="flex justify-center relative z-50 lg:pt-72 lg:pb-0 pt-5 pb-96 sm:pb-20 sm:pt-72"
 		>
-			<Button className="bg-mainYellow py-[25px] px-[42px] ">
+			<Button
+				onClick={() => router.push("/story")}
+				className="bg-mainYellow py-[25px] px-[42px] "
+			>
 				<p className="text-black font-martian text-[16px] uppercase">
 					Подробнее
 				</p>

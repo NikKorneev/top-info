@@ -1,5 +1,5 @@
+import Albums from "@/components/animated/albums";
 import About from "./components/about";
-import Albums from "./components/albums";
 import Background from "./components/background";
 import Btn from "./components/button";
 import Duo from "./components/duo";
@@ -26,7 +26,7 @@ const HomePage = () => {
 				<ParticipantSection />
 			</div>
 			<div className="mt-40">
-				<Albums />
+				<Albums title="Дискография" />
 			</div>
 
 			<LastSong />

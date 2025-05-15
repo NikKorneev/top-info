@@ -13,7 +13,7 @@ import SectionSecondAlbum from "./components/SectionSecondAlbum";
 
 const StoryPage = ({ id }: { id: number }) => {
 	return (
-		<div className="flex flex-col gap-40 relative mb-[1300px]">
+		<div className="flex flex-col gap-40 relative mb-[2200px]">
 			<SectionBanner />
 			<SectionFirstMembers />
 			<SectionFirstAlbum />

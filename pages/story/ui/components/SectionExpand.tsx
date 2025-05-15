@@ -14,6 +14,8 @@ export default function SectionExpand() {
 	const logo = useRef(null);
 	const bg = useRef(null);
 	const text = useRef(null);
+	const logoText = useRef(null);
+	const insideText = useRef(null);
 
 	useGSAP(() => {
 		const ctx = gsap.context(() => {
@@ -21,24 +23,38 @@ export default function SectionExpand() {
 				scrollTrigger: {
 					trigger: container.current,
 					start: "top top",
-					end: "+=1300px", // увеличили продолжительность scroll-пиннинга
+					end: "+=2200px", // увеличили продолжительность scroll-пиннинга
 					scrub: true,
 					pin: true,
 				},
 			});
 
 			tl.to(logo.current, {
-				scale: 30,
+				scale: 8,
 				opacity: 0,
 				ease: "linear",
 			})
 				.to(
 					bg.current,
 					{
-						opacity: 1,
 						width: "100%",
+						ease: "linear",
 					},
-					"<+0.2"
+					"<+0.35"
+				)
+				.to(
+					logoText.current,
+					{
+						opacity: 1,
+					},
+					"<+0.25"
+				)
+				.to(
+					insideText.current,
+					{
+						height: "100%",
+					},
+					"<+0.25"
 				)
 				.to(
 					text.current,
@@ -46,7 +62,7 @@ export default function SectionExpand() {
 						opacity: 1,
 						y: 0,
 					},
-					"<+0.25"
+					"<"
 				);
 		}, container);
 
@@ -56,17 +72,17 @@ export default function SectionExpand() {
 	return (
 		<section
 			ref={container}
-			className="relative min-h-screen overflow-hidden bg-black"
+			className="relative min-h-screen overflow-hidden bg-black "
 		>
 			<img
 				ref={bg}
 				src="/img/expand.png"
-				className="absolute inset-0 w-0 h-full  object-cover opacity-0 transition-opacity duration-500"
+				className="absolute inset-0 w-0 h-full will-change-transform  object-cover  transition-opacity duration-500"
 				alt="Concert"
 			/>
 			<div
 				ref={logo}
-				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+				className="absolute will-change-transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
 			>
 				<img
 					src="/top-logo.svg"
@@ -75,8 +91,22 @@ export default function SectionExpand() {
 				/>
 			</div>
 			<div
+				ref={logoText}
+				className="absolute top-[30%] opacity-0 uppercase font-bold left-1/2 text-center -translate-x-[50%] font-martian  z-10 text-8xl"
+			>
+				<div
+					ref={insideText}
+					className="absolute transition-all overflow-hidden h-0 will-change-auto top-0 left-0 text-mainRed  stroke-2"
+				>
+					twenty one pilots
+				</div>
+				<div className=" text-transparent stroke-red stroke-2">
+					twenty one pilots
+				</div>
+			</div>
+			<div
 				ref={text}
-				className="absolute inset-0 flex mt-80 items-center justify-center opacity-0 translate-y-4 text-white text-4xl font-bold z-20"
+				className="absolute will-change-transform inset-0 flex mt-80 items-center justify-center opacity-0 translate-y-4 text-white text-4xl font-bold z-20"
 			>
 				<Link href={"/albums"}>
 					<ArrowedBtn className="w-[200px] bg-black">

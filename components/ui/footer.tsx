@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
 	return (
@@ -8,15 +9,23 @@ const Footer = () => {
 					<ul className="flex flex-col gap-[14px] text-3xl max-lg:text-xl">
 						<div className="flex flex-col gap-[7px]">
 							<li>Участники группы</li>
-							<span className="text-[16px] font-light text-white/80 max-md:text-sm">
-								Тайлер Джозеф
-							</span>
-							<span className="text-[16px] font-light text-white/80 max-md:text-sm">
-								Джош Дан
-							</span>
+							<Link href="/duo/tyler-joseph">
+								<span className="text-[16px] font-light text-white/80 max-md:text-sm">
+									Тайлер Джозеф
+								</span>
+							</Link>
+							<Link href="/duo/josh-dun">
+								<span className="text-[16px] font-light text-white/80 max-md:text-sm">
+									Джош Дан
+								</span>
+							</Link>
 						</div>
-						<li>Альбомы</li>
-						<li>История группы</li>
+						<li>
+							<Link href="/albums">Альбомы</Link>
+						</li>
+						<li>
+							<Link href="/story">История группы</Link>
+						</li>
 						<li>FAQ</li>
 					</ul>
 					<ul>

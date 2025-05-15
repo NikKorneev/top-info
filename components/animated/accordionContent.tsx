@@ -58,6 +58,15 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 									{children}
 								</p>
 							),
+							a: ({ children, href }) => (
+								<a
+									href={href}
+									target="_blank"
+									className="underline mb-2 text-grayMain cursor-pointer leading-[150%]"
+								>
+									{children}
+								</a>
+							),
 						}}
 					>
 						{description}

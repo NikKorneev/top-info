@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const ParticipantSection = () => {
 	return (
 		<div className="space-y-20 max-md:space-y-16 max-sm:space-y-6 overflow-hidden">
 			<Participant
+				href="/duo/tyler-joseph"
 				alt="tyler joseph pictures"
 				info="text"
 				srcs={[
@@ -22,6 +24,7 @@ const ParticipantSection = () => {
 				signSrc="/icons/tylerSign.png"
 			/>
 			<Participant
+				href="/duo/josh-dun"
 				alt="josh dun pictures"
 				info="text2"
 				srcs={[
@@ -49,6 +52,7 @@ const Participant = ({
 	instruments,
 	name,
 	signSrc,
+	href,
 }: ParticipantProps) => {
 	return (
 		<div
@@ -75,11 +79,13 @@ const Participant = ({
 				<div
 					className={`flex justify-between mt-20 w-full items-center max-md:flex-col ${position == "right" ? "flex-row-reverse max-md:items-end" : "max-md:items-baseline"} max-md:items-baseline max-md:gap-2 max-md:mt-10 max-sm:flex-row max-sm:mt-4 max-sm:items-center`}
 				>
-					<Button
-						className={`bg-transparent border-2 py-5 ${position == "right" ? "text-mainYellow border-mainYellow  " : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
-					>
-						Читать подробнее
-					</Button>
+					<Link href={href}>
+						<Button
+							className={`bg-transparent border-2 py-5 ${position == "right" ? "text-mainYellow border-mainYellow  " : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
+						>
+							Читать подробнее
+						</Button>
+					</Link>
 					<Image
 						src={signSrc}
 						width={219}
@@ -100,6 +106,7 @@ type ParticipantProps = {
 	signSrc: string;
 	born: string;
 	instruments: string;
+	href: string;
 } & ImagesProps;
 
 const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {

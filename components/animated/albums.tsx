@@ -3,6 +3,7 @@ import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 type Item = {
@@ -107,7 +108,13 @@ const items: Item[] = [
 	},
 ];
 
-const Albums = () => {
+type Props = {
+	title: string;
+	titleOnce?: boolean;
+	albumPage?: boolean;
+};
+
+const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 	const [selected, setSelected] = useState<null | Item>(null);
 	return (
 		<section>
@@ -118,10 +125,10 @@ const Albums = () => {
 							initial={{ y: -100, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ duration: 0.35 }}
-							viewport={{ once: true, amount: 1 }}
+							viewport={{ once: titleOnce, amount: 1 }}
 							className="text-mainRed text-5xl max-sm:text-4xl font-extrabold uppercase"
 						>
-							Дискография
+							{title}
 						</motion.h3>
 						<motion.p
 							initial={{ y: -50, opacity: 0 }}
@@ -154,9 +161,13 @@ const Albums = () => {
 							<p className="xl:max-w-[70%] font-light text-[#BFBFBF] mt-2 max-lg:text-[14px]">
 								{items[0].desc}
 							</p>
-							<div className="mt-auto pt-4">
+							<Link
+								scroll={true}
+								href={albumPage ? "/clancy" : "/albums/clancy"}
+								className="mt-auto pt-4"
+							>
 								<ArrowedBtn>Страница альбома</ArrowedBtn>
-							</div>
+							</Link>
 						</div>
 					</div>
 					<div className="grid  grid-cols-3 max-sm:grid-cols-2 mt-5 lg:gap-5 gap-3">
