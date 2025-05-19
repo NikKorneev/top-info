@@ -32,9 +32,7 @@ export default function RootLayout({
 			</div>
 
 			{children}
-			<div className="mt-40">
-				<Footer />
-			</div>
+			<Footer />
 		</ReactLenis>
 	);
 }

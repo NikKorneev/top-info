@@ -1,23 +1,36 @@
 import { client } from "@/sanity/lib/client";
-import { GET_FACT_BY_ID, GET_FACTS } from "@/sanity/query/queries";
+import {
+	GET_FACT_BY_ID,
+	GET_FACTS,
+	GET_SONG_BY_SLUG,
+} from "@/sanity/query/queries";
 import { AccordionContentType, AccordionItemType } from "@/types/accordion";
 import AccordionContent from "./accordionContent";
 import { AccordionItems } from "./accordionItem";
 
 type Props = {
+	type: "album" | "story";
+	id: number | string;
 	title: string;
-	type: "story";
-	id: number;
+	slug?: string;
+	songs?: { title: string; slug: { current: string } }[];
 };
 
-const Accordion = async ({ title, type, id = 1 }: Props) => {
-	const items = await client.fetch<AccordionItemType[]>(GET_FACTS);
-	const content = await client.fetch<[AccordionContentType]>(GET_FACT_BY_ID, {
-		id,
-	});
+const Accordion = async ({ title, type, id = 1, slug, songs }: Props) => {
+	const items =
+		type === "album"
+			? songs
+			: await client.fetch<AccordionItemType[]>(GET_FACTS);
+
+	const fetchObject = type === "album" ? GET_SONG_BY_SLUG : GET_FACT_BY_ID;
+	const fetchParams = type === "album" ? { slug } : { id };
+	const content = await client.fetch<[AccordionContentType]>(
+		fetchObject,
+		fetchParams
+	);
 
 	return (
-		<section className="max-w-[75%]  mx-auto font-martian max-sm:max-w-full">
+		<section className="max-w-[75%] @md:max-w-[100%]  mx-auto font-martian max-sm:max-w-full">
 			<h3 className="title text-center mb-10">{title}</h3>
 			<div className="grid grid-cols-2 gap-6 max-lg:grid-cols-1 max-md:gap-2.5 max-sm:px-4">
 				<div className="max-lg:hidden">
@@ -33,6 +46,7 @@ const Accordion = async ({ title, type, id = 1 }: Props) => {
 					<AccordionItems
 						items={items}
 						id={id}
+						paramName={type === "album" ? "slug" : "id"}
 						description={content[0].description}
 						image={content[0].image}
 					/>

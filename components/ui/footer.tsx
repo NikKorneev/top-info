@@ -9,22 +9,38 @@ const Footer = () => {
 					<ul className="flex flex-col gap-[14px] text-3xl max-lg:text-xl">
 						<div className="flex flex-col gap-[7px]">
 							<li>Участники группы</li>
-							<Link href="/duo/tyler-joseph">
+							<Link
+								href="/duo/tyler-joseph"
+								className="transition-colors hover:*:text-mainYellow"
+							>
 								<span className="text-[16px] font-light text-white/80 max-md:text-sm">
 									Тайлер Джозеф
 								</span>
 							</Link>
-							<Link href="/duo/josh-dun">
+							<Link
+								href="/duo/josh-dun"
+								className="transition-colors hover:*:text-mainYellow"
+							>
 								<span className="text-[16px] font-light text-white/80 max-md:text-sm">
 									Джош Дан
 								</span>
 							</Link>
 						</div>
 						<li>
-							<Link href="/albums">Альбомы</Link>
+							<Link
+								href="/albums"
+								className="transition-colors hover:text-mainYellow"
+							>
+								Альбомы
+							</Link>
 						</li>
 						<li>
-							<Link href="/story">История группы</Link>
+							<Link
+								href="/story"
+								className="transition-colors hover:text-mainYellow"
+							>
+								История группы
+							</Link>
 						</li>
 						<li>FAQ</li>
 					</ul>
@@ -90,8 +106,11 @@ const Footer = () => {
 						<p className="w-full text-[12px] text-center md:text-sm md:text-right">
 							официальные ресурсы
 						</p>
-						<div className="flex gap-5 justify-center mt-1 md:justify-end">
-							<a href="https://www.instagram.com/twentyonepilots/">
+						<div className="flex gap-5 justify-center mt-2 md:justify-end">
+							<a
+								href="https://www.twentyonepilots.com/"
+								target="_blank"
+							>
 								<Image
 									src="/icons/officialWebsiteLogo.svg"
 									width={30}
@@ -100,7 +119,10 @@ const Footer = () => {
 									loading="lazy"
 								/>
 							</a>
-							<a href="https://www.instagram.com/twentyonepilots/">
+							<a
+								href="https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx"
+								target="_blank"
+							>
 								<Image
 									src="/icons/officialSpotify.svg"
 									width={30}
@@ -109,7 +131,10 @@ const Footer = () => {
 									alt="spotify logo"
 								/>
 							</a>
-							<a href="https://www.instagram.com/twentyonepilots/">
+							<a
+								href="https://x.com/twentyonepilots"
+								target="_blank"
+							>
 								<Image
 									src="/icons/officialX.svg"
 									width={30}
@@ -118,7 +143,10 @@ const Footer = () => {
 									alt="twenty one pilots' X"
 								/>
 							</a>
-							<a href="https://www.instagram.com/twentyonepilots/">
+							<a
+								href="https://www.youtube.com/twentyonepilots/videos"
+								target="_blank"
+							>
 								<Image
 									src="/icons/officialYT.svg"
 									width={30}

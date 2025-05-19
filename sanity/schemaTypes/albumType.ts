@@ -10,6 +10,35 @@ export const albumType = defineType({
 			type: "string",
 		}),
 		defineField({
+			name: "albumDescription",
+			type: "markdown",
+		}),
+		defineField({
+			name: "promoDescription",
+			type: "markdown",
+		}),
+		defineField({
+			name: "albumCover",
+			type: "url",
+		}),
+		defineField({
+			name: "releaseDate",
+			type: "date",
+		}),
+		defineField({
+			name: "links",
+			type: "array",
+			of: [
+				{
+					type: "object",
+					fields: [
+						{ name: "name", type: "string" },
+						{ name: "link", type: "url" },
+					],
+				},
+			],
+		}),
+		defineField({
 			name: "slug",
 			type: "slug",
 			options: {
@@ -29,6 +58,12 @@ export const albumType = defineType({
 			title: "Песни",
 			type: "array",
 			of: [{ type: "reference", to: [{ type: "song" }] }],
+		}),
+		defineField({
+			name: "gallery",
+			title: "Галерея",
+			type: "array",
+			of: [{ type: "url" }],
 		}),
 	],
 });

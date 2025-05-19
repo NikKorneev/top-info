@@ -175,7 +175,7 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 							<motion.div
 								key={item.id}
 								layoutId={`card-${item.id}`}
-								className={`aspect-square rounded-xl cursor-pointer relative transition-colors hover:border-4 hover:border-grayMain`}
+								className={`aspect-square rounded-xl group cursor-pointer relative transition-colors bg-neutral-800 hover:border-4 hover:border-grayMain`}
 								onClick={() => setSelected(item)}
 							>
 								<Image
@@ -183,8 +183,11 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 									loading="lazy"
 									fill
 									alt="albums"
-									className="object-cover  hover:scale-[98%]  transition-transform"
+									className="object-cover  group-hover:scale-[90%]  transition-transform hover:mask-alpha group-hover:mask-b-from-45%"
 								/>
+								<div className="uppercase  left-5 transition-all absolute bottom-[-20%] text-7xl font-bold text-white opacity-0 group-hover:bottom-5  group-hover:opacity-100">
+									Clancy
+								</div>
 							</motion.div>
 						))}
 					</div>

@@ -15,6 +15,8 @@ export const GET_FACTS = `*[_type == "interestingFact"] | order(id asc) {id, tit
 
 export const GET_ALBUMS = `*[_type == "album"] | order(id asc) {id, title, imageUrl, slug}`;
 
-export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug][0]{id, title, imageUrl, titleSVG, songs[]->{
-    title
+export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug][0]{id, title, imageUrl, albumDescription, links, albumCover, releaseDate, gallery, titleSVG, songs[]->{
+    title, slug
   }}`;
+
+export const GET_SONG_BY_SLUG = `*[_type == "song" && slug.current == $slug]{title, description}`;

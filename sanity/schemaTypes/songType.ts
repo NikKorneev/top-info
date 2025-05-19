@@ -6,6 +6,10 @@ export const songType = defineType({
 	type: "document",
 	fields: [
 		defineField({
+			name: "id",
+			type: "number",
+		}),
+		defineField({
 			name: "title",
 			type: "string",
 		}),
@@ -19,6 +23,11 @@ export const songType = defineType({
 		defineField({
 			name: "description",
 			type: "markdown",
+		}),
+		defineField({
+			name: "album",
+			type: "reference",
+			to: [{ type: "album" }],
 		}),
 	],
 });

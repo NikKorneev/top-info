@@ -10,18 +10,20 @@ import AccordionContent from "./accordionContent";
 
 export const AccordionItems = ({
 	items,
-	id,
+	id = 1,
 	description,
 	image,
+	paramName = "id",
 }: {
 	items: AccordionItemType[];
-	id: number;
+	id: number | string;
 	description?: string;
 	image?: string;
+	paramName: "id" | "slug";
 }) => {
 	const [index, setIndex] = useState(id);
 	const [isLoading, setLoading] = useState(false);
-	const { setParam } = useUrlParams("id", "1");
+	const { setParam, searchParams } = useUrlParams(paramName, id + "");
 
 	useEffect(() => {
 		setLoading(true);
@@ -31,23 +33,42 @@ export const AccordionItems = ({
 		return () => clearTimeout(timeout);
 	}, [index]);
 
+	const handleClick = (item: AccordionItemType) => {
+		if (paramName == "id") {
+			setParam(item.id + "");
+			setIndex(item.id);
+		} else {
+			setParam(item.slug?.current);
+			setIndex(item.id);
+		}
+	};
+
+	const checkIfChoosen = (item: AccordionItemType) => {
+		if (paramName == "id") {
+			return item.id == id;
+		} else {
+			if (!searchParams?.get("slug"))
+				return item.slug?.current === items[0].slug?.current;
+			return item.slug?.current == searchParams?.get("slug");
+		}
+	};
+
 	return (
 		<>
-			{items.map((item) => (
-				<div key={item.id}>
+			{items.map((item, index) => (
+				<div key={item.id || item.slug?.current}>
 					<AccordionItem
 						onClick={() => {
-							setParam(item.id + "");
-							setIndex(item.id);
+							handleClick(item);
 						}}
 						id={item.id + ""}
 						isLoading={item.id == index && isLoading}
-						active={item.id == index}
-						title={item.title}
+						active={checkIfChoosen(item)}
+						title={index + 1 + ". " + item.title}
 					/>
 					<div className="lg:hidden">
 						<AnimatePresence mode="wait">
-							{item.id == id && (
+							{checkIfChoosen(item) && (
 								<motion.div
 									initial={{ height: 0, opacity: 0 }}
 									animate={{ opacity: 1, height: "auto" }}

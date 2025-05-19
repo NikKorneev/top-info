@@ -7,6 +7,7 @@ const Info = () => {
 			className="container max-sm:px-4 info-grid max-lg:py-0 max-md:-mt-10 max-lg:-mt-10 gap-4 mx-auto pb-20 relative z-50 grid-rows-[324px]  auto-rows-[324px] "
 		>
 			<InfoCard
+				animate={false}
 				title={"группа в цифрах"}
 				color={"bg"}
 				icon="/icons/logo-white.png"
@@ -14,12 +15,14 @@ const Info = () => {
 				className="info-card font-martian"
 			/>
 			<InfoCard
+				animate={false}
 				subtitle={"Лет в\nмузыке"}
 				description={"Группа была образована\nв 2009 году"}
 				title={"15+"}
 				color={"bg-mainYellow"}
 			/>
 			<InfoCard
+				animate={false}
 				subtitle={"студийных\nальбомов"}
 				description={
 					"группа изменяет фирменные цвета\nна каждом альбоме"

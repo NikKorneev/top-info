@@ -29,12 +29,17 @@ const Header = () => {
 								История
 							</Link>
 						</li>
+
 						<li className="menu-item">
 							<Link scroll={true} href="/albums">
 								Альбомы
 							</Link>
 						</li>
-						<li className="menu-item">Мерч</li>
+						<li className="menu-item">
+							<Link scroll={true} href="/duo/tyler-joseph">
+								Био
+							</Link>
+						</li>
 					</ul>
 					<div
 						className={`menu flex md:hidden  ${menuIsOpened ? "open" : ""}`}

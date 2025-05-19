@@ -22,14 +22,17 @@ const InfoCard = ({
 	subtitle,
 	isHeader,
 	className,
+	animate = true,
 }: Props) => {
 	return (
 		<motion.div
-			initial={{
-				opacity: 0,
-				y: 100,
-				scale: 0.5,
-			}}
+			initial={
+				animate && {
+					opacity: 0,
+					y: 100,
+					scale: 0.5,
+				}
+			}
 			whileInView={{
 				opacity: 1,
 				y: 0,

@@ -54,10 +54,10 @@ const AlbumBack = ({ text, image, titleSVG, className }: Props) => {
 		>
 			<div
 				ref={title}
-				className="fixed top-[100px] left-1/2  font-martian -translate-x-1/2 "
+				className="fixed top-[100px] left-1/2  font-martian -translate-x-1/2 cursor-none pointer-events-none"
 			>
 				{showTitle && (
-					<h1 className="text-mainRed leading-[100%] font-bold text-[200px] uppercase max-sm:text-2xl">
+					<h1 className="text-mainRed leading-[100%] font-bold text-[200px] uppercase max-lg:text-[150px] max-md:text-[100px] max-sm:text-6xl">
 						{text}
 					</h1>
 				)}
