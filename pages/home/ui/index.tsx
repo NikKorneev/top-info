@@ -1,4 +1,5 @@
 import Albums from "@/components/animated/albums";
+import { getAlbums } from "@/lib/api";
 import About from "./components/about";
 import Background from "./components/background";
 import Btn from "./components/button";
@@ -8,7 +9,8 @@ import LastSong from "./components/lastSong";
 import MainTitle from "./components/mainTitle";
 import ParticipantSection from "./components/participant";
 import Quote from "./components/quote";
-const HomePage = () => {
+const HomePage = async () => {
+	const albums = await getAlbums();
 	return (
 		<>
 			<div className="relative lg:min-h-screen font-martian">
@@ -26,7 +28,7 @@ const HomePage = () => {
 				<ParticipantSection />
 			</div>
 			<div className="mt-40">
-				<Albums title="Дискография" />
+				<Albums albums={albums} title="Дискография" />
 			</div>
 
 			<LastSong />

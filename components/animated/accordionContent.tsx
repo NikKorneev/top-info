@@ -3,6 +3,7 @@ import { AccordionContentType } from "@/types/accordion";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 type Props = AccordionContentType;
 
@@ -11,6 +12,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 		<AnimatePresence mode="wait">
 			<motion.div
 				key={id}
+				id={title}
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.4 }}
@@ -68,6 +70,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 					className="text-grayMain leading-[150%] mt-3 px-4 pb-6 max-sm:text-[14px]"
 				>
 					<Markdown
+						rehypePlugins={[rehypeRaw]}
 						components={{
 							p: ({ children }) => (
 								<p className="mb-2 text-grayMain leading-[150%]">
@@ -87,6 +90,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 								<iframe
 									{...props}
 									className="w-full aspect-video"
+									allowFullScreen
 								/>
 							),
 						}}
@@ -96,15 +100,6 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 				</motion.div>
 			</motion.div>
 		</AnimatePresence>
-	);
-};
-const LoadingCard = () => {
-	return (
-		<div className="w-full pb-6  bg-[#4e4e4e] animate-pulse">
-			<div className="w-full h-[20vw]  aspect-video bg-grayMain animate-pulse"></div>
-			<div className=" h-[36px] mt-6 mx-4  bg-grayMain animate-pulse"></div>
-			<div className=" h-[200px] mt-3 mx-4  bg-grayMain animate-pulse"></div>
-		</div>
 	);
 };
 

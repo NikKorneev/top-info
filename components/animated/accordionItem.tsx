@@ -3,7 +3,7 @@ import { useUrlParams } from "@/lib/hooks";
 import { AccordionItemType } from "@/types/accordion";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LiaEyeSolid } from "react-icons/lia";
 import { RiLoader3Line } from "react-icons/ri";
 import AccordionContent from "./accordionContent";
@@ -23,6 +23,7 @@ export const AccordionItems = ({
 }) => {
 	const [index, setIndex] = useState(id);
 	const [isLoading, setLoading] = useState(false);
+	const scrollTo = useRef(null);
 	const { setParam, searchParams } = useUrlParams(paramName, id + "");
 
 	useEffect(() => {
@@ -70,6 +71,7 @@ export const AccordionItems = ({
 						<AnimatePresence mode="wait">
 							{checkIfChoosen(item) && (
 								<motion.div
+									ref={scrollTo}
 									initial={{ height: 0, opacity: 0 }}
 									animate={{ opacity: 1, height: "auto" }}
 									exit={{ height: 0, opacity: 0 }}

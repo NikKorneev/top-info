@@ -16,7 +16,7 @@ type Props = {
 	titleSVG?: any;
 };
 
-const AlbumBack = ({ text, image, titleSVG, className }: Props) => {
+const AlbumBack = ({ text, image, titleSVG }: Props) => {
 	const container = useRef(null);
 	const title = useRef(null);
 	const showTitle = text && !titleSVG;
@@ -67,10 +67,11 @@ const AlbumBack = ({ text, image, titleSVG, className }: Props) => {
 						height={217}
 						src={urlFor(titleSVG).width(933).url()}
 						alt={"album title"}
+						className="max-sm:scale-150"
 					/>
 				)}
 
-				<p className="text-black text-5xl max-sm:text-2xl">
+				<p className="text-black text-5xl max-sm:text-2xl max-sm:mt-4">
 					{showTitle ? "[2009-2024]" : "альбом"}
 				</p>
 			</div>

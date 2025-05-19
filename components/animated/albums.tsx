@@ -1,6 +1,7 @@
 "use client";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { Button } from "@/components/ui/button";
+import { AlbumType } from "@/types/album";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -112,10 +113,11 @@ type Props = {
 	title: string;
 	titleOnce?: boolean;
 	albumPage?: boolean;
+	albums: AlbumType[];
 };
 
-const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
-	const [selected, setSelected] = useState<null | Item>(null);
+const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
+	const [selected, setSelected] = useState<null | AlbumType>(null);
 	return (
 		<section>
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
@@ -144,7 +146,7 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 					<div className="grid grid-cols-[1fr_1fr_1fr] lg:gap-5 sm:gap-3 max-sm:grid-cols-1 mt-10 overflow-hidden">
 						<div className="w-full h-full relative aspect-square">
 							<Image
-								src={items[0].image}
+								src={albums[0].albumCover}
 								loading="lazy"
 								fill
 								alt="albums"
@@ -153,17 +155,28 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 						</div>
 						<div className="font-martian album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
 							<h5 className="text-mainRed text-[36px] font-extrabold">
-								{items[0].title}
+								{albums[0].title}
 							</h5>
 							<p className="font-medium text-[#FAFAFA]">
-								{items[0].release}
+								Релиз{" "}
+								{new Date(
+									albums[0].releaseDate
+								).toLocaleDateString("ru-RU", {
+									day: "numeric",
+									month: "long",
+									year: "numeric",
+								})}
 							</p>
 							<p className="xl:max-w-[70%] font-light text-[#BFBFBF] mt-2 max-lg:text-[14px]">
-								{items[0].desc}
+								{albums[0].promoDescription}
 							</p>
 							<Link
 								scroll={true}
-								href={albumPage ? "/clancy" : "/albums/clancy"}
+								href={
+									albumPage
+										? "/" + albums[0].slug.current
+										: "/albums/" + albums[0].slug.current
+								}
 								className="mt-auto pt-4"
 							>
 								<ArrowedBtn>Страница альбома</ArrowedBtn>
@@ -171,22 +184,25 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 						</div>
 					</div>
 					<div className="grid  grid-cols-3 max-sm:grid-cols-2 mt-5 lg:gap-5 gap-3">
-						{[...items].splice(1).map((item) => (
+						{[...albums].splice(1).map((item) => (
 							<motion.div
-								key={item.id}
-								layoutId={`card-${item.id}`}
+								key={item.slug.current}
+								layoutId={`card-${item.slug.current}`}
 								className={`aspect-square rounded-xl group cursor-pointer relative transition-colors bg-neutral-800 hover:border-4 hover:border-grayMain`}
 								onClick={() => setSelected(item)}
 							>
 								<Image
-									src="/img/clancyAlbumCover.png"
+									src={
+										item.albumCover ||
+										"/img/clancyAlbumCover.png"
+									}
 									loading="lazy"
 									fill
 									alt="albums"
 									className="object-cover  group-hover:scale-[90%]  transition-transform hover:mask-alpha group-hover:mask-b-from-45%"
 								/>
 								<div className="uppercase  left-5 transition-all absolute bottom-[-20%] text-7xl font-bold text-white opacity-0 group-hover:bottom-5  group-hover:opacity-100">
-									Clancy
+									{item.title}
 								</div>
 							</motion.div>
 						))}
@@ -203,7 +219,7 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 						exit={{ opacity: 0 }}
 					>
 						<motion.div
-							layoutId={`card-${selected.id}`}
+							layoutId={`card-${selected.slug.current}`}
 							className="bg-white w-[90vw] max-w-md  overflow-hidden shadow-xl relative lg:max-w-4xl"
 							onClick={(e) => e.stopPropagation()}
 							transition={{
@@ -222,7 +238,7 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 							<div className="font-martian album-card flex flex-col lg:grid lg:grid-cols-[1.5fr_2fr]">
 								<div className="relative h-40 w-full lg:aspect-square lg:h-fit z-50">
 									<Image
-										src={selected.image}
+										src={selected.albumCover}
 										alt="album"
 										fill
 										className="object-cover"
@@ -230,21 +246,36 @@ const Albums = ({ title, titleOnce = true, albumPage }: Props) => {
 								</div>
 								<div className="flex flex-col">
 									<h5 className="text-mainRed text-[36px] font-extrabold px-[30px] mt-[10px] max-sm:text-[24px] max-sm:px-[15px]">
-										Альбом Clancy
+										{selected.title}
 									</h5>
 									<p className="font-medium text-[#FAFAFA] px-[30px] max-sm:px-[15px]">
-										Релиз 24/05/2024
+										Релиз{" "}
+										{new Date(
+											albums[0].releaseDate
+										).toLocaleDateString("ru-RU", {
+											day: "numeric",
+											month: "long",
+											year: "numeric",
+										})}
 									</p>
 									<p className=" font-light text-[#BFBFBF] mt-2 max-lg:text-[14px] px-[30px] max-sm:px-[15px]">
-										Cедьмой студийный альбом американского
-										музыкального дуэта Twenty One Pilots,
-										релиз которого состоялся 24 мая
+										{selected.promoDescription}
 									</p>
-									<div className="mt-auto pt-4 px-[30px] pb-[20px] max-sm:px-[15px]">
+
+									<Link
+										scroll={true}
+										href={
+											albumPage
+												? "/" + selected.slug.current
+												: "/albums/" +
+													selected.slug.current
+										}
+										className="mt-auto pt-4 px-[30px] pb-[20px] max-sm:px-[15px]"
+									>
 										<ArrowedBtn>
 											Страница альбома
 										</ArrowedBtn>
-									</div>
+									</Link>
 								</div>
 							</div>
 						</motion.div>
