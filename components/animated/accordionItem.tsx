@@ -57,7 +57,10 @@ export const AccordionItems = ({
 	return (
 		<>
 			{items.map((item, index) => (
-				<div key={item.id || item.slug?.current}>
+				<div
+					id={item.id + "" || item.slug?.current}
+					key={item.id || item.slug?.current}
+				>
 					<AccordionItem
 						onClick={() => {
 							handleClick(item);

@@ -1,6 +1,7 @@
 "use client";
 import { urlFor } from "@/sanity/lib/client";
 import { useGSAP } from "@gsap/react";
+import clsx from "clsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "motion/react";
@@ -71,13 +72,20 @@ const AlbumBack = ({ text, image, titleSVG }: Props) => {
 					/>
 				)}
 
-				<p className="text-black text-5xl max-sm:text-2xl max-sm:mt-4">
+				<p
+					className={clsx(
+						"text-black text-5xl max-sm:text-2xl max-sm:mt-4",
+						(text == "Scaled And Icy" || text == "Blurryface") &&
+							"text-white"
+					)}
+				>
 					{showTitle ? "[2009-2024]" : "альбом"}
 				</p>
 			</div>
 			<Image
 				alt={"albums background"}
 				fill
+				quality={100}
 				className="object-cover  -z-20"
 				src={image || "/img/albums-background.png"}
 			/>

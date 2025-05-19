@@ -1,10 +1,9 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import MobileMenu from "./mobileMenu";
+import Search from "./search";
 
 const Header = () => {
-	const [menuIsOpened, setMenuIsOpened] = useState(false);
 	return (
 		<header className="header font-martian">
 			<div className="container mx-auto items-center flex justify-between 2xl:px-0 md:px-4  max-sm:px-3">
@@ -41,26 +40,9 @@ const Header = () => {
 							</Link>
 						</li>
 					</ul>
-					<div
-						className={`menu flex md:hidden  ${menuIsOpened ? "open" : ""}`}
-						onClick={() => {
-							setMenuIsOpened(!menuIsOpened);
-						}}
-					>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
+					<MobileMenu />
 
-					<div className="cursor-pointer hover:*:animate-bounce">
-						<Image
-							src="/icons/search.svg"
-							width={20}
-							height={20}
-							alt="search icon"
-							className="text-amber-50"
-						/>
-					</div>
+					<Search />
 				</nav>
 			</div>
 		</header>

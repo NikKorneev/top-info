@@ -201,7 +201,7 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 									alt="albums"
 									className="object-cover  group-hover:scale-[90%]  transition-transform hover:mask-alpha group-hover:mask-b-from-45%"
 								/>
-								<div className="uppercase  left-5 transition-all absolute bottom-[-20%] text-7xl font-bold text-white opacity-0 group-hover:bottom-5  group-hover:opacity-100">
+								<div className="uppercase  left-5 transition-all absolute bottom-[-20%] text-7xl max-md:text-4xl max-sm:text-2xl font-bold text-white opacity-0 group-hover:bottom-5  group-hover:opacity-100">
 									{item.title}
 								</div>
 							</motion.div>
