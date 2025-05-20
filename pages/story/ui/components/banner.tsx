@@ -39,7 +39,7 @@ const Banner = () => {
 						initial={{ x: -400, opacity: 0 }}
 						animate={{ x: 0, opacity: 1 }}
 						transition={{ delay: 0.4 }}
-						className="text-[20px] text-grayMain shadowText max-md:p-2 max-md:backdrop-blur-md lg:max-w-[700px] max-lg:max-w-[500px] max-2xl:text-[18px] max-lg:text-[16px] max-md:text-[14px] max-sm:text-[12px] max-xs:text-[10px]"
+						className="text-[20px] font-martian text-grayMain shadowText max-md:p-2 max-md:backdrop-blur-md lg:max-w-[700px] max-lg:max-w-[500px] max-2xl:text-[18px] max-lg:text-[16px] max-md:text-[14px] "
 					>
 						Дуэт из Огайо, ставший голосом целого поколения. Сочетая
 						инди-поп, хип-хоп, электронику и рок, они разрушили

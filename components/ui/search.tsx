@@ -1,17 +1,17 @@
 "use client";
 import { searchGlobal } from "@/lib/actions";
+import { SearchedType } from "@/types/searched";
 import { AnimatePresence, motion } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { IoMdClose } from "react-icons/io";
+import { IoIosSearch, IoMdClose } from "react-icons/io";
 import { SearchForm } from "./searchForm";
 
 const Search = () => {
 	const [opened, setOpened] = useState(false);
 	const [query, setQuery] = useState("");
 	const [debounced, setDebounced] = useState("");
-	const [items, setItems] = useState([]);
+	const [items, setItems] = useState<SearchedType[]>([]);
 
 	const handleSearch = async (val: string) => {
 		const res = await searchGlobal(val);
@@ -37,13 +37,7 @@ const Search = () => {
 					setOpened(true);
 				}}
 			>
-				<Image
-					src="/icons/search.svg"
-					width={20}
-					height={20}
-					alt="search icon"
-					className="text-amber-50"
-				/>
+				<IoIosSearch size={30} color="#ffd800" />
 			</div>
 			<AnimatePresence>
 				{opened && (
@@ -52,7 +46,7 @@ const Search = () => {
 							initial={{ y: -400, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							exit={{ y: -400, opacity: 0 }}
-							className="relative  w-[100dvw] h-[400px] bg-mainYellow z-50"
+							className="relative  w-[100dvw] h-[400px] bg-mainYellow z-[50]"
 						>
 							<div className="absolute cursor-pointer top-4 right-4">
 								<IoMdClose
@@ -78,7 +72,7 @@ const Search = () => {
 								<Link
 									href={`/${item._type === "duoMember" ? "duo" + "/" + item.slug.current : item._type == "song" ? "album" + "/" + item?.album?.slug?.current : item._type + "/" + item.slug.current}`}
 									key={item._id}
-									className="bg-white flex justify-between w-[45vw] py-5 px-4 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all"
+									className="bg-white flex justify-between w-[45vw] max-md:w-[90vw] py-5 px-4 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all"
 								>
 									<p>{item.title || item.name}</p>
 									<p>

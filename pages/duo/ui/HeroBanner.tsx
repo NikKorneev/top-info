@@ -13,6 +13,7 @@ const HeroBanner = ({ info }: Props) => {
 			<motion.div
 				initial={{ opacity: 0, filter: "blur(50px)" }}
 				animate={{ opacity: 1, filter: "blur(0px)" }}
+				className="max-md:pl-4"
 			>
 				<Image
 					src={info.imageUrl}
@@ -28,7 +29,7 @@ const HeroBanner = ({ info }: Props) => {
 				animate={{ opacity: 1, filter: "blur(0px)" }}
 			>
 				<h2 className="title mb-5">{info.name}</h2>
-				<ul className="flex flex-col gap-3">
+				<ul className="flex flex-col gap-3 max-md:text-[14px]">
 					<DataItem title="Полное имя:" descr={info.fullName} />
 					<DataItem
 						title="Дата рождения:"
@@ -65,7 +66,7 @@ export const DataItem = ({
 	descr: string;
 }) => {
 	return (
-		<div className="flex gap-2 text-white">
+		<div className="flex gap-2 text-white max-md:flex-col max-md:gap-1">
 			<h3 className="font-bold">{title}</h3>
 			<p className="text-grayMain">{descr}</p>
 		</div>

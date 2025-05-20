@@ -19,14 +19,14 @@ export const SearchForm = ({
 				setQuery(data.get("q") as string);
 				handleSearch(data.get("q") as string);
 			}}
-			className="absolute top-1/2 left-1/2 -translate-x-1/2 h-[50px] -translate-y-1/2 flex items-center"
+			className="absolute top-1/2 left-1/2 -translate-x-1/2 h-[50px] -translate-y-1/2 flex items-center max-sm:w-[90vw]"
 		>
 			<input
 				type="text"
 				name="q"
 				value={query}
 				onChange={(e) => setQuery(e.target.value)}
-				className="bg-white h-full px-4 py-2 text-[16px] w-[30vw] focus:border-mainRed"
+				className="bg-white h-full px-4 py-2 text-[16px] w-[45vw] max-md:w-[90vw] max-sm:w-full focus:border-mainRed"
 			/>
 			<div className="bg-mainRed transition-all h-full w-[50px] cursor-pointer  hover:grayscale-100 items-center justify-center flex">
 				<button type="submit" disabled={isLoading}>
