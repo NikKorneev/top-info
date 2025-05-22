@@ -70,7 +70,8 @@ const Search = () => {
 						>
 							{items?.map((item) => (
 								<Link
-									href={`/${item._type === "duoMember" ? "duo" + "/" + item.slug.current : item._type == "song" ? "album" + "/" + item?.album?.slug?.current : item._type + "/" + item.slug.current}`}
+									onClick={() => setOpened(false)}
+									href={`/${item._type === "duoMember" ? "duo" + "/" + item.slug.current : item._type == "song" ? "albums" + "/" + item?.album?.slug?.current : item._type + "s/" + item.slug.current}`}
 									key={item._id}
 									className="bg-white flex justify-between w-[45vw] max-md:w-[90vw] py-5 px-4 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all"
 								>

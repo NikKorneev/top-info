@@ -1,6 +1,6 @@
 import Accordion from "@/components/animated/accordion";
 import SectionBanner from "./components/banner";
-import Quote from "./components/quote";
+import NewQuote from "./components/newQuote";
 import SectionAdmire from "./components/SectionAdmire";
 import SectionClancyStory from "./components/SectionClancyStory";
 import SectionContract from "./components/SectionContract";
@@ -21,7 +21,7 @@ const StoryPage = ({ id }: { id: number }) => {
 				<SectionName />
 			</div>
 			<SectionDuoCreation />
-			<Quote />
+			<NewQuote />
 			<SectionSecondAlbum />
 
 			<SectionContract />
