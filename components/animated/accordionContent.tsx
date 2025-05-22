@@ -89,7 +89,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 							iframe: (props) => (
 								<iframe
 									{...props}
-									className="w-full aspect-video"
+									className="w-full aspect-video py-2"
 									allowFullScreen
 								/>
 							),

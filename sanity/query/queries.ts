@@ -31,7 +31,7 @@ export const SEARCH = `*[
     title match $q || 
     name match $q
   )
-] {
+][0...5] {
   _id,
   _type,
   title,

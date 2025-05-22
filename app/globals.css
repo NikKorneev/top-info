@@ -389,7 +389,7 @@ html {
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
 
-	--color-mainRed: #c22128;
+	--color-mainRed: #db2422;
 	--color-mainYellow: #ffd800;
 	--color-back: #231f20;
 	--color-grayMain: #dfdfdf;

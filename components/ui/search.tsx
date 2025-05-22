@@ -1,5 +1,6 @@
 "use client";
 import { searchGlobal } from "@/lib/actions";
+import { setLink } from "@/lib/utils";
 import { SearchedType } from "@/types/searched";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
@@ -19,6 +20,7 @@ const Search = () => {
 	};
 
 	useEffect(() => {
+		if (query.length > 100 || query.length < 3) return;
 		const delay = setTimeout(() => {
 			setDebounced(query);
 		}, 300);
@@ -66,12 +68,12 @@ const Search = () => {
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
 							exit={{ opacity: 0 }}
-							className="relative left-[50%] translate-x-[-50%] z-50 inline-flex flex-col pt-10 items-center overflow-scroll h-[40vh]"
+							className="relative left-[50%] translate-x-[-50%] z-50 inline-flex flex-col pt-10 items-center overflow-scroll"
 						>
 							{items?.map((item) => (
 								<Link
 									onClick={() => setOpened(false)}
-									href={`/${item._type === "duoMember" ? "duo" + "/" + item.slug.current : item._type == "song" ? "albums" + "/" + item?.album?.slug?.current : item._type + "s/" + item.slug.current}`}
+									href={setLink(item)}
 									key={item._id}
 									className="bg-white flex justify-between w-[45vw] max-md:w-[90vw] py-5 px-4 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all"
 								>

@@ -23,6 +23,8 @@ export const SearchForm = ({
 		>
 			<input
 				type="text"
+				minLength={3}
+				maxLength={100}
 				name="q"
 				value={query}
 				onChange={(e) => setQuery(e.target.value)}

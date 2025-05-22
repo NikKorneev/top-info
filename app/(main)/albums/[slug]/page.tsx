@@ -63,14 +63,19 @@ const Page = async ({
 				</div>
 			</div>
 
-			<div className="max-w-[1000px] mx-auto py-20 @container max-lg:px-10 max-md:px-0">
-				<Accordion
-					title={"Треклист"}
-					type="album"
-					id={1}
-					slug={songSlug || info.songs[0].slug.current}
-					songs={info.songs}
-				/>
+			<div
+				id="tracklist"
+				className="max-w-[1000px] mx-auto py-20 @container max-lg:px-10 max-md:px-0"
+			>
+				{info.songs?.length > 0 && (
+					<Accordion
+						title={"Треклист"}
+						type="album"
+						id={1}
+						slug={songSlug || info.songs[0].slug.current}
+						songs={info.songs}
+					/>
+				)}
 			</div>
 
 			{info.gallery?.length > 0 && (

@@ -25,7 +25,7 @@ const MainTitle = () => {
 				className="lg:pr-[85px]"
 			>
 				<p className="text-white text-[12px] sm:text-[14px]">
-					[неофициальный информационный сайт]
+					[информационный сайт]
 				</p>
 			</motion.div>
 
