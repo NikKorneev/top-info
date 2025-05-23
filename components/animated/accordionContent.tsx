@@ -93,6 +93,18 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 									allowFullScreen
 								/>
 							),
+							blockquote: ({ node, ...props }) => (
+								<blockquote
+									style={{
+										borderLeft: "4px solid #ccc",
+										paddingLeft: "1rem",
+										color: "#555",
+										fontStyle: "italic",
+										margin: "1em 0",
+									}}
+									{...props}
+								/>
+							),
 						}}
 					>
 						{description}

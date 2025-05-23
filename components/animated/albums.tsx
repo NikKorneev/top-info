@@ -7,108 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-type Item = {
-	id: number;
-	title: string;
-	desc: string;
-	release: string;
-	image: string;
-};
-
-const items: Item[] = [
-	{
-		id: 1,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-	{
-		id: 2,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-	{
-		id: 3,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-	{
-		id: 4,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-	{
-		id: 5,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-	{
-		id: 6,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-	{
-		id: 7,
-		title: "Clancy",
-		desc: `Cедьмой студийный альбом американского
-								музыкального дуэта Twenty One Pilots, релиз
-								которого состоялся 24 мая 2024 года на лейбле
-								Fueled by Ramen. Альбом стал «заключительной
-								главой» в серии концептуальных релизов группы, а
-								его название отсылает к главному герою пятого
-								студийного альбома Trench.`,
-		release: "Релиз 24/05/2024",
-		image: "/img/clancyAlbumCover.png",
-	},
-];
-
 type Props = {
 	title: string;
 	titleOnce?: boolean;
@@ -251,7 +149,7 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 									<p className="font-medium text-[#FAFAFA] px-[30px] max-sm:px-[15px]">
 										Релиз{" "}
 										{new Date(
-											albums[0].releaseDate
+											selected.releaseDate
 										).toLocaleDateString("ru-RU", {
 											day: "numeric",
 											month: "long",

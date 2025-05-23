@@ -8,7 +8,7 @@ type Props = {
 	albumCover: string;
 };
 
-const AlbumCard = ({ links, releaseDate, albumCover }: Props) => {
+const AlbumCard = ({ links, releaseDate, albumCover, title }: Props) => {
 	const linkList =
 		links?.length > 0
 			? links
@@ -28,7 +28,7 @@ const AlbumCard = ({ links, releaseDate, albumCover }: Props) => {
 					height={400}
 				/>
 				<div className="absolute bottom-0 px-4">
-					<h2 className="text-white font-bold text-2xl">Clancy</h2>
+					<h2 className="text-white font-bold text-2xl">{title}</h2>
 					<div className="flex gap-2 text-grayMain/90">
 						<p className="font-bold">Дата релиза:</p>
 						<span className="capitalize">
