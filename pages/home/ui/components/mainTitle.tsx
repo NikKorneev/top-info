@@ -6,7 +6,6 @@ const MainTitle = () => {
 	const { scrollY } = useScroll();
 
 	const titleY = useTransform(scrollY, [0, 1000], [0, -200]); // больше сдвиг
-	// const titleX = useTransform(scrollY, [0, 1000], [0, -200]); // больше сдвиг
 	const scale = useTransform(scrollY, [0, 1000], [1, 0.7]);
 	return (
 		<div
