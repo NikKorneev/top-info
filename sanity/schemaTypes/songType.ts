@@ -6,6 +6,18 @@ export const songType = defineType({
 	type: "document",
 	fields: [
 		defineField({
+			name: "lang",
+			type: "string",
+			options: {
+				list: [
+					{ title: "Russian", value: "ru" },
+					{ title: "English", value: "en" },
+				],
+			},
+			validation: (Rule) => Rule.required(),
+			initialValue: "ru",
+		}),
+		defineField({
 			name: "id",
 			type: "number",
 		}),
@@ -18,6 +30,7 @@ export const songType = defineType({
 			type: "slug",
 			options: {
 				source: "title",
+				isUnique: () => true,
 			},
 		}),
 		defineField({
@@ -30,4 +43,15 @@ export const songType = defineType({
 			to: [{ type: "album" }],
 		}),
 	],
+	preview: {
+		select: {
+			title: "title",
+			language: "lang",
+		},
+		prepare({ title, language }) {
+			return {
+				title: `${title} (${language})`,
+			};
+		},
+	},
 });

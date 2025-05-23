@@ -10,8 +10,13 @@ import LastSong from "./components/lastSong";
 import MainTitle from "./components/mainTitle";
 import ParticipantSection from "./components/participant";
 import Quote from "./components/quote";
-const HomePage = async () => {
-	const albums = await getAlbums();
+
+type Props = {
+	params: Promise<{ locale: string }>;
+};
+const HomePage = async ({ params }: Props) => {
+	const locale = (await params).locale;
+	const albums = await getAlbums(locale);
 	const t = await getTranslations("HomePage");
 	return (
 		<>
@@ -80,9 +85,7 @@ const HomePage = async () => {
 				/>
 			</div>
 
-			<LastSong title={t("LastWork.title")} />
-
-			{/* <ParallaxSection /> */}
+			<LastSong title={t("LastWork.title")} url={t("LastWork.url")} />
 		</>
 	);
 };

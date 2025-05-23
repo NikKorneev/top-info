@@ -5,6 +5,7 @@ import clsx from "clsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -21,6 +22,7 @@ const AlbumBack = ({ text, image, titleSVG }: Props) => {
 	const container = useRef(null);
 	const title = useRef(null);
 	const showTitle = text && !titleSVG;
+	const t = useTranslations("AlbumPage");
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -79,7 +81,7 @@ const AlbumBack = ({ text, image, titleSVG }: Props) => {
 							"text-white"
 					)}
 				>
-					{showTitle ? "[2009-2024]" : "альбом"}
+					{showTitle ? "[2009-2024]" : t("subtitle")}
 				</p>
 			</div>
 			<Image

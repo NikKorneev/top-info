@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { AlbumType } from "@/types/album";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -23,7 +24,7 @@ const Albums = ({
 	subtitle,
 }: Props) => {
 	const [selected, setSelected] = useState<null | AlbumType>(null);
-
+	const t = useTranslations("AlbumsComponent");
 	return (
 		<section>
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
@@ -63,10 +64,10 @@ const Albums = ({
 								{albums[0].title}
 							</h5>
 							<p className="font-medium text-[#FAFAFA]">
-								Релиз{" "}
+								{t("release")}{" "}
 								{new Date(
 									albums[0].releaseDate
-								).toLocaleDateString("ru-RU", {
+								).toLocaleDateString(t("dateLocale"), {
 									day: "numeric",
 									month: "long",
 									year: "numeric",
@@ -84,7 +85,7 @@ const Albums = ({
 								}
 								className="mt-auto pt-4"
 							>
-								<ArrowedBtn>Страница альбома</ArrowedBtn>
+								<ArrowedBtn>{t("btn")}</ArrowedBtn>
 							</Link>
 						</div>
 					</div>
@@ -177,9 +178,7 @@ const Albums = ({
 										}
 										className="mt-auto pt-4 px-[30px] pb-[20px] max-sm:px-[15px]"
 									>
-										<ArrowedBtn>
-											Страница альбома
-										</ArrowedBtn>
+										<ArrowedBtn>{t("btn")}</ArrowedBtn>
 									</Link>
 								</div>
 							</div>

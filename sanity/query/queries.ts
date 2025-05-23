@@ -1,4 +1,4 @@
-export const GET_DUO_BY_NAME = `*[_type == "duoMember" && slug.current == $slug]
+export const GET_DUO_BY_NAME = `*[_type == "duoMember" && slug.current == $slug && lang == $locale]
     {name, 
     slug, 
     image, 
@@ -7,19 +7,19 @@ export const GET_DUO_BY_NAME = `*[_type == "duoMember" && slug.current == $slug]
     dateOfBirth, 
     placeOfBirth,
     bio, 
-    instruments}`;
+    instruments}`; //checked
 
-export const GET_FACT_BY_ID = `*[_type == "interestingFact" && id == $id]{title, id, description, image}`;
+export const GET_FACT_BY_ID = `*[_type == "interestingFact" && id == $id && lang == $locale]{title, id, description, image}`; //checked
 
-export const GET_FACTS = `*[_type == "interestingFact"] | order(id asc) {id, title}`;
+export const GET_FACTS = `*[_type == "interestingFact" && lang == $locale] | order(id asc) {id, title}`; //checked
 
-export const GET_ALBUMS = `*[_type == "album"] | order(releaseDate desc) {title, albumCover, slug, promoDescription, releaseDate}`;
+export const GET_ALBUMS = `*[_type == "album" && lang == $locale] | order(releaseDate desc) {title, albumCover, slug, promoDescription, releaseDate}`; //checked
 
-export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug][0]{id, title, imageUrl, albumDescription, links, albumCover, releaseDate, gallery, titleSVG, songs[]->{
+export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug && lang == $locale][0]{id, title, imageUrl, albumDescription, links, albumCover, releaseDate, gallery, titleSVG, songs[]->{
     title, slug
-  }}`;
+  }}`; //checked
 
-export const GET_SONG_BY_SLUG = `*[_type == "song" && slug.current == $slug]{title, description}`;
+export const GET_SONG_BY_SLUG = `*[_type == "song" && slug.current == $slug && lang == $locale]{title, description}`; //checked
 
 export const SEARCH_IN_ALBUMS = `*[_type == "album" && lower(title) match lower($q)] {_type, title, albumCover, slug}`;
 export const SEARCH_IN_SONGS = `*[_type == "song" && lower(title) match lower($q)] {_type, title, slug, album}`;
@@ -30,7 +30,7 @@ export const SEARCH = `*[
   && (
     title match $q || 
     name match $q
-  )
+  ) && lang == $locale
 ][0...5] {
   _id,
   _type,

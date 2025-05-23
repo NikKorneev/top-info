@@ -6,6 +6,18 @@ export const albumType = defineType({
 	type: "document",
 	fields: [
 		defineField({
+			name: "lang",
+			type: "string",
+			options: {
+				list: [
+					{ title: "Russian", value: "ru" },
+					{ title: "English", value: "en" },
+				],
+			},
+			validation: (Rule) => Rule.required(),
+			initialValue: "ru",
+		}),
+		defineField({
 			name: "title",
 			type: "string",
 		}),
@@ -43,6 +55,7 @@ export const albumType = defineType({
 			type: "slug",
 			options: {
 				source: "name",
+				isUnique: () => true,
 			},
 		}),
 		defineField({
@@ -66,4 +79,15 @@ export const albumType = defineType({
 			of: [{ type: "url" }],
 		}),
 	],
+	preview: {
+		select: {
+			title: "title",
+			language: "lang",
+		},
+		prepare({ title, language }) {
+			return {
+				title: `${title} (${language})`,
+			};
+		},
+	},
 });

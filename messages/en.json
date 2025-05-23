@@ -68,7 +68,8 @@
 			"subtitle": "Кликните на обложку, чтобы узнать подробности альбома"
 		},
 		"LastWork": {
-			"title": "Последняя работа"
+			"title": "Последняя работа",
+			"url": "https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
 		}
 	},
 	"StoryPage": {
@@ -184,5 +185,31 @@
 		},
 		"Accordion": "Интересные факты",
 		"Expand": "Все альбомы"
+	},
+	"AlbumPage": {
+		"t": "Альбомы",
+		"subtitle": "альбом",
+		"subt": "Кликните на обложку, чтобы узнать подробности альбома"
+	},
+	"DuoPage": {
+		"t1": "ТАЙЛЕР ДЖОЗЕФ",
+		"t2": "ДЖОШ ДАН",
+		"title": "биография участников",
+		"back": "Назад",
+		"fullName": "Полное имя:",
+		"born": "Дата рождения:",
+		"locale": "ru-RU",
+		"place": "Место рождения:",
+		"instruments": "Инструменты:"
+	},
+	"AlbumsComponent": {
+		"release": "Релиз",
+		"dateLocale": "ru-RU",
+		"btn": "Страница альбома"
+	},
+	"LocaleSwitcher": {
+		"en": "EN",
+		"ru": "РУ",
+		"label": "Язык"
 	}
 }

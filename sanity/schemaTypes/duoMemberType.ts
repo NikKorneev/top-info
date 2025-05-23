@@ -6,6 +6,18 @@ export const duoMemberType = defineType({
 	type: "document",
 	fields: [
 		defineField({
+			name: "lang",
+			type: "string",
+			options: {
+				list: [
+					{ title: "Russian", value: "ru" },
+					{ title: "English", value: "en" },
+				],
+			},
+			validation: (Rule) => Rule.required(),
+			initialValue: "ru",
+		}),
+		defineField({
 			name: "name",
 			type: "string",
 		}),
@@ -14,6 +26,7 @@ export const duoMemberType = defineType({
 			type: "slug",
 			options: {
 				source: "name",
+				isUnique: () => true,
 			},
 		}),
 		defineField({

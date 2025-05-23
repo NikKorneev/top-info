@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const LayoutBanner = () => {
+	const t = useTranslations("DuoPage");
 	return (
 		<motion.div
 			initial={{ opacity: 0, filter: "blur(100px)" }}
@@ -17,7 +19,7 @@ const LayoutBanner = () => {
 				alt="Duo page cover"
 			/>
 			<div className="bg-mainRed text-white uppercase text-5xl font-bold py-[9px] px-[13px]">
-				биография участников
+				{t("title")}
 			</div>
 		</motion.div>
 	);

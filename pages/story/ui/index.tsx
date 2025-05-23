@@ -12,7 +12,7 @@ import SectionFirstMembers from "./components/SectionFirstMembers";
 import SectionName from "./components/SectionName";
 import SectionSecondAlbum from "./components/SectionSecondAlbum";
 
-const StoryPage = ({ id }: { id: number }) => {
+const StoryPage = ({ id, locale }: { id: number; locale: "en" | "ru" }) => {
 	const t = useTranslations("StoryPage");
 	return (
 		<div className="flex flex-col gap-40 relative mb-[2200px]">
@@ -32,7 +32,12 @@ const StoryPage = ({ id }: { id: number }) => {
 			<SectionClancyStory />
 
 			<div className="container mx-auto">
-				<Accordion id={id} title={t("Accordion")} type={"story"} />
+				<Accordion
+					locale={locale}
+					id={id}
+					title={t("Accordion")}
+					type={"story"}
+				/>
 			</div>
 			<SectionExpand />
 		</div>

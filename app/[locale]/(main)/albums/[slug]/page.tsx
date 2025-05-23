@@ -12,13 +12,15 @@ const Page = async ({
 	params,
 	searchParams,
 }: {
-	params: Promise<{ slug: string }>;
+	params: Promise<{ slug: string; locale: "en" | "ru" }>;
 	searchParams: Promise<{ slug: string }>;
 }) => {
-	const slug = (await params).slug;
+	const awaitedParams = await params;
+	const slug = awaitedParams.slug;
+	const locale = awaitedParams.locale;
 	const songSlug = (await searchParams).slug;
 
-	const info = await client.fetch(GET_ALBUM_BY_SLUG, { slug });
+	const info = await client.fetch(GET_ALBUM_BY_SLUG, { slug, locale });
 
 	if (!info) {
 		return notFound();
@@ -72,6 +74,7 @@ const Page = async ({
 						title={"Треклист"}
 						type="album"
 						id={1}
+						locale={locale}
 						slug={songSlug || info.songs[0].slug.current}
 						songs={info.songs}
 					/>

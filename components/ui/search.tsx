@@ -1,9 +1,10 @@
 "use client";
+import { Link } from "@/i18n/navigation";
 import { searchGlobal } from "@/lib/actions";
 import { setLink } from "@/lib/utils";
 import { SearchedType } from "@/types/searched";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { IoIosSearch, IoMdClose } from "react-icons/io";
 import { SearchForm } from "./searchForm";
@@ -13,9 +14,10 @@ const Search = () => {
 	const [query, setQuery] = useState("");
 	const [debounced, setDebounced] = useState("");
 	const [items, setItems] = useState<SearchedType[]>([]);
+	const locale = useLocale();
 
 	const handleSearch = async (val: string) => {
-		const res = await searchGlobal(val);
+		const res = await searchGlobal(val, locale);
 		setItems(res);
 	};
 
@@ -23,7 +25,7 @@ const Search = () => {
 		if (query.length > 100 || query.length < 3) return;
 		const delay = setTimeout(() => {
 			setDebounced(query);
-		}, 300);
+		}, 200);
 		return () => clearTimeout(delay);
 	}, [query]);
 

@@ -6,9 +6,10 @@ import { useState } from "react";
 
 type Props = {
 	title: string;
+	url: string;
 };
 
-const LastSong = ({ title }: Props) => {
+const LastSong = ({ title, url }: Props) => {
 	const [isOpened, setOpened] = useState(false);
 	return (
 		<section className="overflow-hidden relative">
@@ -42,7 +43,7 @@ const LastSong = ({ title }: Props) => {
 				{isOpened && (
 					<ModalVideo
 						setOpened={setOpened}
-						url="https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
+						url={url}
 						layoutId="lastSong"
 					/>
 				)}

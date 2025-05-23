@@ -1,5 +1,6 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import LocaleSwitcher from "./localeSwitcher";
 import MobileMenu from "./mobileMenu";
 import Navmenu from "./navmenu";
 import Search from "./search";
@@ -20,6 +21,7 @@ const Header = () => {
 				<nav className="flex items-center gap-8 max-sm:gap-4">
 					<Navmenu />
 					<MobileMenu />
+					<LocaleSwitcher />
 
 					<Search />
 				</nav>
