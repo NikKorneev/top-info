@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import Link from "next/link";
 
-const ParticipantSection = () => {
+type Props = {
+	tyler: Pick<ParticipantProps, "born" | "descr" | "instruments" | "name">;
+	josh: Pick<ParticipantProps, "born" | "descr" | "instruments" | "name">;
+	btn: string;
+};
+
+const ParticipantSection = ({ josh, tyler, btn }: Props) => {
 	return (
 		<div className="space-y-20 max-md:space-y-16 max-sm:space-y-6 overflow-hidden">
 			<Participant
@@ -14,29 +20,22 @@ const ParticipantSection = () => {
 					"/img/p-tyler-2.png",
 					"/img/p-tyler-3.png",
 				]}
-				born="Родился 1 декабря 1988"
-				descr="Идеолог Twenty One Pilots. Его тексты переплетены с
-					глубокими смыслами, а музыка балансирует между разными
-					жанрами, создавая уникальный стиль группы. Узнайте больше о
-					его творческом пути и влиянии на музыку на нашем сайте."
-				instruments="Вокал, Клавишные, гитара"
-				name="Тайлер Джозеф"
+				{...tyler}
+				btn={btn}
 				signSrc="/icons/tylerSign.png"
 			/>
 			<Participant
 				href="/duo/josh-dun"
 				alt="josh dun pictures"
 				info="text2"
+				btn={btn}
 				srcs={[
 					"/img/p-josh-1.png",
 					"/img/p-josh-3.png",
 					"/img/p-josh-2.png",
 				]}
 				position="right"
-				born="Родился 18 июня 1988"
-				descr="Ударник и энергетический двигатель Twenty One Pilots. Его мощная игра на барабанах и сценическая харизма создают неповторимую атмосферу выступлений группы. Узнайте больше о его роли и вдохновении здесь."
-				instruments="барабаны"
-				name="Джош Дан"
+				{...josh}
 				signSrc="/icons/joshSign.png"
 			/>
 		</div>
@@ -53,6 +52,7 @@ const Participant = ({
 	name,
 	signSrc,
 	href,
+	btn,
 }: ParticipantProps) => {
 	return (
 		<div
@@ -83,7 +83,7 @@ const Participant = ({
 						<Button
 							className={`bg-transparent border-2 py-5 ${position == "right" ? "text-mainYellow border-mainYellow  " : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
 						>
-							Читать подробнее
+							{btn}
 						</Button>
 					</Link>
 					<Image
@@ -107,6 +107,7 @@ type ParticipantProps = {
 	born: string;
 	instruments: string;
 	href: string;
+	btn: string;
 } & ImagesProps;
 
 const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {

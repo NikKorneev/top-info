@@ -1,15 +1,23 @@
 "use client";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import Card from "@/components/ui/tiltCard";
+import { Link } from "@/i18n/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const images = ["/img/about-1.png", "/img/about-1-2.png"];
 const images2 = ["/img/about-2.png", "/img/about-2-1.png"];
 
-const About = () => {
+type Props = {
+	title: string;
+	p1: string;
+	p2: string;
+	subtitle: string;
+	btn: string;
+};
+
+const About = ({ title, p1, btn, p2, subtitle }: Props) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -109,28 +117,17 @@ const About = () => {
 				<div className="flex flex-col gap-4 max-sm:col-span-2">
 					<div className="flex justify-between font-martian text-white text-sm max-xl:text-[12px]">
 						<p className="uppercase">twenty Øne pilØts</p>
-						<p>[2009 - настоящее время]</p>
+						<p>{subtitle}</p>
 					</div>
 					<h2 className="font-extrabold text-5xl text-mainRed uppercase font-martian max-sm:text-4xl">
-						о группе
+						{title}
 					</h2>
 					<div className="flex flex-col gap-4 font-martian font-light leading-[160%] text-[#C5C5C5] mb-auto max-xl:text-sm">
-						<p>
-							Twenty One Pilots — американская музыкальная группа,
-							образованная в 2009 году в Коламбусе, штат Огайо.
-							Состав группы - барабанщик Джош Дан и вокалист
-							Тайлер Джозеф, который также является автором песен.
-						</p>
-						<p>
-							Их музыка сочетает элементы рока, хип-хопа,
-							инди-попа, регги и альтернативы. Группа известна
-							своими эмоциональными текстами, которые затрагивают
-							темы психического здоровья, борьбы с депрессией и
-							внутренними переживаниями.
-						</p>
+						<p>{p1}</p>
+						<p>{p2}</p>
 					</div>
 					<Link href="/story">
-						<ArrowedBtn>Читать подробнее</ArrowedBtn>
+						<ArrowedBtn>{btn}</ArrowedBtn>
 					</Link>
 				</div>
 			</div>

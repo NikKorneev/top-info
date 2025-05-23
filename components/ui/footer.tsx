@@ -1,20 +1,22 @@
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 
 const Footer = () => {
+	const t = useTranslations("Footer");
 	return (
 		<footer className="bg-[#0F0F0F]">
 			<div className="container pt-20 mx-auto text-[#FFFFFF] font-martian max-md:px-4 ">
 				<nav className="flex gap-[100px] max-lg:flex-wrap max-lg:gap-10 max-sm:flex-wrap-reverse">
 					<ul className="flex flex-col gap-[14px] text-3xl max-lg:text-xl">
 						<div className="flex flex-col gap-[7px]">
-							<li>Участники группы</li>
+							<li>{t("duos.title")}</li>
 							<Link
 								href="/duo/tyler-joseph"
 								className="transition-colors hover:*:text-mainYellow"
 							>
 								<span className="text-[16px] font-light text-white/80 max-md:text-sm">
-									Тайлер Джозеф
+									{t("duos.joseph")}
 								</span>
 							</Link>
 							<Link
@@ -22,7 +24,7 @@ const Footer = () => {
 								className="transition-colors hover:*:text-mainYellow"
 							>
 								<span className="text-[16px] font-light text-white/80 max-md:text-sm">
-									Джош Дан
+									{t("duos.josh")}
 								</span>
 							</Link>
 						</div>
@@ -31,7 +33,7 @@ const Footer = () => {
 								href="/albums"
 								className="transition-colors hover:text-mainYellow"
 							>
-								Альбомы
+								{t("albums")}
 							</Link>
 						</li>
 						<li>
@@ -39,7 +41,7 @@ const Footer = () => {
 								href="/story"
 								className="transition-colors hover:text-mainYellow"
 							>
-								История группы
+								{t("story")}
 							</Link>
 						</li>
 						<li>FAQ</li>
@@ -47,7 +49,7 @@ const Footer = () => {
 					<ul>
 						<div className="flex flex-col gap-[7px] text-[16px]">
 							<li className="text-3xl max-lg:text-xl">
-								Контакты
+								{t("contacts")}
 							</li>
 							<span className="font-light text-white/80 max-md:text-sm">
 								Email: nickkorneevspace@gmail.com
@@ -61,7 +63,7 @@ const Footer = () => {
 						<li className="text-mainRed uppercase font-extrabold text-6xl">
 							TØP
 						</li>
-						<li>информационный сайт</li>
+						<li>{t("info")}</li>
 						<li className="mt-auto text-xs text-gray-100">
 							© Nikita Korneev 2025, all rights reserved.
 						</li>
@@ -76,21 +78,7 @@ const Footer = () => {
 						<span>Terms and conditions</span>
 					</p>
 					<p className="text-sm text-[#73757B] w-full md:w-2/3 mt-7 mb-10">
-						Отказ от ответственности и уведомление о добросовестном
-						использовании (Fair Use). Этот сайт является
-						некоммерческим фан-проектом, посвящённым творчеству
-						Twenty One Pilots. Все товарные знаки, изображения,
-						тексты песен и другие материалы принадлежат их законным
-						владельцам. Сайт создан исключительно в информационных и
-						образовательных целях и не связан с Twenty One Pilots,
-						их менеджментом или лейблом. Использование материалов на
-						этом сайте соответствует принципу добросовестного
-						использования (Fair Use) (17 U.S.C. § 107) для целей
-						комментариев, критики и образования. Если вы являетесь
-						правообладателем и считаете, что какой-либо контент
-						должен быть удалён, пожалуйста, свяжитесь с нами. Данный
-						сайт может содержать ссылки на ресурсы, доступ к которым
-						может быть ограничен на территории Российской Федерации
+						{t("rights")}
 					</p>
 				</div>
 			</div>
@@ -98,13 +86,11 @@ const Footer = () => {
 			<div className="w-full bg-[url('/img/footer.png')] py-5">
 				<div className="container mx-auto font-martian text-white uppercase flex flex-col md:flex-row md:justify-between items-center">
 					<p className="w-full md:w-2/3 lg:w-1/4 text-[12px] text-center md:text-sm md:text-left">
-						Этот сайт носит исключительно информационный характер и
-						не является официальным ресурсом группы Twenty One
-						Pilots
+						{t("caption")}
 					</p>
 					<div className="md:mt-0 mt-3">
 						<p className="w-full text-[12px] text-center md:text-sm md:text-right">
-							официальные ресурсы
+							{t("official")}
 						</p>
 						<div className="flex gap-5 justify-center mt-2 md:justify-end">
 							<a

@@ -1,7 +1,10 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-const MainTitle = () => {
+type Props = {
+	title: string;
+};
+const MainTitle = ({ title }: Props) => {
 	const ref = useRef(null);
 	const { scrollY } = useScroll();
 
@@ -23,9 +26,7 @@ const MainTitle = () => {
 				}}
 				className="lg:pr-[85px]"
 			>
-				<p className="text-white text-[12px] sm:text-[14px]">
-					[информационный сайт]
-				</p>
+				<p className="text-white text-[12px] sm:text-[14px]">{title}</p>
 			</motion.div>
 
 			<motion.h1

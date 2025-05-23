@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "@/i18n/navigation";
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
-const Btn = () => {
+const Btn = ({ s }: { s: string }) => {
 	const ref = useRef(null);
 	const router = useRouter();
 	const { scrollY } = useScroll();
@@ -21,7 +21,7 @@ const Btn = () => {
 				className="bg-mainYellow gap-2 py-[25px] px-[42px] "
 			>
 				<p className="text-black font-martian text-[16px] uppercase">
-					Подробнее
+					{s}
 				</p>
 				<div>
 					<svg

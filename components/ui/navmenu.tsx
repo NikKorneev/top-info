@@ -1,6 +1,7 @@
 "use client";
+import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 type Props = {
 	className?: string;
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const Navmenu = ({ className, setMenuIsOpened }: Props) => {
+	const t = useTranslations("Header");
 	return (
 		<ul
 			className={clsx(
@@ -21,7 +23,7 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					href="/"
 					onClick={() => setMenuIsOpened && setMenuIsOpened(false)}
 				>
-					Главная
+					{t("main")}
 				</Link>
 			</li>
 			<li className="menu-item">
@@ -30,7 +32,7 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					href="/story"
 					onClick={() => setMenuIsOpened && setMenuIsOpened(false)}
 				>
-					История
+					{t("story")}
 				</Link>
 			</li>
 
@@ -40,7 +42,7 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					href="/albums"
 					onClick={() => setMenuIsOpened && setMenuIsOpened(false)}
 				>
-					Альбомы
+					{t("albums")}
 				</Link>
 			</li>
 			<li className="menu-item">
@@ -49,7 +51,7 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					href="/duo/tyler-joseph"
 					onClick={() => setMenuIsOpened && setMenuIsOpened(false)}
 				>
-					Био
+					{t("bio")}
 				</Link>
 			</li>
 		</ul>

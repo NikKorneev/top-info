@@ -1,8 +1,10 @@
 "use client";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const FirstMembersCards = () => {
+	const t = useTranslations("StoryPage.FirstMembers.info");
 	return (
 		<div className="flex gap-5 min-h-[340px] mt-2 max-md:text-[14px] text-center max-md:gap-2 max-sm:flex-col max-sm:gap-5">
 			<motion.div
@@ -21,9 +23,9 @@ const FirstMembersCards = () => {
 					alt="Chris Salih in 2009"
 				/>
 				<p className="text-grayMain mt-1 text-[14px]  max-md:text-[12px]">
-					Барабанщин
+					{t("chrisInstruments")}
 				</p>
-				<p className="text-mainYellow ">Крис Салих</p>
+				<p className="text-mainYellow ">{t("chris")}</p>
 			</motion.div>
 			<motion.div
 				whileInView={{ opacity: 1, y: 0 }}
@@ -41,9 +43,9 @@ const FirstMembersCards = () => {
 					alt="Tyler joseph in 2009"
 				/>
 				<p className="text-grayMain mt-1 text-[14px] max-md:text-[12px]">
-					Вокалист
+					{t("tylerInstruments")}
 				</p>
-				<p className="text-mainYellow ">Тайлер Джозеф</p>
+				<p className="text-mainYellow ">{t("tyler")}</p>
 			</motion.div>
 			<motion.div
 				whileInView={{ opacity: 1, y: 0 }}
@@ -61,9 +63,9 @@ const FirstMembersCards = () => {
 					alt="Nick Thomas in 2009"
 				/>
 				<p className="text-grayMain mt-1 text-[14px] max-md:text-[12px]">
-					Гитара
+					{t("nickInstruments")}
 				</p>
-				<p className="text-mainYellow">Ник Томас</p>
+				<p className="text-mainYellow">{t("nick")}</p>
 			</motion.div>
 		</div>
 	);

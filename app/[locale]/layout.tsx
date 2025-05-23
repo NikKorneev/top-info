@@ -1,7 +1,9 @@
 import "easymde/dist/easymde.min.css";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { Inter, Martian_Mono, Oswald } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const martian = Martian_Mono({
 	variable: "--font-martian",
@@ -23,17 +25,23 @@ export const metadata: Metadata = {
 	description: "!To do",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
+	params,
 }: Readonly<{
 	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }>) {
+	const locale = (await params).locale;
+	const messages = await getMessages();
 	return (
-		<html lang="ru">
+		<html lang={locale}>
 			<body
 				className={`${martian.variable} ${inter.variable} ${oswald.variable} antialiased bg-back`}
 			>
-				{children}
+				<NextIntlClientProvider messages={messages}>
+					{children}
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

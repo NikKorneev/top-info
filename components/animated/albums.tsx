@@ -1,10 +1,10 @@
 "use client";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { AlbumType } from "@/types/album";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 type Props = {
@@ -12,10 +12,18 @@ type Props = {
 	titleOnce?: boolean;
 	albumPage?: boolean;
 	albums: AlbumType[];
+	subtitle?: string;
 };
 
-const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
+const Albums = ({
+	title,
+	titleOnce = true,
+	albumPage,
+	albums,
+	subtitle,
+}: Props) => {
 	const [selected, setSelected] = useState<null | AlbumType>(null);
+
 	return (
 		<section>
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
@@ -37,8 +45,7 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 							viewport={{ once: true, amount: 0.9 }}
 							className="text-[18px] font-light text-[#D9D9D9] pt-2"
 						>
-							Кликните на обложку, чтобы узнать подробности
-							альбома
+							{subtitle}
 						</motion.p>
 					</div>
 					<div className="grid grid-cols-[1fr_1fr_1fr] lg:gap-5 sm:gap-3 max-sm:grid-cols-1 mt-10 overflow-hidden">

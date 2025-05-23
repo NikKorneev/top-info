@@ -27,6 +27,7 @@ export default async function RootLayout({
 			root
 		>
 			<NextTopLoader color="#cf2f2f" />
+
 			<div className="relative">
 				<Header />
 			</div>

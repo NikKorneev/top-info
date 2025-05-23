@@ -1,46 +1,34 @@
 "use client";
 import ModalVideo from "@/components/animated/modalVideo";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
+import { Link } from "@/i18n/navigation";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { LuPlay } from "react-icons/lu";
 
 const SecondAlbum = () => {
 	const [isOpened, setOpened] = useState(false);
+	const t = useTranslations("StoryPage.SecondAlbum");
 	return (
 		<section className="story-container">
 			<div className="flex justify-between">
-				<span className="story-subtitle">[2013 год]</span>
-				<h3 className="title">ВТОРОЙ АЛЬБОМ</h3>
+				<span className="story-subtitle">{t("subt")}</span>
+				<h3 className="title">{t("t")}</h3>
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 max-md:grid-cols-2 max-sm:grid-cols-1 auto-rows-min">
 				<div className="w-full">
-					<span className="text-mainYellow">июнь 2011 года</span>
-					<p className="text-white mt-1.5">
-						выход альбома “Regional At best”
-					</p>
+					<span className="text-mainYellow">{t("date")}</span>
+					<p className="text-white mt-1.5">{t("p1")}</p>
 				</div>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%]">
-					<p>
-						В 2011 году вышел второй, полностью независимый альбом —
-						“Regional at Best”.
-					</p>
-					<p>
-						И хотя его позже снимут с распространения, именно он
-						заложил фундамент звучания группы.
-					</p>
+					<p>{t("p2")}</p>
+					<p>{t("p3")}</p>
 				</div>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%]">
-					<p>
-						Именно тогда родилась песня “Car Radio”, которую фанаты
-						называют гимном одиночества и внутренней борьбы.
-					</p>
-					<p>
-						На горизонте уже маячил контракт с лейблом. Но пока это
-						была только история двух друзей и маленькой сцены.
-					</p>
+					<p>{t("p4")}</p>
+					<p>{t("p5")}</p>
 				</div>
 				<div className="flex flex-col gap-4 max-sm:row-start-3 max-sm:text-center max-sm:items-center">
 					<Image
@@ -50,12 +38,10 @@ const SecondAlbum = () => {
 						loading="lazy"
 						alt="regional at best cover"
 					/>
-					<span className="text-grayMain">
-						Обложка альбома “Regional At best”
-					</span>
+					<span className="text-grayMain">{t("cover")}</span>
 					<div className="mt-5 max-sm:mb-5">
 						<Link href="/albums/regional-at-best">
-							<ArrowedBtn>Посмотреть альбом</ArrowedBtn>
+							<ArrowedBtn>{t("btn")}</ArrowedBtn>
 						</Link>
 					</div>
 				</div>
@@ -83,7 +69,7 @@ const SecondAlbum = () => {
 					<ModalVideo
 						layoutId="carRadio"
 						setOpened={setOpened}
-						url="https://www.youtube.com/embed/92XVwY54h5k?si=HM6BfMTltSQzEMcE"
+						url={t("videoUrl")}
 					/>
 				)}
 			</AnimatePresence>

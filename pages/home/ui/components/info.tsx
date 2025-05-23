@@ -1,6 +1,28 @@
 import InfoCard from "./InfoCard";
 
-const Info = () => {
+type Props = {
+	card1: {
+		title: string;
+	};
+	card2: {
+		title: string;
+		descr: string;
+	};
+	card3: {
+		title: string;
+		descr: string;
+	};
+	card4: {
+		title: string;
+		descr: string;
+	};
+	card5: {
+		title: string;
+		descr: string;
+	};
+};
+
+const Info = ({ card1, card2, card3, card4, card5 }: Props) => {
 	return (
 		<section
 			id="info"
@@ -8,7 +30,7 @@ const Info = () => {
 		>
 			<InfoCard
 				animate={false}
-				title={"группа в цифрах"}
+				title={card1.title}
 				color={"bg"}
 				icon="/icons/logo-white.png"
 				isHeader
@@ -16,33 +38,27 @@ const Info = () => {
 			/>
 			<InfoCard
 				animate={false}
-				subtitle={"Лет в\nмузыке"}
-				description={"Группа была образована\nв 2009 году"}
+				subtitle={card2.title}
+				description={card2.descr}
 				title={"15+"}
 				color={"bg-mainYellow"}
 			/>
 			<InfoCard
 				animate={false}
-				subtitle={"студийных\nальбомов"}
-				description={
-					"группа изменяет фирменные цвета\nна каждом альбоме"
-				}
+				subtitle={card3.title}
+				description={card3.descr}
 				title={"7"}
 			/>
 
 			<InfoCard
-				subtitle={"прослушиваний\nна одном треке"}
-				description={
-					"“stressed out” является самым\nпрослушиваемым треком группы "
-				}
+				subtitle={card4.title}
+				description={card4.descr}
 				title={"3+"}
 				add={"млрд"}
 			/>
 			<InfoCard
-				subtitle={"слушателей\nна spotify\nкаждый месяц"}
-				description={
-					"группа входит в топ 100\n популярных артистов на spotify каждый месяц"
-				}
+				subtitle={card5.title}
+				description={card5.descr}
 				title={"28+"}
 				add={"млн"}
 			/>

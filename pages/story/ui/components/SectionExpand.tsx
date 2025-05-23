@@ -1,10 +1,11 @@
 "use client";
 
 import ArrowedBtn from "@/components/ui/arrowedBtn";
+import { Link } from "@/i18n/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +17,7 @@ export default function SectionExpand() {
 	const text = useRef(null);
 	const logoText = useRef(null);
 	const insideText = useRef(null);
+	const t = useTranslations("StoryPage");
 
 	useGSAP(() => {
 		const ctx = gsap.context(() => {
@@ -110,7 +112,7 @@ export default function SectionExpand() {
 			>
 				<Link href={"/albums"}>
 					<ArrowedBtn className="w-[200px] bg-black">
-						Все альбомы
+						{t("Expand")}
 					</ArrowedBtn>
 				</Link>
 			</div>

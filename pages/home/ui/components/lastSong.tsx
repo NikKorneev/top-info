@@ -4,14 +4,18 @@ import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
 
-const LastSong = () => {
+type Props = {
+	title: string;
+};
+
+const LastSong = ({ title }: Props) => {
 	const [isOpened, setOpened] = useState(false);
 	return (
 		<section className="overflow-hidden relative">
 			<div className="container mx-auto py-20 font-martian max-sm:px-4">
 				<div className="flex w-full items-center justify-between">
 					<h5 className="font-extrabold text-5xl uppercase text-mainRed max-sm:text-4xl">
-						Последняя работа
+						{title}
 					</h5>
 					<p className="font-light text-3xl text-white max-sm:text-xl">
 						(2024)

@@ -1,18 +1,20 @@
 "use client";
 import ModalVideo from "@/components/animated/modalVideo";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
+import { Link } from "@/i18n/navigation";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { LuPlay } from "react-icons/lu";
 
 const SectionAdmire = () => {
 	const [isOpened, setOpened] = useState(false);
+	const t = useTranslations("StoryPage.Admire");
 	return (
 		<section className="story-container">
 			<div className="flex justify-between">
-				<h3 className="title">МИРОВОЕ ПРИЗНАНИЕ</h3>
+				<h3 className="title">{t("t")}</h3>
 				<p className="story-subtitle">[2015-2017]</p>
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 relative max-md:grid-cols-2 max-sm:grid-cols-1">
@@ -26,40 +28,20 @@ const SectionAdmire = () => {
 					/>
 				</div>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] ">
-					<p>
-						В мае 2015 года выходит Blurryface — альбом-концепт, в
-						котором появляется персонаж, олицетворяющий внутренние
-						страхи, тревоги и неуверенность.
-					</p>
-					<p>
-						Он становится настоящим антагонистом и одновременно
-						голосом альбома. Тайлер и Джош используют музыку как
-						терапию — а образы, сценические решения и лирика
-						начинают работать как единая художественная вселенная.
-					</p>
+					<p>{t("p1")}</p>
+					<p>{t("p2")}</p>
 				</div>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] ">
-					<p>
-						Но особенно — «Stressed Out», ставшая глобальным хитом и
-						открывшая группу миллионам новых слушателей. С её
-						ироничным, почти детским припевом и тяжёлым поддоном
-						тревоги — песня идеально отражала дух времени.
-					</p>
-					<p>
-						Клип на Stressed Out стал вирусным, а альбом занял 1-е
-						место в Billboard 200, что превратило дуэт в
-						международную сенсацию.
-					</p>
+					<p>{t("p3")}</p>
+					<p>{t("p4")}</p>
 				</div>
 				<div className="flex flex-col gap-10">
 					<div>
-						<span className="text-mainYellow">май 2015 года</span>
-						<p className="text-white mt-1.5">
-							выход альбома “Blurryface”
-						</p>
+						<span className="text-mainYellow">{t("date")}</span>
+						<p className="text-white mt-1.5">{t("p5")}</p>
 					</div>
 					<Link href="/albums/blurryface" scroll={true}>
-						<ArrowedBtn>Страница альбома</ArrowedBtn>
+						<ArrowedBtn>{t("btn")}</ArrowedBtn>
 					</Link>
 				</div>
 			</div>
@@ -89,7 +71,7 @@ const SectionAdmire = () => {
 					<ModalVideo
 						layoutId="stressedOut"
 						setOpened={setOpened}
-						url="https://www.youtube.com/embed/pXRviuL6vMY?si=cjGiOtODhbVH4icr"
+						url={t("url")}
 					/>
 				)}
 			</AnimatePresence>
