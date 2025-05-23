@@ -1,7 +1,9 @@
 "use client";
 import ModalVideo from "@/components/animated/modalVideo";
+import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { LuPlay } from "react-icons/lu";
 
@@ -56,6 +58,9 @@ const SectionAdmire = () => {
 							выход альбома “Blurryface”
 						</p>
 					</div>
+					<Link href="/albums/blurryface" scroll={true}>
+						<ArrowedBtn>Страница альбома</ArrowedBtn>
+					</Link>
 				</div>
 			</div>
 			<div className="flex justify-center">

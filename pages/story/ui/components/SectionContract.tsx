@@ -1,5 +1,6 @@
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import Image from "next/image";
+import Link from "next/link";
 
 const SectionContract = () => {
 	return (
@@ -27,9 +28,11 @@ const SectionContract = () => {
 						</p>
 					</div>
 					<div className="mt-auto max-sm:mt-0 max-sm:mb-2">
-						<ArrowedBtn className="overflow-visible bg-back">
-							Посмотреть альбом
-						</ArrowedBtn>
+						<Link href="/albums/vessel">
+							<ArrowedBtn className="overflow-visible bg-back">
+								Посмотреть альбом
+							</ArrowedBtn>
+						</Link>
 					</div>
 				</div>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%] ">

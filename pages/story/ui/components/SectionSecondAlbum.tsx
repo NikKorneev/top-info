@@ -3,6 +3,7 @@ import ModalVideo from "@/components/animated/modalVideo";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { LuPlay } from "react-icons/lu";
 
@@ -53,7 +54,9 @@ const SecondAlbum = () => {
 						Обложка альбома “Regional At best”
 					</span>
 					<div className="mt-5 max-sm:mb-5">
-						<ArrowedBtn>Посмотреть альбом</ArrowedBtn>
+						<Link href="/albums/regional-at-best">
+							<ArrowedBtn>Посмотреть альбом</ArrowedBtn>
+						</Link>
 					</div>
 				</div>
 				<motion.div

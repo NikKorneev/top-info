@@ -2,6 +2,7 @@
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import TextLined from "./textLined";
 
 const FirstAlbum = () => {
@@ -39,7 +40,9 @@ const FirstAlbum = () => {
 					className="ml-auto max-lg:ml-0"
 				>
 					<p></p>
-					<ArrowedBtn>Страница альбома</ArrowedBtn>
+					<Link href="/albums/twenty-one-pilots" scroll={true}>
+						<ArrowedBtn>Страница альбома</ArrowedBtn>
+					</Link>
 				</motion.div>
 			</div>
 		</section>

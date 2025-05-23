@@ -9,12 +9,14 @@ type Props = {
 };
 
 const AlbumCard = ({ links, releaseDate, albumCover }: Props) => {
-	const linkList = links
-		.map((obj) => ({
-			[obj?.name]: obj?.link,
-		}))
-		.reduce((a, b) => Object.assign(a, b));
-
+	const linkList =
+		links?.length > 0
+			? links
+					?.map((obj) => ({
+						[obj?.name]: obj?.link,
+					}))
+					.reduce((a, b) => Object.assign(a, b))
+			: undefined;
 	return (
 		<div className="font-martian shrink-0 flex gap-5 flex-col  max-w-[400px]">
 			<div className="relative">
@@ -41,13 +43,15 @@ const AlbumCard = ({ links, releaseDate, albumCover }: Props) => {
 			</div>
 			<div className="flex flex-col">
 				<div className="mt-auto flex flex-col gap-2">
-					<Socials
-						apple={linkList.apple}
-						spotify={linkList.spotify}
-						soundcloud={linkList.soundcloud}
-						yandex={linkList.yandex}
-						youtube={linkList.youtube}
-					/>
+					{linkList && (
+						<Socials
+							apple={linkList.apple}
+							spotify={linkList.spotify}
+							soundcloud={linkList.soundcloud}
+							yandex={linkList.yandex}
+							youtube={linkList.youtube}
+						/>
+					)}
 				</div>
 			</div>
 		</div>

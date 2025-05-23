@@ -1,5 +1,6 @@
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import Image from "next/image";
+import Link from "next/link";
 import TextLined from "./textLined";
 
 const DuoCreation = () => {
@@ -12,7 +13,9 @@ const DuoCreation = () => {
 			<div className="grid grid-cols-3 gap-20 py-10 max-lg:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<div>
 					<p className="text-gray-50 text-2xl mb-5">Джош Дан</p>
-					<ArrowedBtn>Подробнее</ArrowedBtn>
+					<Link href="/duo/josh-dun" scroll={true}>
+						<ArrowedBtn>Подробнее</ArrowedBtn>
+					</Link>
 					<div className="overflow-hidden mt-5 relative lg:hidden">
 						<Image
 							src="/img/story-josh.png"
