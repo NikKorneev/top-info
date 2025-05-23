@@ -4,7 +4,6 @@ import { searchGlobal } from "@/lib/actions";
 import { setLink } from "@/lib/utils";
 import { SearchedType } from "@/types/searched";
 import { AnimatePresence, motion } from "motion/react";
-import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { IoIosSearch, IoMdClose } from "react-icons/io";
 import { SearchForm } from "./searchForm";
@@ -14,15 +13,14 @@ const Search = () => {
 	const [query, setQuery] = useState("");
 	const [debounced, setDebounced] = useState("");
 	const [items, setItems] = useState<SearchedType[]>([]);
-	const locale = useLocale();
 
 	const handleSearch = async (val: string) => {
-		const res = await searchGlobal(val, locale);
+		const res = await searchGlobal(val);
 		setItems(res);
 	};
 
 	useEffect(() => {
-		if (query.length > 100 || query.length < 3) return;
+		if (query.length > 100 || query.length < 2) return;
 		const delay = setTimeout(() => {
 			setDebounced(query);
 		}, 200);
@@ -36,7 +34,7 @@ const Search = () => {
 	return (
 		<div className="relative">
 			<div
-				className="cursor-pointer hover:*:animate-bounce"
+				className="cursor-pointer hover:*:scale-110 transition-all"
 				onClick={() => {
 					setOpened(true);
 				}}
@@ -83,7 +81,9 @@ const Search = () => {
 									<p>
 										{item._type == "duoMember"
 											? "bio"
-											: item._type}
+											: item._type == "interestingFact"
+												? "fact"
+												: item._type}
 									</p>
 								</Link>
 							))}

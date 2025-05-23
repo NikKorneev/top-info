@@ -44,7 +44,7 @@ const Accordion = async ({
 				<div className="max-lg:hidden">
 					<AccordionContent
 						id={content[0]?.id}
-						description={content[0]?.description}
+						description={content[0]?.description || ""}
 						image={content[0]?.image}
 						title={content[0]?.title}
 						key={content[0]?.id + "gridContent"}
@@ -55,8 +55,8 @@ const Accordion = async ({
 						items={items}
 						id={id}
 						paramName={type === "album" ? "slug" : "id"}
-						description={content[0].description}
-						image={content[0].image}
+						description={content[0]?.description || ""}
+						image={content[0]?.image || ""}
 					/>
 				</div>
 			</div>

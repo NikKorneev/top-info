@@ -1,215 +1,217 @@
 {
 	"Header": {
-		"main": "Главная",
-		"albums": "Альбомы",
-		"bio": "Био",
-		"story": "История"
+		"main": "Home",
+		"albums": "Albums",
+		"bio": "Bio",
+		"story": "Story"
 	},
 	"Footer": {
 		"duos": {
-			"title": "Участники группы",
-			"joseph": "Тайлер Джозеф",
-			"josh": "Джош Дан"
+			"title": "Band Members",
+			"joseph": "Tyler Joseph",
+			"josh": "Josh Dun"
 		},
-		"albums": "Альбомы",
-		"story": "История группы",
-		"contacts": "Контакты",
-		"info": "информационный сайт",
-		"rights": "Отказ от ответственности и уведомление о добросовестном использовании (Fair Use). Этот сайт является некоммерческим фан-проектом, посвящённым творчеству Twenty One Pilots. Все товарные знаки, изображения, тексты песен и другие материалы принадлежат их законным владельцам. Сайт создан исключительно в информационных и образовательных целях и не связан с Twenty One Pilots, их менеджментом или лейблом. Использование материалов на этом сайте соответствует принципу добросовестного использования (Fair Use) (17 U.S.C. § 107) для целей комментариев, критики и образования. Если вы являетесь правообладателем и считаете, что какой-либо контент должен быть удалён, пожалуйста, свяжитесь с нами. Данный сайт может содержать ссылки на ресурсы, доступ к которым может быть ограничен на территории Российской Федерации",
-		"caption": "Этот сайт носит исключительно информационный характер и не является официальным ресурсом группы Twenty One Pilots",
-		"official": "Официальные ресурсы"
+		"albums": "Albums",
+		"story": "Band Story",
+		"contacts": "Contacts",
+		"info": "information website",
+		"rights": "Disclaimer and Fair Use Notice. This site is a non-commercial fan project dedicated to the work of Twenty One Pilots. All trademarks, images, song lyrics and other materials belong to their rightful owners. The site is created solely for informational and educational purposes and is not affiliated with Twenty One Pilots, their management or label. The use of materials on this site complies with the principle of Fair Use (17 U.S.C. § 107) for purposes of commentary, criticism and education. If you are a copyright holder and believe that any content should be removed, please contact us. This site may contain links to resources whose access may be restricted in the territory of the Russian Federation",
+		"caption": "This site is for informational purposes only and is not an official resource of Twenty One Pilots",
+		"official": "Official Resources"
 	},
 	"HomePage": {
 		"MainBanner": {
-			"infoSubtitle": "[информационный сайт]",
-			"btn": "подробнее"
+			"infoSubtitle": "[information website]",
+			"btn": "learn more"
 		},
 		"InfoGrid": {
-			"firstCard": "группа в цифрах",
-			"secCardTitle": "лет в\nмузыке",
-			"secCardDesc": "группа была образована\nв 2009 году",
-			"thirdCardTitle": "студийных\nальбомов",
-			"thirdCardDesc": "группа изменяет фирменные цвета\nна каждом альбоме",
-			"fourthCardTitle": "прослушиваний\nна одном треке",
-			"fourthCardDesc": "“Stressed Out” является самым\nпрослушиваемым треком группы",
-			"fifthCardTitle": "слушателей\nна spotify\nкаждый месяц",
-			"fifthCardDesc": "группа входит в топ 100\n популярных артистов на spotify каждый месяц"
+			"firstCard": "band in numbers",
+			"secCardTitle": "years in\nmusic",
+			"secCardDesc": "the band was formed\nin 2009",
+			"thirdCardTitle": "studio\nalbums",
+			"thirdCardDesc": "the band changes signature colors\nwith each album",
+			"fourthCardTitle": "plays\non one track",
+			"fourthCardDesc": "\"Stressed Out\" is the most\nplayed track by the band",
+			"fifthCardTitle": "listeners\non spotify\nevery month",
+			"fifthCardDesc": "the band is in the top 100\npopular artists on spotify every month"
 		},
 		"About": {
-			"title": "о группе",
-			"subtitle": "[2009 - настоящее время]",
-			"p1": "Twenty One Pilots — американская музыкальная группа, образованная в 2009 году в Коламбусе, штат Огайо. Состав группы - барабанщик Джош Дан и вокалист Тайлер Джозеф, который также является автором песен.",
-			"p2": "Их музыка сочетает элементы рока, хип-хопа, инди-попа, регги и альтернативы. Группа известна своими эмоциональными текстами, которые затрагивают темы психического здоровья, борьбы с депрессией и внутренними переживаниями.",
-			"btn": "читать подробнее"
+			"title": "about the band",
+			"subtitle": "[2009 - present]",
+			"p1": "Twenty One Pilots is an American musical band formed in 2009 in Columbus, Ohio. The band consists of drummer Josh Dun and vocalist Tyler Joseph, who is also the songwriter.",
+			"p2": "Their music combines elements of rock, hip-hop, indie pop, reggae and alternative. The band is known for their emotional lyrics that address themes of mental health, fighting depression and inner struggles.",
+			"btn": "read more"
 		},
 		"Quote": {
-			"quote1": "Начало цели лежит",
-			"quote2": "в создании чего-то,",
-			"quote3": "понятного только вам.",
-			"name": "Тайлер Р. Джозеф"
+			"quote1": "The beginning of purpose lies",
+			"quote2": "in creating something",
+			"quote3": "understandable only to you.",
+			"name": "Tyler R. Joseph"
 		},
 		"Duos": {
 			"Tyler": {
-				"instruments": "Вокал, Клавишные, гитара",
-				"name": "Тайлер Джозеф",
-				"born": "Родился 1 декабря 1988",
-				"descr": "Идеолог Twenty One Pilots. Его тексты переплетены с глубокими смыслами, а музыка балансирует между разными жанрами, создавая уникальный стиль группы. Узнайте больше о его творческом пути и влиянии на музыку на нашем сайте."
+				"instruments": "Vocals, Keyboards, Guitar",
+				"name": "Tyler Joseph",
+				"born": "Born December 1, 1988",
+				"descr": "The ideologist of Twenty One Pilots. His lyrics are intertwined with deep meanings, and his music balances between different genres, creating the unique style of the band. Learn more about his creative path and influence on music on our website."
 			},
 			"Josh": {
-				"instruments": "барабаны",
-				"name": "Джош Дан",
-				"born": "Родился 18 июня 1988",
-				"descr": "Ударник и энергетический двигатель Twenty One Pilots. Его мощная игра на барабанах и сценическая харизма создают неповторимую атмосферу выступлений группы. Узнайте больше о его роли и вдохновении здесь."
+				"instruments": "drums",
+				"name": "Josh Dun",
+				"born": "Born June 18, 1988",
+				"descr": "Drummer and energetic engine of Twenty One Pilots. His powerful drumming and stage charisma create the unique atmosphere of the band's performances. Learn more about his role and inspiration here."
 			},
-			"btn": "Читать подробнее"
+			"btn": "Read more"
 		},
 		"Albums": {
-			"title": "Дискография",
-			"subtitle": "Кликните на обложку, чтобы узнать подробности альбома"
+			"title": "Discography",
+			"subtitle": "Click on the cover to learn album details"
 		},
 		"LastWork": {
-			"title": "Последняя работа",
+			"title": "Latest Work",
 			"url": "https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
 		}
 	},
 	"StoryPage": {
 		"Banner": {
-			"title": "ИСТОРИЯ ГРУППЫ",
-			"subtext": "Дуэт из Огайо, ставший голосом целого поколения. Сочетая инди-поп, хип-хоп, электронику и рок, они разрушили жанровые границы и построили уникальный музыкальный мир.",
-			"scrollDown": "Листайте вниз"
+			"title": "BAND STORY",
+			"subtext": "A duo from Ohio that became the voice of an entire generation. Combining indie pop, hip-hop, electronic and rock, they broke genre boundaries and built a unique musical world.",
+			"scrollDown": "Scroll down"
 		},
 		"FirstMembers": {
-			"title": "КОНЦЕРТЫ В ПОДВАЛАХ",
+			"title": "BASEMENT CONCERTS",
 			"subtitle": "[2009-2011]",
-			"members": "ПЕРВИЧНЫЙ СОСТАВ",
+			"members": "ORIGINAL LINEUP",
 			"info": {
-				"chris": "Крис Салих",
-				"chrisInstruments": "Барабанщик",
-				"tyler": "Тайлер Джозеф",
-				"tylerInstruments": "Вокалист",
-				"nick": "Ник Томас",
-				"nickInstruments": "Гитара"
+				"chris": "Chris Salih",
+				"chrisInstruments": "Drummer",
+				"tyler": "Tyler Joseph",
+				"tylerInstruments": "Vocalist",
+				"nick": "Nick Thomas",
+				"nickInstruments": "Guitar"
 			},
-			"description1": "Всё началось в городе Колумбус, штат Огайо в 2009",
-			"description2": "Тайлер Джозеф, вокалист и мультиинструменталист, собрал первую версию группы вместе с друзьями.",
-			"description3": "Тогда никто из них не знал, что эта группа переживёт состав и станет мировым явлением."
+			"description1": "It all started in Columbus, Ohio in 2009",
+			"description2": "Tyler Joseph, vocalist and multi-instrumentalist, assembled the first version of the band with friends.",
+			"description3": "Back then, none of them knew that this band would outlive the lineup and become a global phenomenon."
 		},
 		"FirstAlbum": {
-			"t": "ПЕРВЫЙ АЛЬБОМ",
-			"subt": "[2009 год]",
-			"p1": "Дебютный альбом под названием “Twenty One Pilots” был выпущен 29 декабря 2009. Ни лейблов, ни продюсеров — только вера в идею.",
-			"p2": "Альбом был записан в домашних условиях и распространялся буквально из рук в руки после выступлений. А мать Джозефа стояла у здания Университета штата Огайо и раздавала билеты на их концерты.",
-			"btn": "Страница альбома"
+			"t": "FIRST ALBUM",
+			"subt": "[2009]",
+			"p1": "The debut album titled \"Twenty One Pilots\" was released on December 29, 2009. No labels, no producers — just faith in the idea.",
+			"p2": "The album was recorded at home and distributed literally hand to hand after performances. And Joseph's mother stood at Ohio State University building and handed out tickets to their concerts.",
+			"btn": "Album page"
 		},
 		"Name": {
-			"t": "НАЗВАНИЕ ГРУППЫ",
-			"p1": "Название “Twenty One Pilots” придумал фронтмен группы Тайлер Джозеф, вдохновившись пьесой Артура Миллера «Все мои сыновья».  ",
-			"p2": "В центре сюжета — бизнесмен, который продал бракованные детали для военной авиации во время Второй мировой войны, что привело к гибели 21 пилота.",
-			"p3": "Эта трагедия глубоко задела Тайлера: в ней он увидел борьбу между моралью и личной выгодой — темой, которая часто звучит и в творчестве группы. ",
-			"p4": "Название Twenty One Pilots стало для него напоминанием о последствиях принятых решений и ответственности за них.",
-			"p5": "Группа с самого начала несла в себе этот философский, почти этический посыл — и именно этим отличается от множества других коллективов: они не просто поют, они задают вопросы."
+			"t": "BAND NAME",
+			"p1": "The name \"Twenty One Pilots\" was coined by band frontman Tyler Joseph, inspired by Arthur Miller's play \"All My Sons\".",
+			"p2": "The plot centers on a businessman who sold defective parts for military aviation during World War II, leading to the death of 21 pilots.",
+			"p3": "This tragedy deeply affected Tyler: he saw in it the struggle between morality and personal gain — a theme that often sounds in the band's work.",
+			"p4": "The name Twenty One Pilots became for him a reminder of the consequences of decisions made and responsibility for them.",
+			"p5": "The band carried this philosophical, almost ethical message from the very beginning — and this is what distinguishes them from many other groups: they don't just sing, they ask questions."
 		},
 		"DuoCreation": {
-			"t": "ФОРМИРОВАНИЕ ДУЭТА",
-			"subt": "[2011 год]",
-			"name": "Джош Дан",
-			"btn": "Подробнее",
-			"p1": "Салих и Томас покинули группу в 2011 году, чтобы сосредоточиться на работе и учебе. Оба написали прощальные записки на официальной странице группы в Facebook.",
-			"p2": "Перед тем как покинуть проект, Салих пригласил друга, Джоша Дана (бывшего гастролирующего барабанщика House of Heroes) занять его место в группе.",
-			"p3": "Впечатленный потенциалом группы и творческим видением Джозефа, Дан присоединился к проекту."
+			"t": "DUO FORMATION",
+			"subt": "[2011]",
+			"name": "Josh Dun",
+			"btn": "Learn more",
+			"p1": "Salih and Thomas left the band in 2011 to focus on work and studies. Both wrote farewell notes on the band's official Facebook page.",
+			"p2": "Before leaving the project, Salih invited a friend, Josh Dun (former touring drummer for House of Heroes) to take his place in the band.",
+			"p3": "Impressed by the band's potential and Joseph's creative vision, Dun joined the project."
 		},
 		"Quote": {
-			"p1": "Музыка может быть",
-			"p2": "мощным инструментом",
-			"p3": "для исцеления",
-			"p4": "и объединения людей.",
-			"name": "Тайлер Джозеф"
+			"p1": "Music can be",
+			"p2": "a powerful tool",
+			"p3": "for healing",
+			"p4": "and bringing people together.",
+			"name": "Tyler Joseph"
 		},
 		"SecondAlbum": {
-			"t": "ВТОРОЙ АЛЬБОМ",
-			"subt": "[2013 год]",
-			"date": "июнь 2011 года",
-			"p1": "выход альбома “Regional At best”",
-			"p2": "В 2011 году вышел второй, полностью независимый альбом — “Regional at Best”.",
-			"p3": "И хотя его позже снимут с распространения, именно он заложил фундамент звучания группы.",
-			"p4": "Именно тогда родилась песня “Car Radio”, которую фанаты называют гимном одиночества и внутренней борьбы.",
-			"p5": "На горизонте уже маячил контракт с лейблом. Но пока это была только история двух друзей и маленькой сцены.",
-			"cover": "Обложка альбома “Regional At best”",
-			"btn": "Посмотреть альбом",
+			"t": "SECOND ALBUM",
+			"subt": "[2013]",
+			"date": "June 2011",
+			"p1": "release of the album \"Regional At Best\"",
+			"p2": "In 2011, the second, completely independent album was released — \"Regional at Best\".",
+			"p3": "And although it would later be removed from distribution, it was this album that laid the foundation for the band's sound.",
+			"p4": "It was then that the song \"Car Radio\" was born, which fans call the anthem of loneliness and inner struggle.",
+			"p5": "A record label contract was already looming on the horizon. But for now it was just the story of two friends and a small scene.",
+			"cover": "\"Regional At Best\" album cover",
+			"btn": "View album",
 			"videoUrl": "https://www.youtube.com/embed/92XVwY54h5k?si=HM6BfMTltSQzEMcE"
 		},
 		"Contract": {
-			"t": "КОНТРАКТ С ЛЕЙБЛОМ И СТУДИЙНЫЙ АЛЬБОМ",
-			"date": "апрель 2012 года",
-			"p1": "подписание контракта с лейблом “Fueled By Ramen”",
-			"date2": "январь 2013 года",
-			"p2": "Выход альбома “Vessel”",
-			"btn": "Посмотреть альбом",
-			"p4": "К концу 2011 года дуэт уже невозможно было игнорировать. Независимая группа из Огайо, собирающая залы без помощи лейблов? Это казалось невозможным — и стало сигналом для музыкальной индустрии.",
-			"p5": "Они подписали контракт с Fueled By Ramen, лейблом, который в своё время открыл миру Fall Out Boy и Panic! at the Disco. Это стало отправной точкой: началась работа над первым студийным альбомом с полноценной продюсерской поддержкой.",
-			"p6": "Так появился альбом “Vessel”. Он вышел 8 января 2013 года и стал мостом между сырой эмоцией раннего периода и продуманным, маниакально точным звучанием, которое сделало группу глобальной. В альбом вошли обновлённые версии песен из Regional at Best — в том числе “Ode to Sleep”, “Guns for Hands” и “Car Radio”.",
-			"p7": "Обложка Vessel — две старые фигуры на сером фоне. Это деды Тайлера и Джоша. Символ преемственности, жизни, возраста, борьбы — тем, которые всегда будут проходить сквозь их музыку."
+			"t": "RECORD LABEL CONTRACT AND STUDIO ALBUM",
+			"date": "April 2012",
+			"p1": "signing contract with \"Fueled By Ramen\" label",
+			"date2": "January 2013",
+			"p2": "Release of \"Vessel\" album",
+			"btn": "View album",
+			"p4": "By the end of 2011, the duo could no longer be ignored. An independent band from Ohio filling venues without label help? This seemed impossible — and became a signal for the music industry.",
+			"p5": "They signed a contract with Fueled By Ramen, the label that once introduced Fall Out Boy and Panic! at the Disco to the world. This became the starting point: work began on the first studio album with full producer support.",
+			"p6": "Thus appeared the album \"Vessel\". It was released on January 8, 2013 and became a bridge between the raw emotion of the early period and the thoughtful, maniacally precise sound that made the band global. The album included updated versions of songs from Regional at Best — including \"Ode to Sleep\", \"Guns for Hands\" and \"Car Radio\".",
+			"p7": "The Vessel cover — two old figures on a gray background. These are Tyler and Josh's grandfathers. A symbol of continuity, life, age, struggle — themes that will always run through their music."
 		},
 		"Admire": {
-			"t": "МИРОВОЕ ПРИЗНАНИЕ",
-			"p1": "В мае 2015 года выходит Blurryface — альбом-концепт, в котором появляется персонаж, олицетворяющий внутренние страхи, тревоги и неуверенность.",
-			"p2": "Он становится настоящим антагонистом и одновременно голосом альбома. Тайлер и Джош используют музыку как терапию — а образы, сценические решения и лирика начинают работать как единая художественная вселенная.",
-			"p3": "Но особенно — «Stressed Out», ставшая глобальным хитом и открывшая группу миллионам новых слушателей. С её ироничным, почти детским припевом и тяжёлым поддоном тревоги — песня идеально отражала дух времени.",
-			"p4": "Клип на Stressed Out стал вирусным, а альбом занял 1-е место в Billboard 200, что превратило дуэт в международную сенсацию.",
-			"date": "май 2015 года",
-			"p5": "выход альбома “Blurryface”",
-			"btn": "Страница альбома",
+			"t": "WORLDWIDE RECOGNITION",
+			"p1": "In May 2015, Blurryface was released — a concept album in which a character appears who embodies inner fears, anxieties and insecurity.",
+			"p2": "He becomes a real antagonist and at the same time the voice of the album. Tyler and Josh use music as therapy — and images, stage solutions and lyrics begin to work as a unified artistic universe.",
+			"p3": "But especially — \"Stressed Out\", which became a global hit and opened the band to millions of new listeners. With its ironic, almost childish chorus and heavy undertone of anxiety — the song perfectly reflected the spirit of the times.",
+			"p4": "The Stressed Out video went viral, and the album reached #1 on the Billboard 200, turning the duo into an international sensation.",
+			"date": "May 2015",
+			"p5": "release of \"Blurryface\" album",
+			"btn": "Album page",
 			"url": "https://www.youtube.com/embed/pXRviuL6vMY?si=cjGiOtODhbVH4icr"
 		},
 		"Clancy": {
-			"t": "ИСТОРИЯ КЛЭНСИ",
-			"q1": "Я тот человек, который должен всё ставить под сомнение, и моя вера — это то, что я всегда подвергал сильным испытаниям. Во время 'Trench' были моменты, когда вы могли видеть, на каком этапе моего сезона сомнений и повторного принятия я находился — и это определённо было сложное время",
-			"a1": "Тайлер Джозеф",
-			"p1-1": "Trench — это не просто альбом. Это история побега из тоталитарного города, контролируемого девятью епископами. Город называется Dema, и он стал метафорой депрессии, контроля и душевной боли. Главный герой — Клэнси — пытается сбежать. А вместе с ним — и слушатель.",
-			"p1-2": "Музыкально альбом стал более зрелым, кинематографичным, тяжёлым. Эстетика Trench была завязана на жёлтом цвете, балаклавах, горных куртках и визуальной кодировке.",
-			"d1-1": "апрель 2018 года",
-			"d1-2": "расшифровка сообщения на",
-			"d2-1": "октябрь 2018 года",
-			"d2-2": "выход альбома",
-			"q2": "Мы всегда писали песни для шоу, а не наоборот. Но мне всегда было интересно, каково это - написать альбом, который никогда не существовал в концертной обстановке.",
-			"p2-1": "Новый альбом вышел цветным, легким, даже почти жизнерадостным — на первый взгляд. Альбом был записан дистанционно, во время пандемии. Тайлер — в подвале своего дома. Джош — на другой стороне страны.",
-			"p2-2": "Музыка стала легче: синтезаторы, фанковая ритмика, мелодичность.Но — как и всегда у них — за внешним фасадом скрывается глубокая внутренняя драма.Треки рассказывают о тревоге, неуверенности, попытке казаться “нормальным” в ненормальном мире.",
-			"d3-1": "май 2021 года",
-			"q3": "Многое из того, кем мы являемся как люди, и многое из того, кем мы являемся как группа, проистекает из нашей личной неуверенности в себе, в своей музыке или в том, как мы представляем себя миру.",
-			"a2": "Джош Дан",
-			"p3-1": "Альбом Clancy — это кульминация десятилетнего путешествия группы. Это не просто музыкальный релиз, а заключительная глава нарратива, начатого в Trench и продолженного в Scaled and Icy. Здесь всё сходится: образы, символы, музыкальные идеи и внутренние монологи.",
-			"p3-2": "Цитаты, метафоры, отсылки к прошлым альбомам — всё вплетено в поэтику, которую фанаты любят расшифровывать.",
-			"p3-3": "Clancy звучит как синтез сырых, живых барабанов, глубокого баса, альтернативного рока, рэпа, и даже индастриала.",
-			"p3-4": "Это альбом не о победе, а о способности не сдаться. Это звук человека, который научился смотреть в лицо страху — и не отводить взгляд. Это конец истории. И начало себя.",
-			"d4-1": "май 2024 года"
+			"t": "CLANCY'S STORY",
+			"q1": "I'm the person who has to question everything, and my faith is something I've always put through heavy trials. During 'Trench' there were moments when you could see what stage of my season of doubt and re-acceptance I was in — and it was definitely a difficult time",
+			"a1": "Tyler Joseph",
+			"p1-1": "Trench is not just an album. It's a story of escape from a totalitarian city controlled by nine bishops. The city is called Dema, and it became a metaphor for depression, control and emotional pain. The main character — Clancy — is trying to escape. And with him — the listener.",
+			"p1-2": "Musically, the album became more mature, cinematic, heavy. The Trench aesthetic was tied to yellow color, balaclavas, mountain jackets and visual coding.",
+			"d1-1": "April 2018",
+			"d1-2": "decoding message on",
+			"d2-1": "October 2018",
+			"d2-2": "album release",
+			"q2": "We've always written songs for shows, not the other way around. But I've always been curious what it would be like to write an album that never existed in a concert setting.",
+			"p2-1": "The new album came out colorful, light, even almost cheerful — at first glance. The album was recorded remotely, during the pandemic. Tyler — in the basement of his house. Josh — on the other side of the country.",
+			"p2-2": "The music became lighter: synthesizers, funk rhythm, melody. But — as always with them — behind the external facade lies deep inner drama. The tracks tell about anxiety, insecurity, the attempt to seem \"normal\" in an abnormal world.",
+			"d3-1": "May 2021",
+			"q3": "Much of who we are as people, and much of who we are as a band, stems from our personal insecurity about ourselves, our music, or how we present ourselves to the world.",
+			"a2": "Josh Dun",
+			"p3-1": "The Clancy album is the culmination of the band's decade-long journey. This is not just a musical release, but the final chapter of the narrative that began in Trench and continued in Scaled and Icy. Everything converges here: images, symbols, musical ideas and internal monologues.",
+			"p3-2": "Quotes, metaphors, references to past albums — everything is woven into the poetics that fans love to decipher.",
+			"p3-3": "Clancy sounds like a synthesis of raw, live drums, deep bass, alternative rock, rap, and even industrial.",
+			"p3-4": "This is an album not about victory, but about the ability not to give up. This is the sound of a person who has learned to look fear in the face — and not look away. This is the end of the story. And the beginning of yourself.",
+			"d4-1": "May 2024"
 		},
-		"Accordion": "Интересные факты",
-		"Expand": "Все альбомы"
+		"Accordion": "Interesting Facts",
+		"Expand": "All Albums"
 	},
 	"AlbumPage": {
-		"t": "Альбомы",
-		"subtitle": "альбом",
-		"subt": "Кликните на обложку, чтобы узнать подробности альбома"
+		"t": "Albums",
+		"subtitle": "album",
+		"subt": "Click on the cover to learn album details"
 	},
 	"DuoPage": {
-		"t1": "ТАЙЛЕР ДЖОЗЕФ",
-		"t2": "ДЖОШ ДАН",
-		"title": "биография участников",
-		"back": "Назад",
-		"fullName": "Полное имя:",
-		"born": "Дата рождения:",
-		"locale": "ru-RU",
-		"place": "Место рождения:",
-		"instruments": "Инструменты:"
+		"t1": "TYLER JOSEPH",
+		"t2": "JOSH DUN",
+		"title": "members biography",
+		"back": "Back",
+		"fullName": "Full name:",
+		"born": "Date of birth:",
+		"locale": "en-US",
+		"place": "Place of birth:",
+		"instruments": "Instruments:"
 	},
 	"AlbumsComponent": {
-		"release": "Релиз",
-		"dateLocale": "ru-RU",
-		"btn": "Страница альбома"
+		"release": "Release",
+		"dateLocale": "en-US",
+		"btn": "Album page"
 	},
 	"LocaleSwitcher": {
-		"en": "EN",
-		"ru": "РУ",
-		"label": "Язык"
+		"label": "EN"
+	},
+	"AlbumCard": {
+		"t": "Release date:",
+		"locale": "en-US"
 	}
 }

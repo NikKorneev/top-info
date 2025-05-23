@@ -26,18 +26,20 @@ export const SEARCH_IN_SONGS = `*[_type == "song" && lower(title) match lower($q
 export const SEARCH_IN_MEMBERS = `*[_type == "duoMember" && lower(name) match lower($q)] {_type, name, slug, imageUrl}`;
 
 export const SEARCH = `*[
-  _type in ["album", "song", "duoMember"]
+  _type in ["album", "song", "duoMember", "interestingFact"]
   && (
     title match $q || 
     name match $q
-  ) && lang == $locale
-][0...5] {
+  ) 
+][0...30] {
   _id,
   _type,
   title,
+  id,
   album->{
   slug
   },
   name,
-  slug
-}`;
+  slug,
+   "slugCurrent": coalesce(album->slug.current, slug.current)
+} | order(slugCurrent asc)`;

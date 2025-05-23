@@ -155,10 +155,10 @@ const Albums = ({
 										{selected.title}
 									</h5>
 									<p className="font-medium text-[#FAFAFA] px-[30px] max-sm:px-[15px]">
-										Релиз{" "}
+										{t("release")}{" "}
 										{new Date(
 											selected.releaseDate
-										).toLocaleDateString("ru-RU", {
+										).toLocaleDateString(t("dateLocale"), {
 											day: "numeric",
 											month: "long",
 											year: "numeric",

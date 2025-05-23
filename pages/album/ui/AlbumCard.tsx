@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Socials from "./Socials";
 
@@ -17,6 +18,7 @@ const AlbumCard = ({ links, releaseDate, albumCover, title }: Props) => {
 					}))
 					.reduce((a, b) => Object.assign(a, b))
 			: undefined;
+	const t = useTranslations("AlbumCard");
 	return (
 		<div className="font-martian shrink-0 flex gap-5 flex-col  max-w-[400px]">
 			<div className="relative">
@@ -30,13 +32,16 @@ const AlbumCard = ({ links, releaseDate, albumCover, title }: Props) => {
 				<div className="absolute bottom-0 px-4">
 					<h2 className="text-white font-bold text-2xl">{title}</h2>
 					<div className="flex gap-2 text-grayMain/90">
-						<p className="font-bold">Дата релиза:</p>
+						<p className="font-bold">{t("t")}</p>
 						<span className="capitalize">
-							{new Date(releaseDate).toLocaleDateString("ru-RU", {
-								year: "numeric",
-								month: "long",
-								day: "numeric",
-							})}
+							{new Date(releaseDate).toLocaleDateString(
+								t("locale"),
+								{
+									year: "numeric",
+									month: "long",
+									day: "numeric",
+								}
+							)}
 						</span>
 					</div>
 				</div>

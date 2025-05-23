@@ -1,6 +1,7 @@
 export type SearchedType = {
 	_id: string;
-	_type: "album" | "song" | "duoMember";
+	id?: number;
+	_type: "album" | "song" | "duoMember" | "interestingFact";
 	slug: {
 		current: string;
 	};

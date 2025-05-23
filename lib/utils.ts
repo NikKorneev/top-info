@@ -15,5 +15,18 @@ export function distance(x1: number, y1: number, x2: number, y2: number) {
 }
 
 export function setLink(item: SearchedType) {
-	return `/${item._type === "duoMember" ? "duo" + "/" + item.slug.current : item._type == "song" ? "albums" + "/" + item?.album?.slug?.current + "/?slug=" + item.slug.current : item._type + "s/" + item.slug.current}`;
+	const { _type, slug, album, id } = item;
+
+	switch (_type) {
+		case "duoMember":
+			return `/duo/${slug.current}`;
+
+		case "song":
+			return `/albums/${album?.slug?.current}?slug=${slug.current}#tracklist`;
+
+		case "album":
+			return `/albums/${slug.current}`;
+		case "interestingFact":
+			return `/story/${id ? "?id=" + id : ""}#facts`;
+	}
 }

@@ -31,7 +31,7 @@ const StoryPage = ({ id, locale }: { id: number; locale: "en" | "ru" }) => {
 
 			<SectionClancyStory />
 
-			<div className="container mx-auto">
+			<div className="container mx-auto" id="facts">
 				<Accordion
 					locale={locale}
 					id={id}

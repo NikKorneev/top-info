@@ -25,6 +25,11 @@ const AlbumBack = ({ text, image, titleSVG }: Props) => {
 	const t = useTranslations("AlbumPage");
 
 	useEffect(() => {
+		const hash = window.location.hash; // все еще используем window
+		if (hash === "#tracklist") {
+			return;
+		}
+
 		window.scrollTo(0, 0);
 	}, []);
 

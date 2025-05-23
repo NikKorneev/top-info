@@ -208,8 +208,11 @@
 		"btn": "Страница альбома"
 	},
 	"LocaleSwitcher": {
-		"en": "EN",
-		"ru": "РУ",
-		"label": "Язык"
+		"label": "RU"
+	},
+
+	"AlbumCard": {
+		"t": "Дата релиза:",
+		"locale": "ru-RU"
 	}
 }

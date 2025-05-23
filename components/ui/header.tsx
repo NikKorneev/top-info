@@ -21,9 +21,11 @@ const Header = () => {
 				<nav className="flex items-center gap-8 max-sm:gap-4">
 					<Navmenu />
 					<MobileMenu />
-					<LocaleSwitcher />
 
-					<Search />
+					<div className="flex gap-4">
+						<LocaleSwitcher />
+						<Search />
+					</div>
 				</nav>
 			</div>
 		</header>
