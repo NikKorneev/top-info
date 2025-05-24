@@ -213,5 +213,20 @@
 	"AlbumCard": {
 		"t": "Release date:",
 		"locale": "en-US"
+	},
+	"MetaHome": {
+		"title": "Twenty One Pilots information site",
+		"description": "Information fan-created site with album details, band history, biography and interesting facts.",
+		"keywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+	},
+	"MetaStory": {
+		"pageTitle": "Band Story - Twenty One Pilots",
+		"pageDescription": "Twenty One Pilots band history timeline, from the beginning to the present day.",
+		"pageKeywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+	},
+	"MetaAlbums": {
+		"pageTitle": "Albums - Twenty One Pilots Info",
+		"pageDescription": "Twenty One Pilots all studio albums",
+		"pageKeywords": "Twenty One Pilots, TOP, albums"
 	}
 }

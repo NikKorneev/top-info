@@ -214,5 +214,20 @@
 	"AlbumCard": {
 		"t": "Дата релиза:",
 		"locale": "ru-RU"
+	},
+	"MetaHome": {
+		"title": "Информационный сайт Twenty One Pilots",
+		"description": "Информационный сайт Twenty One Pilots. Здесь вы можете узнать об альбомах, истории группы, биографии участников и интересными фактами.",
+		"keywords": "Twenty One Pilots, Tyler Josep, Josh Dun, альбомы, песни, Clancy, Тайлер Джозеф, Джош Дан, фан сайт"
+	},
+	"MetaStory": {
+		"pageTitle": "История группы - Twenty One Pilots Info",
+		"pageDescription": "Twenty One Pilots история группы в хронологическом порядке, с самого начала до сегодняшнего дня.",
+		"pageKeywords": "Twenty One Pilots, TOP, альбомы, песни, Clancy, Tyler Joseph, Josh Dun, alternative rock, Тайлер Джозеф, Джош Дан"
+	},
+	"MetaAlbums": {
+		"pageTitle": "Альбомы - Twenty One Pilots Info",
+		"pageDescription": "Twenty One Pilots все студийные альбомы группы",
+		"pageKeywords": "Twenty One Pilots, TOP, albums"
 	}
 }

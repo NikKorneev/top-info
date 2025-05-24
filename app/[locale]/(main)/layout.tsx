@@ -2,12 +2,55 @@ import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import { ReactLenis } from "lenis/react";
 import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
+import { headers } from "next/headers";
 import NextTopLoader from "nextjs-toploader";
 
-export const metadata: Metadata = {
-	title: "Twenty One Pilots unofficial information site",
-	description: "!To do",
-};
+export async function generateMetadata(): Promise<Metadata> {
+	const t = await getTranslations("MetaHome");
+	const locale = await getLocale();
+	const headersList = await headers();
+	const pathname = headersList.get("x-pathname") || "/";
+	const baseUrl =
+		process.env.NEXT_PUBLIC_SITE_URL || "https://yourdomain.com";
+	const fullUrl = baseUrl + pathname;
+
+	return {
+		title: t("title"),
+		description: t("description"),
+		keywords: t("keywords").split(","),
+		authors: [{ name: "Unofficial Fan Team" }],
+		alternates: {
+			canonical: fullUrl,
+		},
+		openGraph: {
+			title: t("title"),
+			description: t("description"),
+			url: fullUrl,
+			siteName: "Twenty One Pilots Info",
+			locale: locale === "ru" ? "ru_RU" : "en_US", // можно автоматизировать
+			type: "website",
+			images: [
+				{
+					url: "https://i.postimg.cc/qRpZbhmV/og-clancy-3552517413.png", // 🔥 Здесь картинка!
+					width: 1200,
+					height: 630,
+					alt: "Twenty One Pilots Band Banner",
+				},
+			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: t("title"),
+			description: t("description"),
+			images: ["https://i.postimg.cc/qRpZbhmV/og-clancy-3552517413.png"],
+		},
+		robots: {
+			index: true,
+			follow: true,
+		},
+	};
+}
 
 export default async function RootLayout({
 	children,
