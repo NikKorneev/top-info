@@ -187,7 +187,7 @@ const NewQuote = () => {
 					disablePictureInPicture
 					controls={false}
 				/>
-				<div className="container mx-auto flex flex-col gap-5 text-white text-shadow max-lg:gap-2.5 max-sm:px-4">
+				<div className="container font-martian mx-auto flex flex-col gap-5 text-white text-shadow max-lg:gap-2.5 max-sm:px-4">
 					<div
 						ref={text1}
 						className="relative flex flex-col items-baseline justify-start w-[100%] translate-x-[20%]  leading-[100%] opacity-0 z-[55]"

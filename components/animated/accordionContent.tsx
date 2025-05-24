@@ -73,7 +73,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 						rehypePlugins={[rehypeRaw]}
 						components={{
 							p: ({ children }) => (
-								<p className="mb-4 text-grayMain leading-[150%] shadow-2xs">
+								<p className="mb-4 text-grayMain leading-[150%] shadow-2xs ">
 									{children}
 								</p>
 							),

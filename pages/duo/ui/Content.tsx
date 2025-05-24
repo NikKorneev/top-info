@@ -6,12 +6,15 @@ const Content = ({ content }: any) => {
 			<Markdown
 				components={{
 					h1: ({ children }) => (
-						<h2 className="uppercase text-mainRed font-bold mb-2 text-2xl max-sm:text-2xl">
-							{children}
-						</h2>
+						<>
+							<h2 className="uppercase text-mainRed font-bold mb-2 mt-4 text-2xl max-sm:text-2xl">
+								{children}
+							</h2>
+							<div className="w-full h-[1px] bg-mainRed mb-2"></div>
+						</>
 					),
 					p: ({ children }) => (
-						<p className="mb-4 text-grayMain leading-[160%]">
+						<p className="mb-4 text-grayMain leading-[160%] font-inter">
 							{children}
 						</p>
 					),
@@ -24,7 +27,7 @@ const Content = ({ content }: any) => {
 								alt={alt}
 								{...props}
 							/>
-							<span className="text-center block text-grayMain text-[12px]">
+							<span className="text-center block text-grayMain text-[14px]">
 								{alt}
 							</span>
 						</>
