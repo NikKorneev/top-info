@@ -77,7 +77,7 @@ const HomePage = async ({ params }: Props) => {
 					}}
 				/>
 			</div>
-			<div className="mt-40">
+			<div className="mt-40 overflow-hidden">
 				<Albums
 					albums={albums}
 					subtitle={t("Albums.subtitle")}

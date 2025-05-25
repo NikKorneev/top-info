@@ -30,7 +30,7 @@ const Quote = ({ name, p1, p2, p3 }: Props) => {
 
 			<div className="container mx-auto max-sm:px-4 font-martian text-white flex items-center h-full gap-5 relative z-10 max-sm:flex-col max-sm:justify-center">
 				<p className="xl:text-[19px] text-[14px] font-inter">{name}</p>
-				<p className="2xl:text-[64px] xl:text-[58px] lg:text-[3vw] md:text-[40px] sm:text-[32px] text-[24px]  font-light leading-[130%] max-sm:text-center">
+				<p className="2xl:text-[64px] xl:text-[58px] lg:text-[3vw] md:text-[28px] sm:text-[26px] text-[18px]  font-light leading-[130%] max-sm:text-center">
 					{p1} <br /> {p2} <br />
 					<span className="bg-mainRed">{p3}</span>
 				</p>
