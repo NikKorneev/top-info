@@ -112,10 +112,10 @@ const StepCard = ({
 					<div className="overflow-hidden mt-5 relative lg:hidden">
 						<Image
 							src={image}
+							loading="eager"
 							width={500}
 							height={500}
 							quality={100}
-							loading="lazy"
 							className="object-cover max-sm:w-[550px] max-sm:h-[250px] mx-auto object-top-left"
 							alt={alt}
 						/>

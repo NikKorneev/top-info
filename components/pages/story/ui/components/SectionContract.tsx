@@ -39,12 +39,14 @@ const SectionContract = () => {
 					src="/img/storyLabelContract.png"
 					width={500}
 					height={300}
+					loading="eager"
 					className="object-cover h-[300px] max-sm:w-[550px] max-sm:h-[250px] sm:hidden md:block mx-auto object-top-left"
 					alt="Josh and Tyler picture"
 				/>
 				<Image
 					src="/img/vesselCover.png"
 					width={500}
+					loading="eager"
 					height={500}
 					className="object-cover col-start-2  max-sm:w-[550px] max-md:col-start-2 max-sm:h-[250px] max-sm:mx-auto object-top-left max-sm:col-auto max-sm:row-start-5"
 					alt="Twenty one pilots' vessel album cover"

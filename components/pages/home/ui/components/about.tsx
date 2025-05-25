@@ -61,6 +61,7 @@ const About = ({ title, p1, btn, p2, subtitle }: Props) => {
 									width={198}
 									height={525}
 									quality={100}
+									loading="eager"
 									className="w-full h-full object-cover"
 								/>
 							</motion.div>
@@ -107,6 +108,7 @@ const About = ({ title, p1, btn, p2, subtitle }: Props) => {
 									width={525}
 									height={525}
 									quality={100}
+									loading="eager"
 									className="w-full h-full object-cover"
 								/>
 							</motion.div>

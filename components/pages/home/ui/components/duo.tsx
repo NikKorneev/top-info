@@ -23,6 +23,7 @@ const Duo = () => {
 				priority={true}
 				width={789}
 				height={859}
+				loading="eager"
 				className="invisible"
 				// className="absolute  left-[47%] translate-x-[-50%] bottom-0 z-20"
 			/>

@@ -57,6 +57,7 @@ const SectionAdmire = () => {
 						width={1200}
 						height={500}
 						quality={100}
+						loading="eager"
 						className="object-cover"
 						alt="Blurryface sign"
 					/>

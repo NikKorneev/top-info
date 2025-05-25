@@ -102,7 +102,7 @@ const Albums = ({
 										item.albumCover ||
 										"/img/clancyAlbumCover.png"
 									}
-									loading="lazy"
+									loading="eager"
 									fill
 									alt="albums"
 									className="object-cover  group-hover:scale-[90%]  transition-transform hover:mask-alpha group-hover:mask-b-from-45%"
@@ -147,6 +147,7 @@ const Albums = ({
 										src={selected.albumCover}
 										alt="album"
 										fill
+										loading="eager"
 										className="object-cover"
 									/>
 								</div>

@@ -23,6 +23,7 @@ const FirstAlbum = () => {
 					<Image
 						src={"/img/story-first-album.png"}
 						width={632}
+						loading="eager"
 						height={355}
 						alt="Twenty one pilots first members"
 					/>

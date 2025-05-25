@@ -140,7 +140,7 @@ const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {
 				<Image
 					quality={100}
 					src={srcs[0]}
-					loading="lazy"
+					loading="eager"
 					fill
 					alt={alt}
 					className="w-full h-full object-cover"
@@ -153,7 +153,7 @@ const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {
 				<Image
 					src={srcs[1]}
 					fill
-					loading="lazy"
+					loading="eager"
 					alt={alt}
 					className="w-full h-full object-cover"
 				/>
@@ -164,7 +164,7 @@ const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {
 				<Image
 					src={srcs[2]}
 					fill
-					loading="lazy"
+					loading="eager"
 					alt={alt}
 					className="w-full h-full object-cover"
 				/>

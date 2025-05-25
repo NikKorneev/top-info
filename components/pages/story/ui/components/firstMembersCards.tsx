@@ -18,7 +18,8 @@ const FirstMembersCards = () => {
 					src="/img/chris.png"
 					width={198}
 					height={301}
-					quality={100}
+					quality={80}
+					loading="eager"
 					className="object-cover"
 					alt="Chris Salih in 2009"
 				/>
@@ -38,7 +39,8 @@ const FirstMembersCards = () => {
 					src="/img/story-tyler-2009.png"
 					width={198}
 					height={301}
-					quality={100}
+					loading="eager"
+					quality={80}
 					className="object-cover"
 					alt="Tyler joseph in 2009"
 				/>
@@ -58,7 +60,8 @@ const FirstMembersCards = () => {
 					src="/img/nick.png"
 					width={198}
 					height={301}
-					quality={100}
+					quality={80}
+					loading="eager"
 					className="object-cover"
 					alt="Nick Thomas in 2009"
 				/>

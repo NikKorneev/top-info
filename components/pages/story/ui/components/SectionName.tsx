@@ -19,6 +19,7 @@ const Name = () => {
 						width={500}
 						height={500}
 						quality={100}
+						loading="eager"
 						className="object-cover max-sm:hidden"
 						alt={"Naming"}
 					/>
@@ -27,6 +28,7 @@ const Name = () => {
 						width={500}
 						height={500}
 						quality={100}
+						loading="eager"
 						className="object-cover object-left"
 						alt={"Naming"}
 					/>

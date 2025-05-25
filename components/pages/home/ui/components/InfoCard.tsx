@@ -56,7 +56,13 @@ const InfoCard = ({
 				<div className="sm:text-right max-sm:mt-4 md:text-[16px] font-bold font-martian uppercase text-[14px] xl:max-w-[30%]  md:max-w-[50%] max-w-[70%]">
 					<p>{subtitle}</p>
 					{icon && (
-						<Image src={icon} alt="logo" width={64} height={64} />
+						<Image
+							src={icon}
+							alt="logo"
+							width={64}
+							height={64}
+							loading="eager"
+						/>
 					)}
 				</div>
 			</div>

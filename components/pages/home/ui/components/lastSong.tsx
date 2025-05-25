@@ -31,6 +31,7 @@ const LastSong = ({ title, url }: Props) => {
 					<Image
 						src="/img/lastSongCover.png"
 						alt="last song"
+						loading="eager"
 						fill
 						className="hover:border-4 hover:border-grayMain transition-all cursor-pointer "
 					/>

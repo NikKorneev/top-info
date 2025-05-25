@@ -55,7 +55,7 @@ const SecondAlbum = () => {
 						src="/img/carRadioCover.jpg"
 						width={1200}
 						height={500}
-						loading="lazy"
+						loading="eager"
 						quality={100}
 						alt="car radio cover"
 					/>

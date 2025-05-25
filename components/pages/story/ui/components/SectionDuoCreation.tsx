@@ -24,6 +24,7 @@ const DuoCreation = () => {
 							width={500}
 							height={500}
 							quality={100}
+							loading="eager"
 							className="object-cover max-sm:w-[550px] max-sm:h-[250px] mx-auto object-top-left"
 							alt="Josh Dun"
 						/>
@@ -42,6 +43,7 @@ const DuoCreation = () => {
 						width={500}
 						height={500}
 						quality={100}
+						loading="eager"
 						className="object-cover max-sm:w-[350px] max-sm:h-[350px] mx-auto"
 						alt="Josh Dun"
 					/>
