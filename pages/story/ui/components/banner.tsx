@@ -1,9 +1,11 @@
 "use client";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const Banner = () => {
 	const { scrollY } = useScroll();
+	const t = useTranslations("StoryPage.Banner");
 
 	const scrollByY = useTransform(scrollY, [0, 1000], [0, -80]);
 	const scrollScale = useTransform(scrollY, [0, 1000], [1, 0.2]);
@@ -16,7 +18,7 @@ const Banner = () => {
 						className="h-14 w-0.5 bg-amber-50 origin-bottom"
 					/>
 					<span className="text-grayMain animate-pulse">
-						Листайте вниз
+						{t("scrollDown")}
 					</span>
 				</motion.div>
 				<div className="flex flex-col justify-center items-center gap-3 relative z-50 h-full w-full">
@@ -33,7 +35,7 @@ const Banner = () => {
 						transition={{ delay: 0.2 }}
 						className="text-mainRed text-[100px] font-bold leading-[100%] max-2xl:text-[80px] max-lg:text-[60px] max-md:text-[50px] max-sm:text-[40px] max-xs:text-[30px]"
 					>
-						ИСТОРИЯ ГРУППЫ
+						{t("title")}
 					</motion.h1>
 					<motion.p
 						initial={{ x: -400, opacity: 0 }}
@@ -41,9 +43,7 @@ const Banner = () => {
 						transition={{ delay: 0.4 }}
 						className="text-[20px] font-martian text-grayMain shadowText max-md:p-2 max-md:backdrop-blur-md lg:max-w-[700px] max-lg:max-w-[500px] max-2xl:text-[18px] max-lg:text-[16px] max-md:text-[14px] "
 					>
-						Дуэт из Огайо, ставший голосом целого поколения. Сочетая
-						инди-поп, хип-хоп, электронику и рок, они разрушили
-						жанровые границы и построили уникальный музыкальный мир.
+						{t("subtext")}
 					</motion.p>
 				</div>
 			</div>

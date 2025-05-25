@@ -1,6 +1,7 @@
 import DuoNavTab from "@/components/animated/DuoNavTab";
 import BackBtn from "@/components/ui/backBtn";
 import LayoutBanner from "@/pages/duo/layoutBanner";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 type Props = {
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
+	const t = useTranslations("DuoPage");
 	return (
 		<div className="pt-30">
 			<div className="container mx-auto pb-3.5">
@@ -17,8 +19,8 @@ const Layout = ({ children }: Props) => {
 			<div className="flex justify-center items-center pt-14">
 				<DuoNavTab
 					tabs={[
-						{ label: "ТАЙЛЕР ДЖОЗЕФ", href: "/duo/tyler-joseph" },
-						{ label: "ДЖОШ ДАН", href: "/duo/josh-dun" },
+						{ label: t("t1"), href: "/duo/tyler-joseph" },
+						{ label: t("t2"), href: "/duo/josh-dun" },
 					]}
 				/>
 			</div>

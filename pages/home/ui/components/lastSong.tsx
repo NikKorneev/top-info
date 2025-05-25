@@ -4,14 +4,19 @@ import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
 
-const LastSong = () => {
+type Props = {
+	title: string;
+	url: string;
+};
+
+const LastSong = ({ title, url }: Props) => {
 	const [isOpened, setOpened] = useState(false);
 	return (
 		<section className="overflow-hidden relative">
 			<div className="container mx-auto py-20 font-martian max-sm:px-4">
 				<div className="flex w-full items-center justify-between">
 					<h5 className="font-extrabold text-5xl uppercase text-mainRed max-sm:text-4xl">
-						Последняя работа
+						{title}
 					</h5>
 					<p className="font-light text-3xl text-white max-sm:text-xl">
 						(2024)
@@ -38,7 +43,7 @@ const LastSong = () => {
 				{isOpened && (
 					<ModalVideo
 						setOpened={setOpened}
-						url="https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
+						url={url}
 						layoutId="lastSong"
 					/>
 				)}

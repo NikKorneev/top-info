@@ -4,10 +4,16 @@ import { notFound } from "next/navigation";
 import Content from "./ui/Content";
 import HeroBanner from "./ui/HeroBanner";
 
-const AboutPage = async ({ params }: { params: Promise<{ name: string }> }) => {
-	const slug = (await params).name;
+const AboutPage = async ({
+	params,
+}: {
+	params: Promise<{ name: string; locale: string }>;
+}) => {
+	const awaited = await params;
+	const slug = awaited.name;
+	const locale = awaited.locale || "en";
 
-	const info = await client.fetch(GET_DUO_BY_NAME, { slug });
+	const info = await client.fetch(GET_DUO_BY_NAME, { slug, locale });
 
 	if (!info || info.length === 0) {
 		return notFound();

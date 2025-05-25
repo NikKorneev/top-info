@@ -1,10 +1,11 @@
 "use client";
 import ArrowedBtn from "@/components/ui/arrowedBtn";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { AlbumType } from "@/types/album";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 type Props = {
@@ -12,10 +13,18 @@ type Props = {
 	titleOnce?: boolean;
 	albumPage?: boolean;
 	albums: AlbumType[];
+	subtitle?: string;
 };
 
-const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
+const Albums = ({
+	title,
+	titleOnce = true,
+	albumPage,
+	albums,
+	subtitle,
+}: Props) => {
 	const [selected, setSelected] = useState<null | AlbumType>(null);
+	const t = useTranslations("AlbumsComponent");
 	return (
 		<section>
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
@@ -37,8 +46,7 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 							viewport={{ once: true, amount: 0.9 }}
 							className="text-[18px] font-light text-[#D9D9D9] pt-2"
 						>
-							Кликните на обложку, чтобы узнать подробности
-							альбома
+							{subtitle}
 						</motion.p>
 					</div>
 					<div className="grid grid-cols-[1fr_1fr_1fr] lg:gap-5 sm:gap-3 max-sm:grid-cols-1 mt-10 overflow-hidden">
@@ -56,10 +64,10 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 								{albums[0].title}
 							</h5>
 							<p className="font-medium text-[#FAFAFA]">
-								Релиз{" "}
+								{t("release")}{" "}
 								{new Date(
 									albums[0].releaseDate
-								).toLocaleDateString("ru-RU", {
+								).toLocaleDateString(t("dateLocale"), {
 									day: "numeric",
 									month: "long",
 									year: "numeric",
@@ -77,7 +85,7 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 								}
 								className="mt-auto pt-4"
 							>
-								<ArrowedBtn>Страница альбома</ArrowedBtn>
+								<ArrowedBtn>{t("btn")}</ArrowedBtn>
 							</Link>
 						</div>
 					</div>
@@ -147,10 +155,10 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 										{selected.title}
 									</h5>
 									<p className="font-medium text-[#FAFAFA] px-[30px] max-sm:px-[15px]">
-										Релиз{" "}
+										{t("release")}{" "}
 										{new Date(
 											selected.releaseDate
-										).toLocaleDateString("ru-RU", {
+										).toLocaleDateString(t("dateLocale"), {
 											day: "numeric",
 											month: "long",
 											year: "numeric",
@@ -170,9 +178,7 @@ const Albums = ({ title, titleOnce = true, albumPage, albums }: Props) => {
 										}
 										className="mt-auto pt-4 px-[30px] pb-[20px] max-sm:px-[15px]"
 									>
-										<ArrowedBtn>
-											Страница альбома
-										</ArrowedBtn>
+										<ArrowedBtn>{t("btn")}</ArrowedBtn>
 									</Link>
 								</div>
 							</div>

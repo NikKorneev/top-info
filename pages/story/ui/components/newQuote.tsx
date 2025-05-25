@@ -1,14 +1,16 @@
 "use client";
+import { Link } from "@/i18n/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 import { MdOutlineFormatQuote } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const NewQuote = () => {
+	const t = useTranslations("StoryPage.Quote");
 	const containerRef = useRef(null);
 	const expander = useRef(null);
 	const text1 = useRef(null);
@@ -64,7 +66,7 @@ const NewQuote = () => {
 				{
 					opacity: 0.2,
 				},
-				"<+0.7"
+				"<+0.2"
 			);
 
 			// ✍️ Таймлайн текста и затемнения
@@ -185,7 +187,7 @@ const NewQuote = () => {
 					disablePictureInPicture
 					controls={false}
 				/>
-				<div className="container mx-auto flex flex-col gap-5 text-white text-shadow max-lg:gap-2.5 max-sm:px-4">
+				<div className="container font-martian mx-auto flex flex-col gap-5 text-white text-shadow max-lg:gap-2.5 max-sm:px-4">
 					<div
 						ref={text1}
 						className="relative flex flex-col items-baseline justify-start w-[100%] translate-x-[20%]  leading-[100%] opacity-0 z-[55]"
@@ -194,25 +196,25 @@ const NewQuote = () => {
 							size={100}
 							className="text-mainRed"
 						/>
-						<span>Музыка может быть</span>
+						<span>{t("p1")}</span>
 					</div>
 					<div
 						ref={text2}
 						className="relative flex justify-start translate-x-[20%] opacity-0 leading-[100%] z-[55] "
 					>
-						<span>мощным инструментом</span>
+						<span>{t("p2")}</span>
 					</div>
 					<div
 						ref={text3}
 						className="relative flex justify-start translate-x-[20%] opacity-0 leading-[100%] z-[55]"
 					>
-						<span>для исцеления</span>
+						<span>{t("p3")}</span>
 					</div>
 					<div
 						ref={text4}
 						className="relative flex justify-start translate-x-[20%] opacity-0 leading-[100%] z-[55]"
 					>
-						<span>и объединения людей.</span>
+						<span>{t("p4")}</span>
 					</div>
 					<div
 						ref={text5}
@@ -222,7 +224,7 @@ const NewQuote = () => {
 							href={"/duo/tyler-joseph"}
 							className="bg-mainRed text-white px-1 transition-all cursor-pointer hover:bg-mainYellow hover:text-back "
 						>
-							Тайлер Джозеф
+							{t("name")}
 						</Link>
 					</div>
 				</div>

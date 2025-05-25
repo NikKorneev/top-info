@@ -14,16 +14,24 @@ type Props = {
 	title: string;
 	slug?: string;
 	songs?: { title: string; slug: { current: string } }[];
+	locale?: "en" | "ru";
 };
 
-const Accordion = async ({ title, type, id = 1, slug, songs }: Props) => {
+const Accordion = async ({
+	title,
+	type,
+	id = 1,
+	slug,
+	songs,
+	locale = "en",
+}: Props) => {
 	const items =
 		type === "album"
 			? songs
-			: await client.fetch<AccordionItemType[]>(GET_FACTS);
+			: await client.fetch<AccordionItemType[]>(GET_FACTS, { locale });
 
 	const fetchObject = type === "album" ? GET_SONG_BY_SLUG : GET_FACT_BY_ID;
-	const fetchParams = type === "album" ? { slug } : { id };
+	const fetchParams = type === "album" ? { slug, locale } : { id, locale };
 	const content = await client.fetch<[AccordionContentType]>(
 		fetchObject,
 		fetchParams
@@ -35,11 +43,11 @@ const Accordion = async ({ title, type, id = 1, slug, songs }: Props) => {
 			<div className="grid grid-cols-2 gap-6 max-lg:grid-cols-1 max-md:gap-2.5 max-sm:px-4">
 				<div className="max-lg:hidden">
 					<AccordionContent
-						id={content[0].id}
-						description={content[0].description}
-						image={content[0].image}
-						title={content[0].title}
-						key={content[0].id + "gridContent"}
+						id={content[0]?.id}
+						description={content[0]?.description || ""}
+						image={content[0]?.image}
+						title={content[0]?.title}
+						key={content[0]?.id + "gridContent"}
 					/>
 				</div>
 				<div className="flex flex-col gap-2 ">
@@ -47,8 +55,8 @@ const Accordion = async ({ title, type, id = 1, slug, songs }: Props) => {
 						items={items}
 						id={id}
 						paramName={type === "album" ? "slug" : "id"}
-						description={content[0].description}
-						image={content[0].image}
+						description={content[0]?.description || ""}
+						image={content[0]?.image || ""}
 					/>
 				</div>
 			</div>

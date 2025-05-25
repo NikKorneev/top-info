@@ -1,37 +1,31 @@
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 
 const SectionClancyStory = () => {
+	const t = useTranslations("StoryPage.Clancy");
 	return (
 		<section className="story-container">
-			<h3 className="title">ИСТОРИЯ КЛЭНСИ</h3>
+			<h3 className="title">{t("t")}</h3>
 			<div className="pt-10 flex flex-col gap-16">
 				<StepCard
-					quote="Я тот человек, который должен всё ставить под сомнение, и моя вера — это то, что я всегда подвергал сильным испытаниям. Во время 'Trench' были моменты, когда вы могли видеть, на каком этапе моего сезона сомнений и повторного принятия я находился — и это определённо было сложное время"
-					author="Тайлер Джозеф"
+					quote={t("q1")}
+					author={t("a1")}
 					albumTitle="Trench"
 					image="/img/trench.png"
 					alt="Twenty One pilots - Trench style"
-					paragraphs={[
-						"Trench — это не просто альбом. Это история побега из тоталитарного города, контролируемого девятью епископами. Город называется Dema, и он стал метафорой депрессии, контроля и душевной боли. Главный герой — Клэнси — пытается сбежать. А вместе с ним — и слушатель.",
-						"Музыкально альбом стал более зрелым, кинематографичным, тяжёлым. Эстетика Trench была завязана на жёлтом цвете, балаклавах, горных куртках и визуальной кодировке.",
-					]}
+					paragraphs={[t("p1-1"), t("p1-2")]}
 				>
 					<div className="xl:max-w-[300px]">
-						<span className="text-mainYellow">
-							апрель 2018 года
-						</span>
+						<span className="text-mainYellow">{t("d1-1")}</span>
 						<p className="text-white mt-1.5 leading-[160%]">
-							расшифровка сообщения на{" "}
-							<a href="dmaorg.info">dmaorg.info</a>
+							{t("d1-2")} <a href="dmaorg.info">dmaorg.info</a>
 						</p>
 					</div>
 					<div className="xl:max-w-[300px]">
-						<span className="text-mainYellow">
-							октябрь 2018 года
-						</span>
+						<span className="text-mainYellow">{t("d2-1")}</span>
 						<p className="text-white mt-1.5 leading-[160%]">
-							выход альбома{" "}
+							{t("d2-2")}{" "}
 							<Link
 								href="/albums/trench"
 								className="underline text-[#e24444]"
@@ -42,20 +36,17 @@ const SectionClancyStory = () => {
 					</div>
 				</StepCard>
 				<StepCard
-					author="Тайлер Джозеф"
-					quote="Мы всегда писали песни для шоу, а не наоборот. Но мне всегда было интересно, каково это - написать альбом, который никогда не существовал в концертной обстановке."
+					author={t("a1")}
+					quote={t("q2")}
 					albumTitle="Scaled And Icy"
 					image="/img/scaledAndIcy.png"
 					alt="Twenty One pilots - Scaled And Icy style"
-					paragraphs={[
-						"Новый альбом вышел цветным, легким, даже почти жизнерадостным — на первый взгляд. Альбом был записан дистанционно, во время пандемии. Тайлер — в подвале своего дома. Джош — на другой стороне страны.",
-						"Музыка стала легче: синтезаторы, фанковая ритмика, мелодичность.Но — как и всегда у них — за внешним фасадом скрывается глубокая внутренняя драма.Треки рассказывают о тревоге, неуверенности, попытке казаться “нормальным” в ненормальном мире.",
-					]}
+					paragraphs={[t("p2-1"), t("p2-2")]}
 				>
 					<div className="xl:max-w-[300px]">
-						<span className="text-mainYellow">май 2021 года</span>
+						<span className="text-mainYellow">{t("d3-1")}</span>
 						<p className="text-white mt-1.5 leading-[160%]">
-							выход альбома{" "}
+							{t("d2-2")}{" "}
 							<Link
 								href="/albums/scaled-and-icy"
 								className="underline text-[#e24444]"
@@ -66,22 +57,17 @@ const SectionClancyStory = () => {
 					</div>
 				</StepCard>
 				<StepCard
-					quote="Многое из того, кем мы являемся как люди, и многое из того, кем мы являемся как группа, проистекает из нашей личной неуверенности в себе, в своей музыке или в том, как мы представляем себя миру."
-					author="Джош Дан"
+					quote={t("q3")}
+					author={t("a2")}
 					albumTitle="Clancy"
 					image="/img/clancy.png"
 					alt="Twenty One pilots - Clancy style"
-					paragraphs={[
-						"Альбом Clancy — это кульминация десятилетнего путешествия группы. Это не просто музыкальный релиз, а заключительная глава нарратива, начатого в Trench и продолженного в Scaled and Icy. Здесь всё сходится: образы, символы, музыкальные идеи и внутренние монологи.",
-						"Цитаты, метафоры, отсылки к прошлым альбомам — всё вплетено в поэтику, которую фанаты любят расшифровывать.",
-						"Clancy звучит как синтез сырых, живых барабанов, глубокого баса, альтернативного рока, рэпа, и даже индастриала.",
-						"Это альбом не о победе, а о способности не сдаться. Это звук человека, который научился смотреть в лицо страху — и не отводить взгляд. Это конец истории. И начало себя.",
-					]}
+					paragraphs={[t("p3-1"), t("p3-2"), t("p3-3"), t("p3-4")]}
 				>
 					<div className="xl:max-w-[300px]">
-						<span className="text-mainYellow">май 2024 года</span>
+						<span className="text-mainYellow">{t("d4-1")}</span>
 						<p className="text-white mt-1.5 leading-[160%]">
-							выход альбома{" "}
+							{t("d2-2")}{" "}
 							<Link
 								href="/albums/clancy"
 								className="underline text-[#e24444]"

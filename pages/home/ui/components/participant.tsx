@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import Link from "next/link";
 
-const ParticipantSection = () => {
+type Props = {
+	tyler: Pick<ParticipantProps, "born" | "descr" | "instruments" | "name">;
+	josh: Pick<ParticipantProps, "born" | "descr" | "instruments" | "name">;
+	btn: string;
+};
+
+const ParticipantSection = ({ josh, tyler, btn }: Props) => {
 	return (
 		<div className="space-y-20 max-md:space-y-16 max-sm:space-y-6 overflow-hidden">
 			<Participant
@@ -14,29 +20,22 @@ const ParticipantSection = () => {
 					"/img/p-tyler-2.png",
 					"/img/p-tyler-3.png",
 				]}
-				born="Родился 1 декабря 1988"
-				descr="Идеолог Twenty One Pilots. Его тексты переплетены с
-					глубокими смыслами, а музыка балансирует между разными
-					жанрами, создавая уникальный стиль группы. Узнайте больше о
-					его творческом пути и влиянии на музыку на нашем сайте."
-				instruments="Вокал, Клавишные, гитара"
-				name="Тайлер Джозеф"
+				{...tyler}
+				btn={btn}
 				signSrc="/icons/tylerSign.png"
 			/>
 			<Participant
 				href="/duo/josh-dun"
 				alt="josh dun pictures"
 				info="text2"
+				btn={btn}
 				srcs={[
 					"/img/p-josh-1.png",
 					"/img/p-josh-3.png",
 					"/img/p-josh-2.png",
 				]}
 				position="right"
-				born="Родился 18 июня 1988"
-				descr="Ударник и энергетический двигатель Twenty One Pilots. Его мощная игра на барабанах и сценическая харизма создают неповторимую атмосферу выступлений группы. Узнайте больше о его роли и вдохновении здесь."
-				instruments="барабаны"
-				name="Джош Дан"
+				{...josh}
 				signSrc="/icons/joshSign.png"
 			/>
 		</div>
@@ -53,6 +52,7 @@ const Participant = ({
 	name,
 	signSrc,
 	href,
+	btn,
 }: ParticipantProps) => {
 	return (
 		<div
@@ -81,9 +81,27 @@ const Participant = ({
 				>
 					<Link href={href}>
 						<Button
-							className={`bg-transparent border-2 py-5 ${position == "right" ? "text-mainYellow border-mainYellow  " : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
+							className={`bg-transparent border-2 py-6 ${position == "right" ? "text-mainYellow border-mainYellow" : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
 						>
-							Читать подробнее
+							{btn}{" "}
+							<div>
+								<svg
+									width="16"
+									height="17"
+									viewBox="0 0 16 17"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M14.8954 1.5626C14.8766 1.01063 14.4139 0.578437 13.8619 0.597261L4.86714 0.904012C4.31518 0.922835 3.88298 1.38555 3.90181 1.93751C3.92063 2.48948 4.38334 2.92167 4.93531 2.90285L12.9307 2.63018L13.2033 10.6255C13.2222 11.1775 13.6849 11.6097 14.2368 11.5909C14.7888 11.572 15.221 11.1093 15.2022 10.5574L14.8954 1.5626ZM1.7308 16.0859L14.6268 2.27928L13.1652 0.914085L0.269203 14.7207L1.7308 16.0859Z"
+										fill={
+											position == "right"
+												? "#ffd800"
+												: "#db2422"
+										}
+									/>
+								</svg>
+							</div>
 						</Button>
 					</Link>
 					<Image
@@ -107,6 +125,7 @@ type ParticipantProps = {
 	born: string;
 	instruments: string;
 	href: string;
+	btn: string;
 } & ImagesProps;
 
 const ParticipantImages = ({ srcs, alt, position = "left" }: ImagesProps) => {

@@ -23,7 +23,7 @@ export const SearchForm = ({
 		>
 			<input
 				type="text"
-				minLength={3}
+				minLength={2}
 				maxLength={100}
 				name="q"
 				value={query}

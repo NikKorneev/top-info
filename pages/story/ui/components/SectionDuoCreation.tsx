@@ -1,20 +1,22 @@
 import ArrowedBtn from "@/components/ui/arrowedBtn";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import TextLined from "./textLined";
 
 const DuoCreation = () => {
+	const t = useTranslations("StoryPage.DuoCreation");
 	return (
 		<section className="story-container">
 			<div className="flex justify-between max-sm:flex-col max-sm:gap-2">
-				<h4 className="title">ФОРМИРОВАНИЕ ДУЭТА</h4>
-				<p className="story-subtitle">[2011 год]</p>
+				<h4 className="title">{t("t")}</h4>
+				<p className="story-subtitle">{t("subt")}</p>
 			</div>
 			<div className="grid grid-cols-3 gap-20 py-10 max-lg:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<div>
-					<p className="text-gray-50 text-2xl mb-5">Джош Дан</p>
+					<p className="text-gray-50 text-2xl mb-5">{t("name")}</p>
 					<Link href="/duo/josh-dun" scroll={true}>
-						<ArrowedBtn>Подробнее</ArrowedBtn>
+						<ArrowedBtn>{t("btn")}</ArrowedBtn>
 					</Link>
 					<div className="overflow-hidden mt-5 relative lg:hidden">
 						<Image
@@ -53,11 +55,7 @@ const DuoCreation = () => {
 				</div>
 				<TextLined
 					end="-=50%"
-					paragraphs={[
-						"Салих и Томас покинули группу в 2011 году, чтобы сосредоточиться на работе и учебе. Оба написали прощальные записки на официальной странице группы в Facebook.",
-						"Перед тем как покинуть проект, Салих пригласил друга, Джоша Дана (бывшего гастролирующего барабанщика House of Heroes) занять его место в группе.",
-						"Впечатленный потенциалом группы и творческим видением Джозефа, Дан присоединился к проекту.",
-					]}
+					paragraphs={[t("p1"), t("p2"), t("p3")]}
 				/>
 			</div>
 		</section>

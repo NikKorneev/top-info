@@ -1,4 +1,5 @@
 import Accordion from "@/components/animated/accordion";
+import { useTranslations } from "next-intl";
 import SectionBanner from "./components/banner";
 import NewQuote from "./components/newQuote";
 import SectionAdmire from "./components/SectionAdmire";
@@ -11,7 +12,8 @@ import SectionFirstMembers from "./components/SectionFirstMembers";
 import SectionName from "./components/SectionName";
 import SectionSecondAlbum from "./components/SectionSecondAlbum";
 
-const StoryPage = ({ id }: { id: number }) => {
+const StoryPage = ({ id, locale }: { id: number; locale: "en" | "ru" }) => {
+	const t = useTranslations("StoryPage");
 	return (
 		<div className="flex flex-col gap-40 relative mb-[2200px]">
 			<SectionBanner />
@@ -29,8 +31,13 @@ const StoryPage = ({ id }: { id: number }) => {
 
 			<SectionClancyStory />
 
-			<div className="container mx-auto">
-				<Accordion id={id} title={"Интересные факты"} type={"story"} />
+			<div className="container mx-auto" id="facts">
+				<Accordion
+					locale={locale}
+					id={id}
+					title={t("Accordion")}
+					type={"story"}
+				/>
 			</div>
 			<SectionExpand />
 		</div>

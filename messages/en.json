@@ -1,0 +1,277 @@
+{
+	"Header": {
+		"main": "Home",
+		"albums": "Albums",
+		"bio": "Bio",
+		"story": "Story"
+	},
+	"Footer": {
+		"duos": {
+			"title": "Band Members",
+			"joseph": "Tyler Joseph",
+			"josh": "Josh Dun"
+		},
+		"albums": "Albums",
+		"story": "Band Story",
+		"contacts": "Contacts",
+		"info": "information website",
+		"rights": "Disclaimer and Fair Use Notice. This site is a non-commercial fan project dedicated to the work of Twenty One Pilots. All trademarks, images, song lyrics and other materials belong to their rightful owners. The site is created solely for informational and educational purposes and is not affiliated with Twenty One Pilots, their management or label. The use of materials on this site complies with the principle of Fair Use (17 U.S.C. § 107) for purposes of commentary, criticism and education. If you are a copyright holder and believe that any content should be removed, please contact us.",
+		"caption": "This site is for informational purposes only and is not an official resource of Twenty One Pilots",
+		"official": "Official Resources",
+		"credits": "Credits",
+		"privacy": "Privacy Policy"
+	},
+	"HomePage": {
+		"MainBanner": {
+			"infoSubtitle": "[information website]",
+			"btn": "learn more"
+		},
+		"InfoGrid": {
+			"firstCard": "band in numbers",
+			"secCardTitle": "years in\nmusic",
+			"secCardDesc": "the band was formed\nin 2009",
+			"thirdCardTitle": "studio\nalbums",
+			"thirdCardDesc": "the band changes signature colors\nwith each album",
+			"fourthCardTitle": "plays\non one track",
+			"fourthCardDesc": "\"Stressed Out\" is the most\nplayed track by the band",
+			"fifthCardTitle": "listeners\non spotify\nevery month",
+			"fifthCardDesc": "the band is in the top 100\npopular artists on spotify every month"
+		},
+		"About": {
+			"title": "about the band",
+			"subtitle": "[2009 - present]",
+			"p1": "Twenty One Pilots is an American musical band formed in 2009 in Columbus, Ohio. The band consists of drummer Josh Dun and vocalist Tyler Joseph, who is also the songwriter.",
+			"p2": "Their music combines elements of rock, hip-hop, indie pop, reggae and alternative. The band is known for their emotional lyrics that address themes of mental health, fighting depression and inner struggles.",
+			"btn": "read more"
+		},
+		"Quote": {
+			"quote1": "The beginning of purpose lies",
+			"quote2": "in creating something",
+			"quote3": "understandable only to you.",
+			"name": "Tyler R. Joseph"
+		},
+		"Duos": {
+			"Tyler": {
+				"instruments": "Vocals, Keyboards, Guitar",
+				"name": "Tyler Joseph",
+				"born": "Born December 1, 1988",
+				"descr": "The ideologist of Twenty One Pilots. His lyrics are intertwined with deep meanings, and his music balances between different genres, creating the unique style of the band. Learn more about his creative path and influence on music on our website."
+			},
+			"Josh": {
+				"instruments": "drums",
+				"name": "Josh Dun",
+				"born": "Born June 18, 1988",
+				"descr": "Drummer and energetic engine of Twenty One Pilots. His powerful drumming and stage charisma create the unique atmosphere of the band's performances. Learn more about his role and inspiration here."
+			},
+			"btn": "View Biography"
+		},
+		"Albums": {
+			"title": "Discography",
+			"subtitle": "Click on the cover to learn album details"
+		},
+		"LastWork": {
+			"title": "Latest Work",
+			"url": "https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
+		}
+	},
+	"StoryPage": {
+		"Banner": {
+			"title": "BAND STORY",
+			"subtext": "A duo from Ohio that became the voice of an entire generation. Combining indie pop, hip-hop, electronic and rock, they broke genre boundaries and built a unique musical world.",
+			"scrollDown": "Scroll down"
+		},
+		"FirstMembers": {
+			"title": "BASEMENT CONCERTS",
+			"subtitle": "[2009-2011]",
+			"members": "ORIGINAL LINEUP",
+			"info": {
+				"chris": "Chris Salih",
+				"chrisInstruments": "Drummer",
+				"tyler": "Tyler Joseph",
+				"tylerInstruments": "Vocalist",
+				"nick": "Nick Thomas",
+				"nickInstruments": "Guitar"
+			},
+			"description1": "It all started in Columbus, Ohio in 2009",
+			"description2": "Tyler Joseph, vocalist and multi-instrumentalist, assembled the first version of the band with friends.",
+			"description3": "Back then, none of them knew that this band would outlive the lineup and become a global phenomenon."
+		},
+		"FirstAlbum": {
+			"t": "FIRST ALBUM",
+			"subt": "[2009]",
+			"p1": "The debut album titled \"Twenty One Pilots\" was released on December 29, 2009. No labels, no producers — just faith in the idea.",
+			"p2": "The album was recorded at home and distributed literally hand to hand after performances. And Joseph's mother stood at Ohio State University building and handed out tickets to their concerts.",
+			"btn": "Album page"
+		},
+		"Name": {
+			"t": "BAND NAME",
+			"p1": "The name \"Twenty One Pilots\" was coined by band frontman Tyler Joseph, inspired by Arthur Miller's play \"All My Sons\".",
+			"p2": "The plot centers on a businessman who sold defective parts for military aviation during World War II, leading to the death of 21 pilots.",
+			"p3": "This tragedy deeply affected Tyler: he saw in it the struggle between morality and personal gain — a theme that often sounds in the band's work.",
+			"p4": "The name Twenty One Pilots became for him a reminder of the consequences of decisions made and responsibility for them.",
+			"p5": "The band carried this philosophical, almost ethical message from the very beginning — and this is what distinguishes them from many other groups: they don't just sing, they ask questions."
+		},
+		"DuoCreation": {
+			"t": "DUO FORMATION",
+			"subt": "[2011]",
+			"name": "Josh Dun",
+			"btn": "Learn more",
+			"p1": "Salih and Thomas left the band in 2011 to focus on work and studies. Both wrote farewell notes on the band's official Facebook page.",
+			"p2": "Before leaving the project, Salih invited a friend, Josh Dun (former touring drummer for House of Heroes) to take his place in the band.",
+			"p3": "Impressed by the band's potential and Joseph's creative vision, Dun joined the project."
+		},
+		"Quote": {
+			"p1": "Music can be",
+			"p2": "a powerful tool",
+			"p3": "for healing",
+			"p4": "and bringing people together.",
+			"name": "Tyler Joseph"
+		},
+		"SecondAlbum": {
+			"t": "SECOND ALBUM",
+			"subt": "[2013]",
+			"date": "June 2011",
+			"p1": "release of the album \"Regional At Best\"",
+			"p2": "In 2011, the second, completely independent album was released — \"Regional at Best\".",
+			"p3": "And although it would later be removed from distribution, it was this album that laid the foundation for the band's sound.",
+			"p4": "It was then that the song \"Car Radio\" was born, which fans call the anthem of loneliness and inner struggle.",
+			"p5": "A record label contract was already looming on the horizon. But for now it was just the story of two friends and a small scene.",
+			"cover": "\"Regional At Best\" album cover",
+			"btn": "View album",
+			"videoUrl": "https://www.youtube.com/embed/92XVwY54h5k?si=HM6BfMTltSQzEMcE"
+		},
+		"Contract": {
+			"t": "RECORD LABEL CONTRACT AND STUDIO ALBUM",
+			"date": "April 2012",
+			"p1": "signing contract with \"Fueled By Ramen\" label",
+			"date2": "January 2013",
+			"p2": "Release of \"Vessel\" album",
+			"btn": "View album",
+			"p4": "By the end of 2011, the duo could no longer be ignored. An independent band from Ohio filling venues without label help? This seemed impossible — and became a signal for the music industry.",
+			"p5": "They signed a contract with Fueled By Ramen, the label that once introduced Fall Out Boy and Panic! at the Disco to the world. This became the starting point: work began on the first studio album with full producer support.",
+			"p6": "Thus appeared the album \"Vessel\". It was released on January 8, 2013 and became a bridge between the raw emotion of the early period and the thoughtful, maniacally precise sound that made the band global. The album included updated versions of songs from Regional at Best — including \"Ode to Sleep\", \"Guns for Hands\" and \"Car Radio\".",
+			"p7": "The Vessel cover — two old figures on a gray background. These are Tyler and Josh's grandfathers. A symbol of continuity, life, age, struggle — themes that will always run through their music."
+		},
+		"Admire": {
+			"t": "WORLDWIDE RECOGNITION",
+			"p1": "In May 2015, Blurryface was released — a concept album in which a character appears who embodies inner fears, anxieties and insecurity.",
+			"p2": "He becomes a real antagonist and at the same time the voice of the album. Tyler and Josh use music as therapy — and images, stage solutions and lyrics begin to work as a unified artistic universe.",
+			"p3": "But especially — \"Stressed Out\", which became a global hit and opened the band to millions of new listeners. With its ironic, almost childish chorus and heavy undertone of anxiety — the song perfectly reflected the spirit of the times.",
+			"p4": "The Stressed Out video went viral, and the album reached #1 on the Billboard 200, turning the duo into an international sensation.",
+			"date": "May 2015",
+			"p5": "release of \"Blurryface\" album",
+			"btn": "Album page",
+			"url": "https://www.youtube.com/embed/pXRviuL6vMY?si=cjGiOtODhbVH4icr"
+		},
+		"Clancy": {
+			"t": "CLANCY'S STORY",
+			"q1": "I'm the person who has to question everything, and my faith is something I've always put through heavy trials. During 'Trench' there were moments when you could see what stage of my season of doubt and re-acceptance I was in — and it was definitely a difficult time",
+			"a1": "Tyler Joseph",
+			"p1-1": "Trench is not just an album. It's a story of escape from a totalitarian city controlled by nine bishops. The city is called Dema, and it became a metaphor for depression, control and emotional pain. The main character — Clancy — is trying to escape. And with him — the listener.",
+			"p1-2": "Musically, the album became more mature, cinematic, heavy. The Trench aesthetic was tied to yellow color, balaclavas, mountain jackets and visual coding.",
+			"d1-1": "April 2018",
+			"d1-2": "decoding message on",
+			"d2-1": "October 2018",
+			"d2-2": "album release",
+			"q2": "We've always written songs for shows, not the other way around. But I've always been curious what it would be like to write an album that never existed in a concert setting.",
+			"p2-1": "The new album came out colorful, light, even almost cheerful — at first glance. The album was recorded remotely, during the pandemic. Tyler — in the basement of his house. Josh — on the other side of the country.",
+			"p2-2": "The music became lighter: synthesizers, funk rhythm, melody. But — as always with them — behind the external facade lies deep inner drama. The tracks tell about anxiety, insecurity, the attempt to seem \"normal\" in an abnormal world.",
+			"d3-1": "May 2021",
+			"q3": "Much of who we are as people, and much of who we are as a band, stems from our personal insecurity about ourselves, our music, or how we present ourselves to the world.",
+			"a2": "Josh Dun",
+			"p3-1": "The Clancy album is the culmination of the band's decade-long journey. This is not just a musical release, but the final chapter of the narrative that began in Trench and continued in Scaled and Icy. Everything converges here: images, symbols, musical ideas and internal monologues.",
+			"p3-2": "Quotes, metaphors, references to past albums — everything is woven into the poetics that fans love to decipher.",
+			"p3-3": "Clancy sounds like a synthesis of raw, live drums, deep bass, alternative rock, rap, and even industrial.",
+			"p3-4": "This is an album not about victory, but about the ability not to give up. This is the sound of a person who has learned to look fear in the face — and not look away. This is the end of the story. And the beginning of yourself.",
+			"d4-1": "May 2024"
+		},
+		"Accordion": "Interesting Facts",
+		"Expand": "All Albums"
+	},
+	"AlbumPage": {
+		"t": "Albums",
+		"subtitle": "album",
+		"subt": "Click on the cover to learn album details"
+	},
+	"DuoPage": {
+		"t1": "TYLER JOSEPH",
+		"t2": "JOSH DUN",
+		"title": "members biography",
+		"back": "Back",
+		"fullName": "Full name:",
+		"born": "Date of birth:",
+		"locale": "en-US",
+		"place": "Place of birth:",
+		"instruments": "Instruments:"
+	},
+	"AlbumsComponent": {
+		"release": "Release",
+		"dateLocale": "en-US",
+		"btn": "Album page"
+	},
+	"LocaleSwitcher": {
+		"label": "EN"
+	},
+	"AlbumCard": {
+		"t": "Release date:",
+		"locale": "en-US"
+	},
+	"MetaHome": {
+		"title": "Twenty One Pilots information site",
+		"description": "Information fan-created site with album details, band history, biography and interesting facts.",
+		"keywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+	},
+	"MetaStory": {
+		"pageTitle": "Band Story - Twenty One Pilots",
+		"pageDescription": "Twenty One Pilots band history timeline, from the beginning to the present day.",
+		"pageKeywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+	},
+	"MetaAlbums": {
+		"pageTitle": "Albums - Twenty One Pilots Info",
+		"pageDescription": "Twenty One Pilots all studio albums",
+		"pageKeywords": "Twenty One Pilots, TOP, albums"
+	},
+	"Credits": {
+		"t": "Photo Credits",
+		"subt": "This page lists credits for images used across the site. All rights belong to their respective owners.",
+		"subt2": "Certain images are used under fair use for commentary, review and non-commercial fan purposes."
+	},
+	"MetaCredits": {
+		"t": "Credits – Twenty One Pilots Info",
+		"desc": "List of photo authors and sources used on the site."
+	},
+	"PrivacyPolicy": {
+		"title": "Privacy Policy",
+		"lastUpdate": "Last updated: <strong>May 21, 2025</strong>",
+		"intro": "Thank you for your interest in our fan-made site dedicated to Twenty One Pilots. We respect your privacy and aim to be transparent about what data we do (or don’t) collect.",
+		"noDataTitle": "What data we <red>do not</red> collect",
+		"noDataList": [
+			"Name, surname",
+			"Email or passwords",
+			"IP address or location",
+			"Personal or payment information"
+		],
+		"noAccount": "We do not use sign-up, login, or commenting forms. All content is freely accessible.",
+		"analyticsTitle": "Anonymous Analytics",
+		"analyticsIntro": "To analyze visits, we use <strong>Vercel Analytics</strong>. This service:",
+		"analyticsList": [
+			"Does not use cookies",
+			"Does not track personal data",
+			"Shows only aggregated statistics"
+		],
+		"contactTitle": "Contact Form",
+		"contactText": "If you contact us via the form, we receive only your <strong>email</strong> and <strong>message</strong>. This data <underline>is not stored</underline> in a database and is used only to respond.",
+		"externalContentTitle": "Embedded and External Content",
+		"externalContentText": "Some pages may include embedded media or links to third-party sources, which may use their own cookies or policies.",
+		"updatesTitle": "Policy Updates",
+		"updatesText": "We may update this policy periodically. The latest version is always available on this page.",
+		"contactEmailTitle": "Contact",
+		"contactEmailText": "If you have questions, write us at:"
+	},
+	"ContactModal": {
+		"modalBtn": "Contact",
+		"t": "Contact us",
+		"text": "Your message",
+		"btn": "Send"
+	}
+}

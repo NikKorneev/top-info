@@ -3,7 +3,7 @@ import { useUrlParams } from "@/lib/hooks";
 import { AccordionItemType } from "@/types/accordion";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { LiaEyeSolid } from "react-icons/lia";
 import { RiLoader3Line } from "react-icons/ri";
 import AccordionContent from "./accordionContent";
@@ -21,26 +21,19 @@ export const AccordionItems = ({
 	image?: string;
 	paramName: "id" | "slug";
 }) => {
-	const [index, setIndex] = useState(id);
-	const [isLoading, setLoading] = useState(false);
+	const [index, setIndex] = useState(0);
 	const scrollTo = useRef(null);
-	const { setParam, searchParams } = useUrlParams(paramName, id + "");
+	const { setParam, searchParams, isPending } = useUrlParams(
+		paramName,
+		id + ""
+	);
 
-	useEffect(() => {
-		setLoading(true);
-		const timeout = setTimeout(() => {
-			setLoading(false);
-		}, 500);
-		return () => clearTimeout(timeout);
-	}, [index]);
-
-	const handleClick = (item: AccordionItemType) => {
+	const handleClick = (item: AccordionItemType, index?: number) => {
+		setIndex(index || 0);
 		if (paramName == "id") {
 			setParam(item.id + "");
-			setIndex(item.id);
 		} else {
 			setParam(item.slug?.current);
-			setIndex(item.id);
 		}
 	};
 
@@ -56,19 +49,19 @@ export const AccordionItems = ({
 
 	return (
 		<>
-			{items.map((item, index) => (
+			{items.map((item, i) => (
 				<div
 					id={item.id + "" || item.slug?.current}
 					key={item.id || item.slug?.current}
 				>
 					<AccordionItem
 						onClick={() => {
-							handleClick(item);
+							handleClick(item, i);
 						}}
 						id={item.id + ""}
-						isLoading={item.id == index && isLoading}
+						isLoading={i == index && isPending}
 						active={checkIfChoosen(item)}
-						title={index + 1 + ". " + item.title}
+						title={i + 1 + ". " + item.title}
 					/>
 					<div className="lg:hidden">
 						<AnimatePresence mode="wait">
@@ -112,7 +105,8 @@ export const AccordionItem = ({
 			onClick={onClick}
 			className={clsx(
 				"flex  transition-colors  items-center justify-between bg-grayMain/65 py-4 px-4 cursor-pointer hover:bg-[#be6562] hover:text-mainYellow",
-				active && "text-mainYellow bg-mainRed"
+				active && "text-mainYellow bg-mainRed",
+				isLoading && "animate-pulse"
 			)}
 		>
 			<h4>{title}</h4>

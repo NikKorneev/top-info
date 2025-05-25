@@ -1,6 +1,7 @@
 "use client";
 import { DuoMember } from "@/types/duoMember";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 type Props = {
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const HeroBanner = ({ info }: Props) => {
+	const t = useTranslations("DuoPage");
 	return (
 		<section className="flex gap-5 justify-center font-martian py-10 relative">
 			<motion.div
@@ -30,18 +32,18 @@ const HeroBanner = ({ info }: Props) => {
 			>
 				<h2 className="title mb-5">{info.name}</h2>
 				<ul className="flex flex-col gap-3 max-md:text-[14px]">
-					<DataItem title="Полное имя:" descr={info.fullName} />
+					<DataItem title={t("fullName")} descr={info.fullName} />
 					<DataItem
-						title="Дата рождения:"
+						title={t("born")}
 						descr={new Date(info.dateOfBirth).toLocaleDateString(
-							"ru-RU"
+							t("locale")
 						)}
 					/>
+					<DataItem title={t("place")} descr={info.placeOfBirth} />
 					<DataItem
-						title="Место рождения:"
-						descr={info.placeOfBirth}
+						title={t("instruments")}
+						descr={info.instruments}
 					/>
-					<DataItem title="Инструменты:" descr={info.instruments} />
 				</ul>
 			</motion.div>
 			<div className="absolute bottom-[-90%] opacity-25 -z-10 right-0 left-0">

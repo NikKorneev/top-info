@@ -1,9 +1,9 @@
 "use client";
+import { Link } from "@/i18n/navigation";
 import { searchGlobal } from "@/lib/actions";
 import { setLink } from "@/lib/utils";
 import { SearchedType } from "@/types/searched";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoIosSearch, IoMdClose } from "react-icons/io";
 import { SearchForm } from "./searchForm";
@@ -20,10 +20,10 @@ const Search = () => {
 	};
 
 	useEffect(() => {
-		if (query.length > 100 || query.length < 3) return;
+		if (query.length > 100 || query.length < 2) return;
 		const delay = setTimeout(() => {
 			setDebounced(query);
-		}, 300);
+		}, 200);
 		return () => clearTimeout(delay);
 	}, [query]);
 
@@ -34,7 +34,7 @@ const Search = () => {
 	return (
 		<div className="relative">
 			<div
-				className="cursor-pointer hover:*:animate-bounce"
+				className="cursor-pointer hover:*:scale-110 transition-all"
 				onClick={() => {
 					setOpened(true);
 				}}
@@ -81,7 +81,9 @@ const Search = () => {
 									<p>
 										{item._type == "duoMember"
 											? "bio"
-											: item._type}
+											: item._type == "interestingFact"
+												? "fact"
+												: item._type}
 									</p>
 								</Link>
 							))}

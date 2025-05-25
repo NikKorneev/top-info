@@ -6,6 +6,18 @@ export const interestingFacts = defineType({
 	type: "document",
 	fields: [
 		{
+			name: "lang",
+			type: "string",
+			options: {
+				list: [
+					{ title: "Russian", value: "ru" },
+					{ title: "English", value: "en" },
+				],
+			},
+			validation: (Rule) => Rule.required(),
+			initialValue: "ru",
+		},
+		{
 			name: "id",
 			type: "number",
 			title: "ID",
