@@ -15,9 +15,11 @@
 		"story": "Band Story",
 		"contacts": "Contacts",
 		"info": "information website",
-		"rights": "Disclaimer and Fair Use Notice. This site is a non-commercial fan project dedicated to the work of Twenty One Pilots. All trademarks, images, song lyrics and other materials belong to their rightful owners. The site is created solely for informational and educational purposes and is not affiliated with Twenty One Pilots, their management or label. The use of materials on this site complies with the principle of Fair Use (17 U.S.C. § 107) for purposes of commentary, criticism and education. If you are a copyright holder and believe that any content should be removed, please contact us. This site may contain links to resources whose access may be restricted in the territory of the Russian Federation",
+		"rights": "Disclaimer and Fair Use Notice. This site is a non-commercial fan project dedicated to the work of Twenty One Pilots. All trademarks, images, song lyrics and other materials belong to their rightful owners. The site is created solely for informational and educational purposes and is not affiliated with Twenty One Pilots, their management or label. The use of materials on this site complies with the principle of Fair Use (17 U.S.C. § 107) for purposes of commentary, criticism and education. If you are a copyright holder and believe that any content should be removed, please contact us.",
 		"caption": "This site is for informational purposes only and is not an official resource of Twenty One Pilots",
-		"official": "Official Resources"
+		"official": "Official Resources",
+		"credits": "Credits",
+		"privacy": "Privacy Policy"
 	},
 	"HomePage": {
 		"MainBanner": {
@@ -228,5 +230,42 @@
 		"pageTitle": "Albums - Twenty One Pilots Info",
 		"pageDescription": "Twenty One Pilots all studio albums",
 		"pageKeywords": "Twenty One Pilots, TOP, albums"
+	},
+	"Credits": {
+		"t": "Photo Credits",
+		"subt": "This page lists credits for images used across the site. All rights belong to their respective owners.",
+		"subt2": "Certain images are used under fair use for commentary, review and non-commercial fan purposes."
+	},
+	"MetaCredits": {
+		"t": "Credits – Twenty One Pilots Info",
+		"desc": "List of photo authors and sources used on the site."
+	},
+	"PrivacyPolicy": {
+		"title": "Privacy Policy",
+		"lastUpdate": "Last updated: <strong>May 21, 2025</strong>",
+		"intro": "Thank you for your interest in our fan-made site dedicated to Twenty One Pilots. We respect your privacy and aim to be transparent about what data we do (or don’t) collect.",
+		"noDataTitle": "What data we <red>do not</red> collect",
+		"noDataList": [
+			"Name, surname",
+			"Email or passwords",
+			"IP address or location",
+			"Personal or payment information"
+		],
+		"noAccount": "We do not use sign-up, login, or commenting forms. All content is freely accessible.",
+		"analyticsTitle": "Anonymous Analytics",
+		"analyticsIntro": "To analyze visits, we use <strong>Vercel Analytics</strong>. This service:",
+		"analyticsList": [
+			"Does not use cookies",
+			"Does not track personal data",
+			"Shows only aggregated statistics"
+		],
+		"contactTitle": "Contact Form",
+		"contactText": "If you contact us via the form, we receive only your <strong>email</strong> and <strong>message</strong>. This data <underline>is not stored</underline> in a database and is used only to respond.",
+		"externalContentTitle": "Embedded and External Content",
+		"externalContentText": "Some pages may include embedded media or links to third-party sources, which may use their own cookies or policies.",
+		"updatesTitle": "Policy Updates",
+		"updatesText": "We may update this policy periodically. The latest version is always available on this page.",
+		"contactEmailTitle": "Contact",
+		"contactEmailText": "If you have questions, write us at:"
 	}
 }

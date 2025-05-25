@@ -44,7 +44,6 @@ const Footer = () => {
 								{t("story")}
 							</Link>
 						</li>
-						<li>FAQ</li>
 					</ul>
 					<ul>
 						<div className="flex flex-col gap-[7px] text-[16px]">
@@ -74,8 +73,8 @@ const Footer = () => {
 
 				<div className="font-inter">
 					<p className="text-sm text-[#73757B]">
-						<span>Privacy policy</span> |{" "}
-						<span>Terms and conditions</span>
+						<Link href="/privacy">{t("privacy")}</Link> |{" "}
+						<Link href="/credits">{t("credits")}</Link>
 					</p>
 					<p className="text-sm text-[#73757B] w-full md:w-2/3 mt-7 mb-10">
 						{t("rights")}
