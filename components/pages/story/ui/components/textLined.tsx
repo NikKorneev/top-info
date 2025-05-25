@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const TextLined = ({
-	paragraphs,
+	paragraphs = [],
 	itemsClass,
 	wrapperClass,
 	end,
@@ -68,6 +68,7 @@ const TextLined = ({
 				{paragraphs?.map((p, i) => (
 					<p
 						key={i}
+						//@ts-expect-error should be fixed
 						ref={(el) => (paragraphRefs.current[i] = el)}
 						className={`${itemsClass} text-grayMain leading-[160%] opacity-0  transition-all duration-300 max-lg:text-[14px]`}
 					>

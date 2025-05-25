@@ -37,6 +37,9 @@ const Accordion = async ({
 		fetchParams
 	);
 
+	if (!content) return null;
+	if (!items) return null;
+
 	return (
 		<section className="max-w-[75%] @md:max-w-[100%]  mx-auto font-martian max-sm:max-w-full">
 			<h3 className="title text-center mb-10">{title}</h3>
@@ -52,7 +55,7 @@ const Accordion = async ({
 				</div>
 				<div className="flex flex-col gap-2 ">
 					<AccordionItems
-						items={items}
+						items={items as any}
 						id={id}
 						paramName={type === "album" ? "slug" : "id"}
 						description={content[0]?.description || ""}

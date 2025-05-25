@@ -4,9 +4,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+	transpilePackages: ["gsap"],
+
 	images: {
 		remotePatterns: [new URL("https://i.postimg.cc/**")],
 	},
+
 	async redirects() {
 		return [
 			{

@@ -1,0 +1,58 @@
+diff --git a/node_modules/next-intl/dist/esm/production/navigation/react-client/createNavigation.js b/node_modules/next-intl/dist/esm/production/navigation/react-client/createNavigation.js
+index bd3b2a6..6a8dd63 100644
+--- a/node_modules/next-intl/dist/esm/production/navigation/react-client/createNavigation.js
++++ b/node_modules/next-intl/dist/esm/production/navigation/react-client/createNavigation.js
+@@ -1 +1,9 @@
+-import{useRouter as e,usePathname as t}from"next/navigation";import{useMemo as r}from"react";import{useLocale as n}from"use-intl";import o from"../shared/createSharedNavigationFns.js";import a from"../shared/syncLocaleCookie.js";import{getRoute as s}from"../shared/utils.js";import i from"./useBasePathname.js";function c(c){const{Link:m,config:u,getPathname:f,...h}=o(n,c);return{...h,Link:m,usePathname:function(){const e=i(u),t=n();return r((()=>e&&u.pathnames?s(t,e,u.pathnames):e),[t,e])},useRouter:function(){const o=e(),s=n(),i=t();return r((()=>{function e(e){return function(t,r){const{locale:n,...o}=r||{},c=[f({href:t,locale:n||s})];Object.keys(o).length>0&&c.push(o),e(...c),a(u.localeCookie,i,s,n)}}return{...o,push:e(o.push),replace:e(o.replace),prefetch:e(o.prefetch)}}),[s,i,o])},getPathname:f}}export{c as default};
++import { useRouter as e, usePathname as t } from "next/navigation.js";
++import { useMemo as r } from "react";
++import { useLocale as n } from "use-intl";
++import o from "../shared/createSharedNavigationFns.js";
++import a from "../shared/syncLocaleCookie.js";
++import { getRoute as s } from "../shared/utils.js";
++import i from "./useBasePathname.js";
++function c(c){const{Link:m,config:u,getPathname:f,...h}=o(n,c);return{...h,Link:m,usePathname:function(){const e=i(u),t=n();return r((()=>e&&u.pathnames?s(t,e,u.pathnames):e),[t,e])},useRouter:function(){const o=e(),s=n(),i=t();return r((()=>{function e(e){return function(t,r){const{locale:n,...o}=r||{},c=[f({href:t,locale:n||s})];Object.keys(o).length>0&&c.push(o),e(...c),a(u.localeCookie,i,s,n)}}return{...o,push:e(o.push),replace:e(o.replace),prefetch:e(o.prefetch)}}),[s,i,o])},getPathname:f}}export { c as default };
++
+diff --git a/node_modules/next-intl/dist/esm/production/navigation/react-client/useBasePathname.js b/node_modules/next-intl/dist/esm/production/navigation/react-client/useBasePathname.js
+index db60850..2a2edba 100644
+--- a/node_modules/next-intl/dist/esm/production/navigation/react-client/useBasePathname.js
++++ b/node_modules/next-intl/dist/esm/production/navigation/react-client/useBasePathname.js
+@@ -1 +1,6 @@
+-import{usePathname as e}from"next/navigation";import{useMemo as r}from"react";import{useLocale as o}from"use-intl";import{hasPathnamePrefixed as t,unprefixPathname as i,getLocalePrefix as f,getLocaleAsPrefix as l}from"../../shared/utils.js";function n(n){const s=e(),a=o();return r((()=>{if(!s)return s;let e=s;const r=f(a,n.localePrefix);if(t(r,s))e=i(s,r);else if("as-needed"===n.localePrefix.mode&&n.localePrefix.prefixes){const r=l(a);t(r,s)&&(e=i(s,r))}return e}),[n.localePrefix,a,s])}export{n as default};
++import { usePathname as e } from "next/navigation.js";
++import { useMemo as r } from "react";
++import { useLocale as o } from "use-intl";
++import { getLocalePrefix as f, unprefixPathname as i, getLocaleAsPrefix as l, hasPathnamePrefixed as t } from "../../shared/utils.js";
++function n(n){const s=e(),a=o();return r((()=>{if(!s)return s;let e=s;const r=f(a,n.localePrefix);if(t(r,s))e=i(s,r);else if("as-needed"===n.localePrefix.mode&&n.localePrefix.prefixes){const r=l(a);t(r,s)&&(e=i(s,r))}return e}),[n.localePrefix,a,s])}export { n as default };
++
+diff --git a/node_modules/next-intl/dist/esm/production/navigation/shared/BaseLink.js b/node_modules/next-intl/dist/esm/production/navigation/shared/BaseLink.js
+index 746c251..ea95e07 100644
+--- a/node_modules/next-intl/dist/esm/production/navigation/shared/BaseLink.js
++++ b/node_modules/next-intl/dist/esm/production/navigation/shared/BaseLink.js
+@@ -1,2 +1,9 @@
+ "use client";
+-import o from"next/link";import{usePathname as r}from"next/navigation";import{forwardRef as e}from"react";import{useLocale as t}from"use-intl";import i from"./syncLocaleCookie.js";import{jsx as n}from"react/jsx-runtime";function f({href:e,locale:f,localeCookie:c,onClick:m,prefetch:l,...a},p){const s=t(),u=null!=f&&f!==s,h=r();u&&(l=!1);return n(o,{ref:p,href:e,hrefLang:u?f:void 0,onClick:function(o){i(c,h,s,f),m&&m(o)},prefetch:l,...a})}var c=e(f);export{c as default};
++import o from "next/link.js";
++import { usePathname as r } from "next/navigation.js";
++import { forwardRef as e } from "react";
++import { jsx as n } from "react/jsx-runtime";
++import { useLocale as t } from "use-intl";
++import i from "./syncLocaleCookie.js";
++function f({href:e,locale:f,localeCookie:c,onClick:m,prefetch:l,...a},p){const s=t(),u=null!=f&&f!==s,h=r();u&&(l=!1);return n(o,{ref:p,href:e,hrefLang:u?f:void 0,onClick:function(o){i(c,h,s,f),m&&m(o)},prefetch:l,...a})}var c=e(f);export { c as default };
++
+diff --git a/node_modules/next-intl/dist/esm/production/navigation/shared/createSharedNavigationFns.js b/node_modules/next-intl/dist/esm/production/navigation/shared/createSharedNavigationFns.js
+index 8915bfd..88aa0c2 100644
+--- a/node_modules/next-intl/dist/esm/production/navigation/shared/createSharedNavigationFns.js
++++ b/node_modules/next-intl/dist/esm/production/navigation/shared/createSharedNavigationFns.js
+@@ -1 +1,10 @@
+-import{redirect as e,permanentRedirect as t}from"next/navigation";import{forwardRef as o}from"react";import{receiveRoutingConfig as r}from"../../routing/config.js";import n from"../../shared/use.js";import{isLocalizableHref as a,isPromise as i}from"../../shared/utils.js";import c from"./BaseLink.js";import{serializeSearchParams as f,compileLocalizedPathname as m,applyPathnamePrefix as l,normalizeNameOrNameWithParams as s}from"./utils.js";import{jsx as p}from"react/jsx-runtime";function u(u,h){const j=r(h||{}),d=j.pathnames;function g({href:e,locale:t,...o},r){let f,m;"object"==typeof e?(f=e.pathname,m=e.params):f=e;const l=a(e),s=u(),h=i(s)?n(s):s,g=l?y({locale:t||h,href:null==d?f:{pathname:f,params:m},forcePrefix:null!=t||void 0}):f;return p(c,{ref:r,href:"object"==typeof e?{...e,pathname:g}:g,locale:t,localeCookie:j.localeCookie,...o})}const x=o(g);function y(e){const{forcePrefix:t,href:o,locale:r}=e;let n;return null==d?"object"==typeof o?(n=o.pathname,o.query&&(n+=f(o.query))):n=o:n=m({locale:r,...s(o),pathnames:j.pathnames}),l(n,r,j,t)}function k(e){return function(t,...o){return e(y(t),...o)}}const b=k(e),P=k(t);return{config:j,Link:x,redirect:b,permanentRedirect:P,getPathname:y}}export{u as default};
++import { redirect as e, permanentRedirect as t } from "next/navigation.js";
++import { forwardRef as o } from "react";
++import { jsx as p } from "react/jsx-runtime";
++import { receiveRoutingConfig as r } from "../../routing/config.js";
++import n from "../../shared/use.js";
++import { isLocalizableHref as a, isPromise as i } from "../../shared/utils.js";
++import c from "./BaseLink.js";
++import { serializeSearchParams as f, applyPathnamePrefix as l, compileLocalizedPathname as m, normalizeNameOrNameWithParams as s } from "./utils.js";
++function u(u,h){const j=r(h||{}),d=j.pathnames;function g({href:e,locale:t,...o},r){let f,m;"object"==typeof e?(f=e.pathname,m=e.params):f=e;const l=a(e),s=u(),h=i(s)?n(s):s,g=l?y({locale:t||h,href:null==d?f:{pathname:f,params:m},forcePrefix:null!=t||void 0}):f;return p(c,{ref:r,href:"object"==typeof e?{...e,pathname:g}:g,locale:t,localeCookie:j.localeCookie,...o})}const x=o(g);function y(e){const{forcePrefix:t,href:o,locale:r}=e;let n;return null==d?"object"==typeof o?(n=o.pathname,o.query&&(n+=f(o.query))):n=o:n=m({locale:r,...s(o),pathnames:j.pathnames}),l(n,r,j,t)}function k(e){return function(t,...o){return e(y(t),...o)}}const b=k(e),P=k(t);return{config:j,Link:x,redirect:b,permanentRedirect:P,getPathname:y}}export { u as default };
++

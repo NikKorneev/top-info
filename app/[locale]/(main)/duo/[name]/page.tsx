@@ -1,17 +1,17 @@
-import AboutPage from "@/pages/duo";
+import AboutPage from "@/components/pages/duo";
 import { client } from "@/sanity/lib/client";
 import { GET_DUO_BY_NAME } from "@/sanity/query/queries";
 import { getLocale } from "next-intl/server";
 import { headers } from "next/headers";
 
 interface GenerateMetadataProps {
-	params: {
+	params: Promise<{
 		name: string;
-	};
+	}>;
 }
 
 export async function generateMetadata({ params }: GenerateMetadataProps) {
-	const { name } = params;
+	const name = (await params).name;
 	const locale = await getLocale();
 	const headersList = await headers();
 	const pathname = headersList.get("x-pathname") || "/";

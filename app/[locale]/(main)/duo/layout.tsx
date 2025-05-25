@@ -1,6 +1,6 @@
 import DuoNavTab from "@/components/animated/DuoNavTab";
+import LayoutBanner from "@/components/pages/duo/layoutBanner";
 import BackBtn from "@/components/ui/backBtn";
-import LayoutBanner from "@/pages/duo/layoutBanner";
 import { useTranslations } from "next-intl";
 import React from "react";
 

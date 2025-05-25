@@ -2,7 +2,7 @@ import Accordion from "@/components/animated/accordion";
 import AlbumBack from "@/components/animated/albumBack";
 import { DragCards } from "@/components/animated/dragCardGallery";
 import RunningLine from "@/components/animated/runningLine";
-import AlbumCard from "@/pages/album/ui/AlbumCard";
+import AlbumCard from "@/components/pages/album/ui/AlbumCard";
 import { client } from "@/sanity/lib/client";
 import { GET_ALBUM_BY_SLUG } from "@/sanity/query/queries";
 import { getLocale } from "next-intl/server";
@@ -20,13 +20,13 @@ interface AlbumInfo {
 }
 
 interface GenerateMetadataProps {
-	params: {
+	params: Promise<{
 		slug: string;
-	};
+	}>;
 }
 
 export async function generateMetadata({ params }: GenerateMetadataProps) {
-	const { slug } = params;
+	const slug = (await params).slug;
 	const locale = await getLocale();
 	const headersList = await headers();
 	const pathname = headersList.get("x-pathname") || "/";

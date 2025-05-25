@@ -27,6 +27,7 @@ const AlbumCard = ({ links, releaseDate, albumCover, title }: Props) => {
 					alt="album-card"
 					className="mask-alpha mask-b-from-45%"
 					width={400}
+					loading="eager"
 					height={400}
 				/>
 				<div className="absolute bottom-0 px-4">

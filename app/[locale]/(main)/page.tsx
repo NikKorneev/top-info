@@ -1,4 +1,4 @@
-import HomePage from "@/pages/home/ui";
+import HomePage from "@/components/pages/home/ui";
 
 export default async function Home({
 	params,

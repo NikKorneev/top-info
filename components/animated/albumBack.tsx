@@ -72,6 +72,9 @@ const AlbumBack = ({ text, image, titleSVG }: Props) => {
 				{titleSVG && (
 					<Image
 						width={933}
+						loading="eager"
+						quality={100}
+						priority
 						height={217}
 						src={urlFor(titleSVG).width(933).url()}
 						alt={"album title"}
@@ -92,6 +95,8 @@ const AlbumBack = ({ text, image, titleSVG }: Props) => {
 			<Image
 				alt={"albums background"}
 				fill
+				priority
+				loading="eager"
 				quality={100}
 				className="object-cover  -z-20"
 				src={image || "/img/albums-background.png"}

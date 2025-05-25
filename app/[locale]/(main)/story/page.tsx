@@ -1,4 +1,4 @@
-import StoryPage from "@/pages/story/ui";
+import StoryPage from "@/components/pages/story/ui";
 import { Metadata } from "next";
 
 import { getLocale, getTranslations } from "next-intl/server";

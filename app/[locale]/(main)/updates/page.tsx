@@ -1,4 +1,4 @@
-import NewsCard from "@/pages/news/components/NewsCard";
+import NewsCard from "@/components/pages/news/components/NewsCard";
 import { client } from "@/sanity/lib/client";
 import { GET_ALL_ARTICLES_BY_LANG } from "@/sanity/query/queries";
 import { Article } from "@/types/article";
