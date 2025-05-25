@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import InfoCard from "./InfoCard";
 
 type Props = {
@@ -23,6 +24,7 @@ type Props = {
 };
 
 const Info = ({ card1, card2, card3, card4, card5 }: Props) => {
+	const t = useTranslations("HomePage.InfoGrid");
 	return (
 		<section
 			id="info"
@@ -54,13 +56,13 @@ const Info = ({ card1, card2, card3, card4, card5 }: Props) => {
 				subtitle={card4.title}
 				description={card4.descr}
 				title={"3+"}
-				add={"млрд"}
+				add={t("billions")}
 			/>
 			<InfoCard
 				subtitle={card5.title}
 				description={card5.descr}
 				title={"28+"}
-				add={"млн"}
+				add={t("millions")}
 			/>
 		</section>
 	);

@@ -28,5 +28,7 @@ export function setLink(item: SearchedType) {
 			return `/albums/${slug.current}`;
 		case "interestingFact":
 			return `/story/${id ? "?id=" + id : ""}#facts`;
+		case "article":
+			return `/updates/${slug.current}`;
 	}
 }

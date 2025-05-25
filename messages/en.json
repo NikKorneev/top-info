@@ -3,7 +3,8 @@
 		"main": "Home",
 		"albums": "Albums",
 		"bio": "Bio",
-		"story": "Story"
+		"story": "Story",
+		"news": "News"
 	},
 	"Footer": {
 		"duos": {
@@ -35,7 +36,9 @@
 			"fourthCardTitle": "plays\non one track",
 			"fourthCardDesc": "\"Stressed Out\" is the most\nplayed track by the band",
 			"fifthCardTitle": "listeners\non spotify\nevery month",
-			"fifthCardDesc": "the band is in the top 100\npopular artists on spotify every month"
+			"fifthCardDesc": "the band is in the top 100\npopular artists on spotify every month",
+			"millions": "M",
+			"billions": "B"
 		},
 		"About": {
 			"title": "about the band",
@@ -45,9 +48,9 @@
 			"btn": "read more"
 		},
 		"Quote": {
-			"quote1": "The beginning of purpose lies",
-			"quote2": "in creating something",
-			"quote3": "understandable only to you.",
+			"quote1": "The beginning of purpose is",
+			"quote2": "found in creating something",
+			"quote3": "that only you can understand.",
 			"name": "Tyler R. Joseph"
 		},
 		"Duos": {
@@ -272,6 +275,21 @@
 		"modalBtn": "Contact",
 		"t": "Contact us",
 		"text": "Your message",
-		"btn": "Send"
+		"send": "Send",
+		"success": "Message sent",
+		"error": "Try later",
+		"loading": "Sending..."
+	},
+	"News": {
+		"t": "News",
+		"desc": "Latest Twenty One Pilots' news and updates",
+		"locale": "en-US",
+		"keywords": "Twenty One Pilots, TOP, news, updates",
+		"noNews": "News not found for this language. Try another language."
+	},
+	"NotFound": {
+		"t": "Page not found",
+		"desc": "The page you are looking for does not exist.",
+		"backHome": "Back to the main page"
 	}
 }

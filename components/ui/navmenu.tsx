@@ -2,6 +2,7 @@
 import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
+import LocaleSwitcher from "./localeSwitcher";
 
 type Props = {
 	className?: string;
@@ -13,7 +14,7 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 	return (
 		<ul
 			className={clsx(
-				"hidden md:flex gap-8 text-[#ffffffd3] uppercase font-normal xl:text-[18px] text-sm sm:text-[16px] *:transition-colors *:cursor-pointer *:hover:text-mainYellow",
+				"hidden md:flex gap-8 text-[#ffffffd3] uppercase font-normal xl:text-[18px] text-sm max-md:text-[20px]  *:transition-colors *:cursor-pointer *:hover:text-mainYellow",
 				className
 			)}
 		>
@@ -53,6 +54,18 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 				>
 					{t("bio")}
 				</Link>
+			</li>
+			<li className="menu-item">
+				<Link
+					scroll={true}
+					href="/updates"
+					onClick={() => setMenuIsOpened && setMenuIsOpened(false)}
+				>
+					{t("news")}
+				</Link>
+			</li>
+			<li className="md:hidden">
+				<LocaleSwitcher className="text-black" />
 			</li>
 		</ul>
 	);

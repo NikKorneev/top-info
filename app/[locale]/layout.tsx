@@ -21,8 +21,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-	title: "Twenty One Pilots Main Page",
-	description: "!To do",
+	title: "Twenty One Pilots Info",
 };
 
 export default async function RootLayout({

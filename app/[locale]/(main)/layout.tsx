@@ -28,11 +28,11 @@ export async function generateMetadata(): Promise<Metadata> {
 			description: t("description"),
 			url: fullUrl,
 			siteName: "Twenty One Pilots Info",
-			locale: locale === "ru" ? "ru_RU" : "en_US", // можно автоматизировать
+			locale: locale === "ru" ? "ru_RU" : "en_US",
 			type: "website",
 			images: [
 				{
-					url: "https://i.postimg.cc/qRpZbhmV/og-clancy-3552517413.png", // 🔥 Здесь картинка!
+					url: "https://i.postimg.cc/qRpZbhmV/og-clancy-3552517413.png",
 					width: 1200,
 					height: 630,
 					alt: "Twenty One Pilots Band Banner",

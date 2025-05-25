@@ -13,7 +13,11 @@ import { useParams } from "next/navigation";
 import { useTransition } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const LocaleSwitcher = () => {
+type Props = {
+	className?: string;
+};
+
+const LocaleSwitcher = ({ className }: Props) => {
 	const router = useRouter();
 	const [isPending, startTransition] = useTransition();
 	const pathname = usePathname();
@@ -30,8 +34,13 @@ const LocaleSwitcher = () => {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger className="flex gap-1 uppercase text-mainYellow font-martian items-center   cursor-pointer hover:text-mainYellow transition-colors">
-				<span>{t("label")}</span> <MdKeyboardArrowDown size={24} />
+			<DropdownMenuTrigger
+				className={
+					"flex gap-1 uppercase text-mainYellow font-martian items-center   cursor-pointer hover:text-mainYellow transition-colors"
+				}
+			>
+				<span className={className}>{t("label")}</span>{" "}
+				<MdKeyboardArrowDown size={24} className={className} />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="bg-back text-white text-[16px] font-martian ">
 				<DropdownMenuLabel className="sr-only">
