@@ -63,7 +63,7 @@
 				"born": "Born June 18, 1988",
 				"descr": "Drummer and energetic engine of Twenty One Pilots. His powerful drumming and stage charisma create the unique atmosphere of the band's performances. Learn more about his role and inspiration here."
 			},
-			"btn": "Read more"
+			"btn": "View Biography"
 		},
 		"Albums": {
 			"title": "Discography",
@@ -267,5 +267,11 @@
 		"updatesText": "We may update this policy periodically. The latest version is always available on this page.",
 		"contactEmailTitle": "Contact",
 		"contactEmailText": "If you have questions, write us at:"
+	},
+	"ContactModal": {
+		"modalBtn": "Contact",
+		"t": "Contact us",
+		"text": "Your message",
+		"btn": "Send"
 	}
 }

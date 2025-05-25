@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import ContactModal from "./contactModal";
 
 const Footer = () => {
 	const t = useTranslations("Footer");
@@ -56,6 +57,9 @@ const Footer = () => {
 							<span className="font-light text-white/80 max-md:text-sm">
 								Location: Bryansk, Russian Federation
 							</span>
+							<li className="mt-5">
+								<ContactModal />
+							</li>
 						</div>
 					</ul>
 					<ul className="ml-auto text-right flex flex-col gap-[7px] max-md:text-left max-md:ml-0">

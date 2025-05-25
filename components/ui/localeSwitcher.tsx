@@ -24,7 +24,7 @@ const LocaleSwitcher = () => {
 	function handleClick(locale: "en" | "ru") {
 		startTransition(() => {
 			//@ts-expect-error should be fixed
-			router.replace({ pathname, params }, { locale });
+			router.replace({ pathname, params }, { locale, scroll: false });
 		});
 	}
 
