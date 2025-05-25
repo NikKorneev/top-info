@@ -48,7 +48,7 @@ const Search = () => {
 							initial={{ y: -400, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							exit={{ y: -400, opacity: 0 }}
-							className="relative  w-[100dvw] h-[400px] bg-mainYellow z-[50]"
+							className="relative  w-[100dvw] h-[400px] max-sm:h-[100px] bg-mainYellow z-[50]"
 						>
 							<div className="absolute cursor-pointer top-4 right-4">
 								<IoMdClose

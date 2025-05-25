@@ -43,7 +43,7 @@ const AlbumScrollLayout = () => {
 					alt={"band"}
 					fill
 					ref={scrollEl1}
-					className="object-cover -z-10"
+					className="object-cover -z-10 max-sm:hidden"
 					src={"/img/rock-bandl1.png"}
 				/>
 			</motion.div>

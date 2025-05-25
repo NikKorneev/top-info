@@ -214,7 +214,7 @@ export default async function NewsArticlePage({ params }: Props) {
 					<h2 className="text-2xl font-bold mb-4 text-white">
 						{locale === "en" ? "References" : "Ссылки на источники"}
 					</h2>
-					<ul className="list-inside">
+					<ul>
 						{article.references.map((reference, i) => (
 							<li key={reference} className="mb-2 text-white">
 								{i + 1 + ". "}
