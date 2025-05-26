@@ -221,19 +221,19 @@
 		"locale": "ru-RU"
 	},
 	"MetaHome": {
-		"title": "Информационный сайт Twenty One Pilots",
-		"description": "Информационный неофициальный фан-сайт, посвященный творчеству Twenty One Pilots. Здесь вы можете узнать об альбомах, истории группы, биографии участников и интересных фактах.",
+		"title": "Информационный фан-сайт Twenty One Pilots",
+		"description": "Неофициальный информационный фан-сайт, посвященный творчеству Twenty One Pilots. Здесь вы можете узнать об альбомах, истории группы, биографии участников и интересных фактах.",
 		"keywords": "Twenty One Pilots, Tyler Josep, 21 pilots, Josh Dun, альбомы, песни, Clancy, Тайлер Джозеф, Джош Дан, история, информация, новости, лор"
 	},
 	"MetaStory": {
-		"pageTitle": "История группы - Twenty One Pilots Info",
-		"pageDescription": "История группы Twenty One Pilots  в хронологическом порядке, с самого начала до сегодняшнего дня. Интересные факты про участников, альбомы и песни.",
-		"pageKeywords": "Twenty One Pilots, TOP, альбомы, песни, история, лор, Clancy, фан-сайт, Tyler Joseph, Josh Dun, alternative rock, Тайлер Джозеф, Джош Дан"
+		"pageTitle": "История группы - Twenty One Pilots Info fan-site",
+		"pageDescription": "История группы Twenty One Pilots  в хронологическом порядке, с самого начала до сегодняшнего дня. Интересные факты про участников, альбомы и песни. Неофициальный информационный фан-сайт, посвященный творчеству Twenty One Pilots.",
+		"pageKeywords": "Twenty One Pilots, TOP, альбомы, песни, история, лор, неофициальный, Clancy, фан-сайт, Tyler Joseph, Josh Dun, alternative rock, Тайлер Джозеф, Джош Дан"
 	},
 	"MetaAlbums": {
-		"pageTitle": "Альбомы - Twenty One Pilots Info",
-		"pageDescription": "Twenty One Pilots все студийные альбомы группы",
-		"pageKeywords": "Twenty One Pilots, TOP, albums, альбомы, о чем, песни, Тайлер Джозеф, Джош Дан, 21 pilots"
+		"pageTitle": "Альбомы - Twenty One Pilots Info fan-site",
+		"pageDescription": "Twenty One Pilots все студийные альбомы группы. Неофициальный информационный фан-сайт, посвященный творчеству Twenty One Pilots.",
+		"pageKeywords": "Twenty One Pilots, TOP, albums, альбомы, о чем, песни, Тайлер Джозеф, Джош Дан, 21 pilots, неофициальный"
 	},
 	"Credits": {
 		"t": "Источники фотографий",

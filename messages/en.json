@@ -220,19 +220,19 @@
 		"locale": "en-US"
 	},
 	"MetaHome": {
-		"title": "Twenty One Pilots information site",
+		"title": "Twenty One Pilots information fan-site",
 		"description": "Information unofficial fan-created site about Twenty One Pilots with album details, band history, biography and interesting facts.",
-		"keywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock, history, lore, information, news, 21 pilots"
+		"keywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, unofficial, Josh Dun, alternative rock, history, lore, information, news, 21 pilots"
 	},
 	"MetaStory": {
-		"pageTitle": "Band Story - Twenty One Pilots",
-		"pageDescription": "Twenty One Pilots band history timeline, from the beginning to the present day. Interesting facts about albums, songs and band's members.",
-		"pageKeywords": "Twenty One Pilots, TOP, albums, history, lore, fan, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+		"pageTitle": "Band Story - Twenty One Pilots Info fan-site",
+		"pageDescription": "Twenty One Pilots band history timeline, from the beginning to the present day. Interesting facts about albums, songs and band's members. Information unofficial fan-created site about Twenty One Pilots",
+		"pageKeywords": "Twenty One Pilots, TOP, albums, history, lore, fan, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock, unofficial"
 	},
 	"MetaAlbums": {
-		"pageTitle": "Albums - Twenty One Pilots Info",
-		"pageDescription": "Twenty One Pilots all studio albums",
-		"pageKeywords": "Twenty One Pilots, TOP, albums, about, songs, lore, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+		"pageTitle": "Albums - Twenty One Pilots Info fan-site",
+		"pageDescription": "Twenty One Pilots all studio albums. Information unofficial fan-created site about Twenty One Pilots",
+		"pageKeywords": "Twenty One Pilots, TOP, albums, about, songs, lore, Clancy, Tyler Joseph, Josh Dun, alternative rock, unofficial"
 	},
 	"Credits": {
 		"t": "Photo Credits",
