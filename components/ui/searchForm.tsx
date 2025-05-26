@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { IoIosSearch } from "react-icons/io";
 
@@ -13,6 +14,12 @@ export const SearchForm = ({
 	setQuery: (query: string) => void;
 	handleSearch: (val: string) => void;
 }) => {
+	const ref = useRef<HTMLInputElement>(null);
+
+	useEffect(() => {
+		ref?.current?.focus();
+	}, []);
+
 	return (
 		<form
 			action={(data) => {
@@ -25,6 +32,7 @@ export const SearchForm = ({
 				type="text"
 				minLength={2}
 				maxLength={100}
+				ref={ref}
 				name="q"
 				value={query}
 				onChange={(e) => setQuery(e.target.value)}
