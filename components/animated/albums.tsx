@@ -30,15 +30,9 @@ const Albums = ({
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
 				<div className="container mx-auto font-martian">
 					<div>
-						<motion.h3
-							initial={{ y: -100, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.35 }}
-							viewport={{ once: titleOnce, amount: 1 }}
-							className="text-mainRed text-5xl max-sm:text-4xl font-extrabold uppercase"
-						>
+						<h3 className="text-mainRed text-5xl max-sm:text-4xl font-extrabold uppercase">
 							{title}
-						</motion.h3>
+						</h3>
 						<motion.p
 							initial={{ y: -50, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
