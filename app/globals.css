@@ -8,6 +8,25 @@ html {
 }
 
 @layer utilities {
+	@keyframes pulse-blink {
+		0% {
+			transform: translate3d(0, 0, 0) scale(1);
+			opacity: 1;
+		}
+		50% {
+			transform: translate3d(10px, 2px, 0) scale(0.99);
+			opacity: 0.8;
+		}
+		100% {
+			transform: translate3d(0, 0, 0) scale(1);
+			opacity: 1;
+		}
+	}
+
+	.attention-pulse {
+		animation: pulse-blink 0.7s infinite ease-in-out;
+	}
+
 	.container {
 		@media (min-width: 96rem /* 1536px */) and (max-width: 1600px) {
 			max-width: 1440px !important;

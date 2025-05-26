@@ -5,7 +5,7 @@ import RunningLine from "@/components/animated/runningLine";
 import AlbumCard from "@/components/pages/album/ui/AlbumCard";
 import { client } from "@/sanity/lib/client";
 import { GET_ALBUM_BY_SLUG } from "@/sanity/query/queries";
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
@@ -184,6 +184,7 @@ const Page = async ({
 	const slug = awaitedParams.slug;
 	const locale = awaitedParams.locale;
 	const songSlug = (await searchParams).slug;
+	const t = await getTranslations("Gallery");
 
 	const info = await client.fetch(GET_ALBUM_BY_SLUG, { slug, locale });
 
@@ -248,7 +249,10 @@ const Page = async ({
 
 			{info.gallery?.length > 0 && (
 				<div>
-					<DragCards srcs={info.gallery} title={"Галлерея"} />
+					<DragCards
+						srcs={info.gallery}
+						title={t("t") ?? "Pictures"}
+					/>
 				</div>
 			)}
 		</div>

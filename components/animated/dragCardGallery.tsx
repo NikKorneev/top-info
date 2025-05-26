@@ -64,6 +64,7 @@ const params = [
 
 const Cards = ({ srcs }: CardProp) => {
 	const containerRef = useRef<HTMLDivElement | null>(null);
+	const [isActivated, setIsActivated] = useState(false);
 
 	return (
 		<div className="absolute inset-0 z-10" ref={containerRef}>
@@ -71,6 +72,8 @@ const Cards = ({ srcs }: CardProp) => {
 				<Card
 					key={index}
 					containerRef={containerRef}
+					toBeActivated={index === 2 && !isActivated}
+					setIsActivated={setIsActivated}
 					src={src}
 					alt="Example image"
 					{...params[index]}
@@ -88,6 +91,8 @@ interface Props {
 	left: string;
 	rotate: string;
 	className?: string;
+	toBeActivated?: boolean;
+	setIsActivated: (b: boolean) => void;
 }
 
 const Card = ({
@@ -98,11 +103,14 @@ const Card = ({
 	left,
 	rotate,
 	className,
+	toBeActivated,
+	setIsActivated,
 }: Props) => {
 	const [zIndex, setZIndex] = useState(0);
 
 	const updateZIndex = () => {
 		const els = document.querySelectorAll(".drag-elements");
+		setIsActivated(true);
 
 		let maxZIndex = -Infinity;
 
@@ -129,8 +137,10 @@ const Card = ({
 				zIndex,
 			}}
 			className={twMerge(
-				"drag-elements cursor-grab hover:border-mainRed border-[2px] hover:shadow-mainRed/50 shadow-md  absolute w-48  bg-neutral-200 p-1 pb-4",
-				className
+				"drag-elements cursor-grab  hover:border-mainRed border-[2px] hover:shadow-mainRed/50 shadow-md  absolute w-48  bg-neutral-200 p-1 pb-4",
+				className,
+				toBeActivated && "attention-pulse scale-125 ",
+				toBeActivated && "border-mainRed"
 			)}
 			src={src}
 			alt={alt}
@@ -139,7 +149,7 @@ const Card = ({
 			// Uncomment below and remove dragElastic to remove movement after release
 			//   dragMomentum={false}
 			dragElastic={0.65}
-			whileDrag={{ scale: 2 }} // 👈 Добавлено увеличение
+			whileDrag={{ scale: 2, filter: "grayscale(0%)" }} // 👈 Добавлено увеличение
 			transition={{ type: "spring", stiffness: 300, damping: 20 }}
 		/>
 	);
