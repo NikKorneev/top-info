@@ -221,18 +221,18 @@
 	},
 	"MetaHome": {
 		"title": "Twenty One Pilots information site",
-		"description": "Information fan-created site with album details, band history, biography and interesting facts.",
-		"keywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+		"description": "Information unofficial fan-created site about Twenty One Pilots with album details, band history, biography and interesting facts.",
+		"keywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock, history, lore, information, news, 21 pilots"
 	},
 	"MetaStory": {
 		"pageTitle": "Band Story - Twenty One Pilots",
-		"pageDescription": "Twenty One Pilots band history timeline, from the beginning to the present day.",
-		"pageKeywords": "Twenty One Pilots, TOP, albums, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
+		"pageDescription": "Twenty One Pilots band history timeline, from the beginning to the present day. Interesting facts about albums, songs and band's members.",
+		"pageKeywords": "Twenty One Pilots, TOP, albums, history, lore, fan, songs, Clancy, Tyler Joseph, Josh Dun, alternative rock"
 	},
 	"MetaAlbums": {
 		"pageTitle": "Albums - Twenty One Pilots Info",
 		"pageDescription": "Twenty One Pilots all studio albums",
-		"pageKeywords": "Twenty One Pilots, TOP, albums"
+		"pageKeywords": "Twenty One Pilots, TOP, albums, about, songs, lore, Clancy, Tyler Joseph, Josh Dun, alternative rock"
 	},
 	"Credits": {
 		"t": "Photo Credits",
