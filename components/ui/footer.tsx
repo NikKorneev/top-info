@@ -88,7 +88,7 @@ const Footer = () => {
 
 			<div className="w-full bg-[url('/img/footer.png')] py-5">
 				<div className="container mx-auto font-martian text-white uppercase flex flex-col md:flex-row md:justify-between items-center">
-					<p className="w-full md:w-2/3 lg:w-1/4 text-[12px] text-center md:text-sm md:text-left">
+					<p className="w-full md:w-2/3 lg:w-1/4 text-[12px] text-center md:text-sm md:text-left max-sm:max-w-[70%]">
 						{t("caption")}
 					</p>
 					<div className="md:mt-0 mt-3">

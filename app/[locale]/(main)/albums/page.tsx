@@ -53,7 +53,7 @@ const Page = async ({ params }: Props) => {
 	const t = await getTranslations("AlbumPage");
 	return (
 		<div>
-			<AlbumBack text={"альбомы"} />
+			<AlbumBack text={t("t")} />
 			<div className="relative z-50">
 				<Albums
 					title={t("t")}

@@ -236,7 +236,7 @@ const Page = async ({
 			>
 				{info.songs?.length > 0 && (
 					<Accordion
-						title={"Треклист"}
+						title={locale == "ru" ? "Треклист" : "Tracklist"}
 						type="album"
 						id={1}
 						locale={locale}

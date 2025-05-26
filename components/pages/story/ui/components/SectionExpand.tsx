@@ -94,7 +94,7 @@ export default function SectionExpand() {
 			</div>
 			<div
 				ref={logoText}
-				className="absolute top-[30%] opacity-0 uppercase font-bold left-1/2 text-center -translate-x-[50%] font-martian  z-10 text-8xl"
+				className="absolute top-[30%] opacity-0 uppercase font-bold left-1/2 text-center -translate-x-[50%] font-martian  z-10 text-8xl max-sm:text-6xl"
 			>
 				<div
 					ref={insideText}

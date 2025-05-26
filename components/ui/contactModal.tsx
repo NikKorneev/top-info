@@ -51,7 +51,7 @@ const ContactModal = () => {
 							initial={{ opacity: 0, scale: 0.2 }}
 							animate={{ opacity: 1, scale: 1 }}
 							exit={{ opacity: 0, scale: 0.2 }}
-							className="bg-zinc-700 z-[10] text-white px-4 py-8 rounded-xl max-w-md w-full shadow-lg relative"
+							className="bg-zinc-700 z-[10] text-white px-4 py-8 rounded-xl max-w-md w-full shadow-lg relative max-sm:mx-4"
 						>
 							<button
 								onClick={closeModal}
