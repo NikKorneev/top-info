@@ -20,7 +20,8 @@
 		"caption": "This site is for informational purposes only and is not an official resource of Twenty One Pilots",
 		"official": "Official Resources",
 		"credits": "Credits",
-		"privacy": "Privacy Policy"
+		"privacy": "Privacy Policy",
+		"news": "News"
 	},
 	"HomePage": {
 		"MainBanner": {
@@ -282,7 +283,7 @@
 	},
 	"News": {
 		"t": "News",
-		"desc": "Latest Twenty One Pilots' news and updates",
+		"desc": "Latest Twenty One Pilots' news and updates. Information unofficial fan-created site about Twenty One Pilots",
 		"locale": "en-US",
 		"keywords": "Twenty One Pilots, TOP, news, updates",
 		"noNews": "News not found for this language. Try another language."

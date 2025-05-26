@@ -8,7 +8,7 @@ export async function generateMetadata() {
 	const t = await getTranslations("News");
 
 	return {
-		title: t("t") + " - Twenty One Pilots Info",
+		title: t("t") + " - Twenty One Pilots Info Unofficial",
 		description: t("desc"),
 		keywords: t("keywords").split(","),
 	};

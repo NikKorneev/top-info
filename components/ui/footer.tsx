@@ -45,6 +45,14 @@ const Footer = () => {
 								{t("story")}
 							</Link>
 						</li>
+						<li>
+							<Link
+								href="/updates"
+								className="transition-colors hover:text-mainYellow"
+							>
+								{t("news")}
+							</Link>
+						</li>
 					</ul>
 					<ul>
 						<div className="flex flex-col gap-[7px] text-[16px]">
