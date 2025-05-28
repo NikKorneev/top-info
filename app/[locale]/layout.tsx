@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import "easymde/dist/easymde.min.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -38,6 +39,7 @@ export default async function RootLayout({
 			<body
 				className={`${martian.variable} ${inter.variable} ${oswald.variable} antialiased bg-back`}
 			>
+				<Analytics />
 				<NextIntlClientProvider messages={messages}>
 					{children}
 				</NextIntlClientProvider>
