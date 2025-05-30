@@ -50,6 +50,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps) {
 	// Generate dynamic title and description
 	const title = `${albumInfo.title} - ${locale === "ru" ? "Альбомы" : "Albums"} - Twenty One Pilots Info`;
 	const description = albumInfo.promoDescription;
+	console.log(albumInfo);
 
 	// Generate keywords based on album info
 	const keywords = [
@@ -73,8 +74,8 @@ export async function generateMetadata({ params }: GenerateMetadataProps) {
 		},
 		description,
 		keywords,
-		authors: [{ name: "Unofficial Fan Team" }],
-		creator: "Twenty One Pilots Fan Community",
+		authors: [{ name: "Nikita Korneev" }],
+		creator: "Nick Korneev",
 		publisher: "Twenty One Pilots Info",
 
 		// Canonical URL

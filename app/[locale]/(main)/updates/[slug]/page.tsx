@@ -59,8 +59,8 @@ export async function generateMetadata({ params }: Props) {
 		},
 		description,
 		keywords,
-		authors: [{ name: "Unofficial Fan Team" }],
-		creator: "Twenty One Pilots Fan Community",
+		authors: [{ name: "Nikita Korneev" }],
+		creator: "Nick Korneev",
 		publisher: "Twenty One Pilots Info",
 
 		alternates: {

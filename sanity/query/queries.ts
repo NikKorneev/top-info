@@ -15,7 +15,7 @@ export const GET_FACTS = `*[_type == "interestingFact" && lang == $locale] | ord
 
 export const GET_ALBUMS = `*[_type == "album" && lang == $locale] | order(releaseDate desc) {title, albumCover, slug, promoDescription, releaseDate}`; //checked
 
-export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug && lang == $locale][0]{id, title, imageUrl, albumDescription, links, albumCover, releaseDate, gallery, titleSVG, songs[]->{
+export const GET_ALBUM_BY_SLUG = `*[_type == "album" && slug.current == $slug && lang == $locale][0]{id, promoDescription, title, imageUrl, albumDescription, links, albumCover, releaseDate, gallery, titleSVG, songs[]->{
     title, slug
   }}`; //checked
 

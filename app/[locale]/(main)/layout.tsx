@@ -19,7 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
 		title: t("title"),
 		description: t("description"),
 		keywords: t("keywords").split(","),
-		authors: [{ name: "Unofficial Fan Team" }],
+		authors: [{ name: "Nikita Korneev" }],
+		creator: "Nick Korneev",
 		alternates: {
 			canonical: fullUrl,
 		},
