@@ -82,6 +82,16 @@ html {
 
 	.story-container {
 		@apply container mx-auto max-sm:px-4 font-martian;
+		p {
+			font-family: var(--font-openSans);
+			font-size: 18px;
+			line-height: 150%;
+		}
+		@media (max-width: 640px) {
+			p {
+				font-size: 16px;
+			}
+		}
 		@media (min-width: 96rem /* 1536px */) and (max-width: 1600px) {
 			max-width: 1440px !important;
 		}

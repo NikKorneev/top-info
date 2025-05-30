@@ -104,7 +104,7 @@ export const AccordionItem = ({
 		<div
 			onClick={onClick}
 			className={clsx(
-				"flex  transition-colors  items-center justify-between bg-grayMain/65 py-4 px-4 cursor-pointer hover:bg-[#be6562] hover:text-mainYellow",
+				"flex  transition-colors font-martian  items-center justify-between bg-grayMain/65 py-4 px-4 cursor-pointer hover:bg-[#be6562] hover:text-mainYellow",
 				active && "text-mainYellow bg-mainRed",
 				isLoading && "animate-pulse"
 			)}

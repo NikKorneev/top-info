@@ -41,10 +41,10 @@ const Accordion = async ({
 	if (!items) return null;
 
 	return (
-		<section className="max-w-[75%] @md:max-w-[100%]  mx-auto font-martian max-sm:max-w-full">
-			<h3 className="title text-center mb-10">{title}</h3>
+		<section className="max-w-[75%] @md:max-w-[100%]  mx-auto  max-sm:max-w-full">
+			<h3 className="title text-center mb-10 font-martian">{title}</h3>
 			<div className="grid grid-cols-2 gap-6 max-lg:grid-cols-1 max-md:gap-2.5 max-sm:px-4">
-				<div className="max-lg:hidden">
+				<div className="max-lg:hidden ">
 					<AccordionContent
 						id={content[0]?.id}
 						description={content[0]?.description || ""}

@@ -28,9 +28,9 @@ const Albums = ({
 	return (
 		<section>
 			<div className="bg-[url(/img/albumsBack.png)] py-20 max-md:px-2">
-				<div className="container mx-auto font-martian">
+				<div className="container mx-auto ">
 					<div>
-						<h3 className="text-mainRed text-5xl max-sm:text-4xl font-extrabold uppercase">
+						<h3 className="text-mainRed font-martian text-5xl max-sm:text-4xl font-extrabold uppercase">
 							{title}
 						</h3>
 						<motion.p
@@ -38,7 +38,7 @@ const Albums = ({
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ duration: 0.45, delay: 0.2 }}
 							viewport={{ once: true, amount: 0.9 }}
-							className="text-[18px] font-light text-[#D9D9D9] pt-2"
+							className="text-[18px] font-light text-[#D9D9D9] font-martian pt-2"
 						>
 							{subtitle}
 						</motion.p>
@@ -53,11 +53,11 @@ const Albums = ({
 								className="object-cover h-[412px] max-lg:w-[200px] max-lg:h-full max-sm:w-full max-sm:h-[200px]"
 							/>
 						</div>
-						<div className="font-martian album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
-							<h5 className="text-mainRed text-[36px] font-extrabold">
+						<div className=" album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
+							<h5 className="text-mainRed text-[36px] font-martian font-extrabold">
 								{albums[0].title}
 							</h5>
-							<p className="font-medium text-[#FAFAFA]">
+							<p className="font-medium font-martian text-[#FAFAFA]">
 								{t("release")}{" "}
 								{new Date(
 									albums[0].releaseDate
@@ -67,7 +67,7 @@ const Albums = ({
 									year: "numeric",
 								})}
 							</p>
-							<p className="xl:max-w-[70%] font-light text-[#BFBFBF] mt-2 max-lg:text-[14px]">
+							<p className="xl:max-w-[70%] font-openSans text-[20px]  text-[#BFBFBF] mt-2 max-lg:text-[16px]">
 								{albums[0].promoDescription}
 							</p>
 							<Link
@@ -77,7 +77,7 @@ const Albums = ({
 										? "/" + albums[0].slug.current
 										: "/albums/" + albums[0].slug.current
 								}
-								className="mt-auto pt-4"
+								className="mt-auto pt-4 font-martian"
 							>
 								<ArrowedBtn>{t("btn")}</ArrowedBtn>
 							</Link>
@@ -101,7 +101,7 @@ const Albums = ({
 									alt="albums"
 									className="object-cover  group-hover:scale-[90%]  transition-transform hover:mask-alpha group-hover:mask-b-from-45%"
 								/>
-								<div className="uppercase  left-5 transition-all absolute bottom-[-20%] text-5xl max-xl:text-3xl max-md:text-4xl max-sm:text-2xl font-bold text-white opacity-0 group-hover:bottom-5  group-hover:opacity-100">
+								<div className="uppercase font-martian  left-5 transition-all absolute bottom-[-20%] text-5xl max-xl:text-3xl max-md:text-4xl max-sm:text-2xl font-bold text-white opacity-0 group-hover:bottom-5  group-hover:opacity-100">
 									{item.title}
 								</div>
 							</motion.div>
@@ -135,7 +135,7 @@ const Albums = ({
 								</Button>
 							</div>
 
-							<div className="font-martian album-card flex flex-col lg:grid lg:grid-cols-[1.5fr_2fr]">
+							<div className=" album-card flex flex-col lg:grid lg:grid-cols-[1.5fr_2fr]">
 								<div className="relative h-40 w-full lg:aspect-square lg:h-fit z-50">
 									<Image
 										src={selected.albumCover}
@@ -146,10 +146,10 @@ const Albums = ({
 									/>
 								</div>
 								<div className="flex flex-col">
-									<h5 className="text-mainRed text-[36px] font-extrabold px-[30px] mt-[10px] max-sm:text-[24px] max-sm:px-[15px]">
+									<h5 className="text-mainRed font-martian text-[36px] font-extrabold px-[30px] mt-[10px] max-sm:text-[24px] max-sm:px-[15px]">
 										{selected.title}
 									</h5>
-									<p className="font-medium text-[#FAFAFA] px-[30px] max-sm:px-[15px]">
+									<p className="font-medium font-martian text-[#FAFAFA] px-[30px] max-sm:px-[15px]">
 										{t("release")}{" "}
 										{new Date(
 											selected.releaseDate
@@ -159,7 +159,7 @@ const Albums = ({
 											year: "numeric",
 										})}
 									</p>
-									<p className=" font-light text-[#BFBFBF] mt-2 max-lg:text-[14px] px-[30px] max-sm:px-[15px]">
+									<p className=" font-openSans text-[#BFBFBF] text-[18px] mt-2 max-lg:text-[16px] px-[30px] max-sm:px-[15px]">
 										{selected.promoDescription}
 									</p>
 
@@ -171,7 +171,7 @@ const Albums = ({
 												: "/albums/" +
 													selected.slug.current
 										}
-										className="mt-auto pt-4 px-[30px] pb-[20px] max-sm:px-[15px]"
+										className="mt-auto font-martian pt-4 px-[30px] pb-[20px] max-sm:px-[15px]"
 									>
 										<ArrowedBtn>{t("btn")}</ArrowedBtn>
 									</Link>

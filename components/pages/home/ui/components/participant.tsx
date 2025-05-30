@@ -60,28 +60,28 @@ const Participant = ({
 		>
 			<ParticipantImages srcs={srcs} alt={alt} position={position} />
 			<div
-				className={`flex gap-2 flex-col font-martian pt-[10%] ${position == "right" ? "items-end" : "items-start"} max-sm:items-center max-sm:*:text-center max-sm:pt-[5%]`}
+				className={`flex gap-2 flex-col  pt-[10%] ${position == "right" ? "items-end" : "items-start"} max-sm:items-center max-sm:*:text-center max-sm:pt-[5%]`}
 			>
-				<p className="text-[#D5D0C3] font-bold text-[13px] uppercase">
+				<p className="text-[#D5D0C3] font-bold text-[13px] uppercase font-martian">
 					{instruments}
 				</p>
 				<h3
-					className={`text-[32px] font-bold  ${position == "right" ? "text-mainYellow" : "text-mainRed"} max-md:text-[27px]`}
+					className={`text-[32px] font-bold  font-martian ${position == "right" ? "text-mainYellow" : "text-mainRed"} max-md:text-[27px]`}
 				>
 					{name}
 				</h3>
-				<p className="text-[#D5D0C3] font-bold">{born}</p>
+				<p className="text-[#D5D0C3] font-bold font-martian">{born}</p>
 				<p
-					className={`leading-[160%] text-[#c3c3c3d3] max-w-[526px] ${position == "right" ? "text-right" : "text-left"} max-md:text-[14px]`}
+					className={`leading-[160%] font-openSans text-[20px] text-[#c3c3c3d3] max-w-[526px] ${position == "right" ? "text-right" : "text-left"} max-md:text-[16px]`}
 				>
 					{descr}
 				</p>
 				<div
-					className={`flex justify-between mt-20 w-full items-center max-md:flex-col ${position == "right" ? "flex-row-reverse max-md:items-end" : "max-md:items-baseline"} max-md:items-baseline max-md:gap-2 max-md:mt-10 max-sm:flex-row max-sm:mt-4 max-sm:items-center`}
+					className={`flex justify-between mt-20 w-full items-center max-md:flex-col ${position == "right" ? "flex-row-reverse max-md:items-end" : "max-md:items-baseline"} max-md:items-baseline max-md:gap-2 max-md:mt-10  max-sm:flex-row max-sm:mt-4 max-sm:items-center`}
 				>
 					<Link href={href}>
 						<Button
-							className={`bg-transparent border-2 py-6 ${position == "right" ? "text-mainYellow border-mainYellow" : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
+							className={`bg-transparent font-martian border-2 py-6 ${position == "right" ? "text-mainYellow border-mainYellow" : "text-mainRed border-mainRed hover:bg-mainYellow"}`}
 						>
 							{btn}{" "}
 							<div>

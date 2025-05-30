@@ -40,7 +40,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3 }}
 							exit={{ opacity: 0, y: -100 }}
-							className="font-bold absolute bottom-[10px] text-white text-2xl uppercase  pt-6 px-4 line-clamp-1 max-md:text-xl"
+							className="font-bold font-martian absolute bottom-[10px] text-white text-2xl uppercase  pt-6 px-4 line-clamp-1 max-md:text-xl"
 						>
 							{title}
 						</motion.h3>
@@ -67,7 +67,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.5 }}
 					exit={{ opacity: 0, y: -100 }}
-					className="text-grayMain leading-[150%] mt-3 px-4 pb-6 max-sm:text-[14px]"
+					className="text-grayMain leading-[150%] font-openSans text-[18px] mt-3 px-4 pb-6 max-sm:text-[16px]"
 				>
 					<Markdown
 						rehypePlugins={[rehypeRaw]}
