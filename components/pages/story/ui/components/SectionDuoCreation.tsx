@@ -10,11 +10,13 @@ const DuoCreation = () => {
 		<section className="story-container">
 			<div className="flex justify-between max-sm:flex-col max-sm:gap-2">
 				<h4 className="title">{t("t")}</h4>
-				<p className="story-subtitle">{t("subt")}</p>
+				<span className="story-subtitle">{t("subt")}</span>
 			</div>
 			<div className="grid grid-cols-3 gap-20 py-10 max-lg:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<div>
-					<p className="text-gray-50 text-2xl mb-5">{t("name")}</p>
+					<span className="text-gray-50 block text-2xl mb-5">
+						{t("name")}
+					</span>
 					<Link href="/duo/josh-dun" scroll={true}>
 						<ArrowedBtn>{t("btn")}</ArrowedBtn>
 					</Link>

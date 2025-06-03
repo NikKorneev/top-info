@@ -8,7 +8,7 @@ const FirstMembers = () => {
 		<section className="story-container">
 			<div className="flex justify-between">
 				<h2 className="title">{t("title")}</h2>
-				<p className="story-subtitle">{t("subtitle")}</p>
+				<span className="story-subtitle">{t("subtitle")}</span>
 			</div>
 			<div className="grid grid-cols-3 gap-20 pt-10 max-md:grid-cols-2 max-md:gap-5 max-sm:grid-cols-1">
 				<TextLined
@@ -20,7 +20,9 @@ const FirstMembers = () => {
 					]}
 				/>
 				<div className="flex flex-col col-span-2 pt-10 max-sm:text-center max-sm:items-center">
-					<p className="text-grayMain text-2xl ">{t("members")}</p>
+					<span className="text-grayMain text-2xl ">
+						{t("members")}
+					</span>
 					<FirstMembersCards />
 				</div>
 			</div>

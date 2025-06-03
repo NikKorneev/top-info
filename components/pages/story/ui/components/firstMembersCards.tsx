@@ -23,10 +23,10 @@ const FirstMembersCards = () => {
 					className="object-cover"
 					alt="Chris Salih in 2009"
 				/>
-				<p className="text-grayMain mt-1 text-[14px]  max-md:text-[12px]">
+				<span className="text-grayMain mt-1 text-[14px]  max-md:text-[12px]">
 					{t("chrisInstruments")}
-				</p>
-				<p className="text-mainYellow ">{t("chris")}</p>
+				</span>
+				<span className="text-mainYellow ">{t("chris")}</span>
 			</motion.div>
 			<motion.div
 				whileInView={{ opacity: 1, y: 0 }}
@@ -44,10 +44,10 @@ const FirstMembersCards = () => {
 					className="object-cover"
 					alt="Tyler joseph in 2009"
 				/>
-				<p className="text-grayMain mt-1 text-[14px] max-md:text-[12px]">
+				<span className="text-grayMain mt-1 text-[14px] max-md:text-[12px]">
 					{t("tylerInstruments")}
-				</p>
-				<p className="text-mainYellow ">{t("tyler")}</p>
+				</span>
+				<span className="text-mainYellow ">{t("tyler")}</span>
 			</motion.div>
 			<motion.div
 				whileInView={{ opacity: 1, y: 0 }}
@@ -65,10 +65,10 @@ const FirstMembersCards = () => {
 					className="object-cover"
 					alt="Nick Thomas in 2009"
 				/>
-				<p className="text-grayMain mt-1 text-[14px] max-md:text-[12px]">
+				<span className="text-grayMain mt-1 text-[14px] max-md:text-[12px]">
 					{t("nickInstruments")}
-				</p>
-				<p className="text-mainYellow">{t("nick")}</p>
+				</span>
+				<span className="text-mainYellow">{t("nick")}</span>
 			</motion.div>
 		</div>
 	);

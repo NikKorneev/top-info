@@ -19,8 +19,8 @@ const SecondAlbum = () => {
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 max-md:grid-cols-2 max-sm:grid-cols-1 auto-rows-min">
 				<div className="w-full">
-					<span className="text-mainYellow">{t("date")}</span>
-					<p className="text-white mt-1.5">{t("p1")}</p>
+					<span className="text-mainYellow block">{t("date")}</span>
+					<span className="text-white mt-1.5 block">{t("p1")}</span>
 				</div>
 				<div className="flex flex-col gap-4 text-grayMain max-lg:text-[14px] leading-[160%]">
 					<p>{t("p2")}</p>

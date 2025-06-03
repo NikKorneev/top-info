@@ -8,8 +8,8 @@ const SectionContract = () => {
 	return (
 		<section className="story-container relative">
 			<div className="flex justify-between max-sm:flex-col max-sm:gap-2.5">
-				<h3 className="title">{t("t")}</h3>
-				<p className="story-subtitle">[2011-2013]</p>
+				<h4 className="title">{t("t")}</h4>
+				<span className="story-subtitle">[2011-2013]</span>
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 max-md:grid-cols-2 max-sm:grid-cols-1">
 				<div className="flex flex-col gap-10 xl:max-w-[400px]">

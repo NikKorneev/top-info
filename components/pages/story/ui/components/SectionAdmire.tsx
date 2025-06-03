@@ -15,7 +15,7 @@ const SectionAdmire = () => {
 		<section className="story-container">
 			<div className="flex justify-between">
 				<h3 className="title">{t("t")}</h3>
-				<p className="story-subtitle">[2015-2017]</p>
+				<span className="story-subtitle">[2015-2017]</span>
 			</div>
 			<div className="grid grid-cols-3 gap-7 pt-10 relative max-md:grid-cols-2 max-sm:grid-cols-1">
 				<div className="absolute bottom-[-60%] w-full h-full max-sm:hidden">
@@ -36,9 +36,9 @@ const SectionAdmire = () => {
 					<p>{t("p4")}</p>
 				</div>
 				<div className="flex flex-col gap-10">
-					<div>
+					<div className="flex flex-col">
 						<span className="text-mainYellow">{t("date")}</span>
-						<p className="text-white mt-1.5">{t("p5")}</p>
+						<span className="text-white mt-1.5">{t("p5")}</span>
 					</div>
 					<Link href="/albums/blurryface" scroll={true}>
 						<ArrowedBtn>{t("btn")}</ArrowedBtn>

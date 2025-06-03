@@ -7,7 +7,7 @@ const Name = () => {
 	return (
 		<section className="story-container">
 			<div className="flex justify-between">
-				<p className="title">{t("t")}</p>
+				<h3 className="title">{t("t")}</h3>
 			</div>
 			<div className="grid grid-cols-[1fr_2fr] gap-[80px] pt-10  max-lg:gap-10 max-md:gap-x-5 max-md:gap-y-10 max-lg:grid-cols-2 max-sm:grid-cols-1  max-sm:gap-x-5">
 				<TextLined

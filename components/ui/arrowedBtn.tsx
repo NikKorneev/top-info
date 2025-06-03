@@ -13,11 +13,11 @@ const ArrowedBtn = ({ onClick, color, className, children }: Props) => {
 			onClick={onClick}
 			className={`border-2 ${color ? "border-[" + color + "]" : "border-mainRed"}  bg-transparent py-[22px] hover:bg-mainYellow ${className}`}
 		>
-			<p
+			<span
 				className={`${color ? "text-[" + color + "]" : "text-mainRed"} font-martian uppercase`}
 			>
 				{children}
-			</p>
+			</span>
 
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

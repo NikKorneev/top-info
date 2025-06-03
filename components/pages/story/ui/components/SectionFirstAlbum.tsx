@@ -12,7 +12,7 @@ const FirstAlbum = () => {
 		<section className="story-container">
 			<div className="flex justify-between ">
 				<h3 className="title">{t("t")}</h3>
-				<p className="story-subtitle">{t("subt")}</p>
+				<span className="story-subtitle">{t("subt")}</span>
 			</div>
 			<div className="mt-10 grid grid-cols-[2fr_2fr_1fr] gap-5 max-lg:grid-cols-2 xl:gap-20 lg:gap-10 max-sm:grid-cols-1 max-sm:gap-10 overflow-hidden">
 				<motion.div
