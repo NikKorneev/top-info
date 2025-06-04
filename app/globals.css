@@ -80,12 +80,20 @@ html {
 		-webkit-text-stroke-color: var(--color-black);
 	}
 
+	.news {
+		p {
+			font-family: var(--font-roboto);
+			font-size: 18px;
+			line-height: 152%;
+		}
+	}
+
 	.story-container {
 		@apply container mx-auto max-sm:px-4 font-martian;
 		p {
-			font-family: var(--font-openSans);
-			font-size: 18px;
-			line-height: 150%;
+			font-family: var(--font-roboto);
+			font-size: 20px;
+			line-height: 152%;
 		}
 		@media (max-width: 640px) {
 			p {
@@ -425,7 +433,7 @@ html {
 	--color-trench: #242020;
 
 	--font-martian: var(--font-martian);
-	--font-inter: var(--font-inter);
+	--font-roboto: var(--font-roboto);
 	--font-oswald: var(--font-oswald);
 }
 

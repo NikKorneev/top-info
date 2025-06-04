@@ -208,11 +208,11 @@ const Page = async ({
 					links={info.links}
 					releaseDate={info.releaseDate}
 				/>
-				<div className=" text-grayMain flex  flex-col leading-[160%] text-[20px] gap-2 max-md:text-[16px] ">
+				<div className=" text-grayMain flex font-roboto  flex-col leading-[160%] text-[20px] gap-2 max-md:text-[16px] ">
 					<Markdown
 						components={{
 							p: ({ children }) => (
-								<p className="mb-2 text-grayMain leading-[150%] font-openSans">
+								<p className="mb-2 text-grayMain leading-[150%] ">
 									{children}
 								</p>
 							),
@@ -220,7 +220,7 @@ const Page = async ({
 								<a
 									href={href}
 									target="_blank"
-									className="underline mb-2 text-grayMain cursor-pointer leading-[150%] font-openSans"
+									className="underline mb-2 text-grayMain cursor-pointer leading-[150%] "
 								>
 									{children}
 								</a>

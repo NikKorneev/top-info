@@ -19,7 +19,7 @@ const FirstMembers = () => {
 						t("description3"),
 					]}
 				/>
-				<div className="flex flex-col col-span-2 pt-10 max-sm:text-center max-sm:items-center">
+				<div className="flex flex-col col-span-2 pt-10 max-sm:text-center max-sm:items-center font-martian">
 					<span className="text-grayMain text-2xl ">
 						{t("members")}
 					</span>

@@ -15,7 +15,7 @@ import SectionSecondAlbum from "./components/SectionSecondAlbum";
 const StoryPage = ({ id, locale }: { id: number; locale: "en" | "ru" }) => {
 	const t = useTranslations("StoryPage");
 	return (
-		<div className="flex flex-col gap-40 relative mb-[2200px]">
+		<div className="flex flex-col gap-40 relative mb-[2200px] max-sm:gap-28">
 			<SectionBanner />
 			<SectionFirstMembers />
 			<SectionFirstAlbum />

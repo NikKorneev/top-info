@@ -33,7 +33,7 @@ const MainTitle = ({ title }: Props) => {
 				data-text="twenty Øne pilØts"
 				id="title"
 				style={{ y: titleY, scaleX: scale }}
-				className="cursor-default origin-center glitch is-glitching 2xl:text-[205px] xl:text-[166px] md:text-[12vw] text-[12vw] font-bold  uppercase text-mainRed leading-[92%] tracking-[-3%] text-center "
+				className="cursor-default  origin-center glitch is-glitching 2xl:text-[205px] xl:text-[166px] md:text-[12vw] text-[12vw] font-bold  uppercase text-mainRed leading-[92%] tracking-[-3%] text-center "
 			>
 				twenty Øne pilØts
 			</motion.h1>

@@ -16,7 +16,7 @@ export default function NewsCard({
 	slug,
 }: NewsCardProps) {
 	return (
-		<div className="bg-neutral-900 rounded-xs overflow-hidden shadow-md transition hover:shadow-xl break-inside-avoid">
+		<div className="bg-neutral-900 rounded-xs overflow-hidden shadow-md transition hover:shadow-xl break-inside-avoid font-martian">
 			<Link href={`/updates/${slug}`} className="block group">
 				<div className="aspect-video overflow-hidden">
 					<img

@@ -72,7 +72,7 @@ const Participant = ({
 				</h3>
 				<p className="text-[#D5D0C3] font-bold font-martian">{born}</p>
 				<p
-					className={`leading-[160%] font-openSans text-[20px] text-[#c3c3c3d3] max-w-[526px] ${position == "right" ? "text-right" : "text-left"} max-md:text-[16px]`}
+					className={`leading-[150%] font-roboto text-[19px] text-[#c3c3c3d3] max-w-[526px] ${position == "right" ? "text-right" : "text-left"} max-md:text-[16px]`}
 				>
 					{descr}
 				</p>

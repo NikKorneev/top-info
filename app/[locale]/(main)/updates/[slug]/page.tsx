@@ -141,22 +141,22 @@ export default async function NewsArticlePage({ params }: Props) {
 	}
 
 	return (
-		<section className="max-w-3xl mx-auto px-4 pt-30 pb-20">
-			<div className="mb-2">
+		<section className="max-w-3xl mx-auto px-4 pt-30 pb-20 news">
+			<div className="mb-2 font-martian">
 				<BackBtn />
 			</div>
 
-			<h1 className="text-4xl font-bold mb-4 text-white">
+			<h1 className="text-4xl font-bold mb-4 text-white story-title font-martian">
 				{article.title}
 			</h1>
 
-			<p className="text-sm text-gray-400 mb-6">
+			<span className="text-sm text-gray-400 mb-6 font-martian block">
 				{new Date(article.date).toLocaleDateString("en-US", {
 					year: "numeric",
 					month: "long",
 					day: "numeric",
 				})}
-			</p>
+			</span>
 
 			{article.imageUrl && (
 				<img
@@ -166,12 +166,12 @@ export default async function NewsArticlePage({ params }: Props) {
 				/>
 			)}
 
-			<div className="prose prose-invert max-w-none text-gray-300 leading-relaxed">
+			<div className="prose prose-invert max-w-none text-gray-300 leading-relaxed font-roboto">
 				<Markdown
 					rehypePlugins={[rehypeRaw]}
 					components={{
 						p: ({ children }) => (
-							<p className="mb-4 text-grayMain leading-[150%] shadow-2xs  text-[18px] max-md:text-[16px]">
+							<p className="mb-4 text-grayMain leading-[150%] shadow-2xs   text-[18px] max-md:text-[16px]">
 								{children}
 							</p>
 						),
@@ -210,7 +210,7 @@ export default async function NewsArticlePage({ params }: Props) {
 			</div>
 
 			{article.references.length > 0 && (
-				<div className="mt-10">
+				<div className="mt-10 max-w-screen overflow-hidden font-martian">
 					<h2 className="text-2xl font-bold mb-4 text-white">
 						{locale === "en" ? "References" : "Ссылки на источники"}
 					</h2>

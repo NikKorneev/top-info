@@ -3,26 +3,22 @@ import "easymde/dist/easymde.min.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Inter, Martian_Mono, Open_Sans, Oswald } from "next/font/google";
+import { Martian_Mono, Oswald, Roboto } from "next/font/google";
 import "../globals.css";
 
 const martian = Martian_Mono({
 	variable: "--font-martian",
 	subsets: ["latin", "cyrillic"],
 });
-const openSans = Open_Sans({
-	variable: "--font-openSans",
-	subsets: ["latin", "cyrillic"],
-});
 
-const inter = Inter({
-	variable: "--font-inter",
-	subsets: ["cyrillic", "latin"],
+const roboto = Roboto({
+	variable: "--font-roboto",
+	subsets: ["latin", "cyrillic"],
 });
 
 const oswald = Oswald({
 	variable: "--font-oswald",
-	subsets: ["cyrillic", "latin"],
+	subsets: ["latin", "cyrillic"],
 });
 
 export const metadata: Metadata = {
@@ -41,7 +37,7 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body
-				className={`${martian.variable} ${openSans.variable} ${inter.variable} ${oswald.variable} antialiased bg-back`}
+				className={`${martian.variable} ${roboto.variable}  ${oswald.variable}  antialiased bg-back`}
 			>
 				<Analytics />
 				<NextIntlClientProvider messages={messages}>
