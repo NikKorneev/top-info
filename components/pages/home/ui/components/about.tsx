@@ -118,13 +118,13 @@ const About = ({ title, p1, btn, p2, subtitle }: Props) => {
 
 				<div className="flex flex-col gap-4 max-sm:col-span-2">
 					<div className="flex justify-between font-martian text-white text-sm max-xl:text-[12px]">
-						<p className="uppercase">twenty Øne pilØts</p>
-						<p>{subtitle}</p>
+						<span className="uppercase">twenty Øne pilØts</span>
+						<span>{subtitle}</span>
 					</div>
 					<h2 className="font-extrabold text-5xl text-mainRed uppercase font-martian max-sm:text-4xl">
 						{title}
 					</h2>
-					<div className="flex flex-col gap-4 font-openSans text-[20px]  leading-[160%] text-[#C5C5C5] mb-auto max-xl:text-[16px] max-sm:text-sm">
+					<div className="flex flex-col gap-4 font-roboto text-[19px]  leading-[150%] text-[#C5C5C5] mb-auto max-xl:text-[16px] max-sm:text-sm">
 						<p>{p1}</p>
 						<p>{p2}</p>
 					</div>

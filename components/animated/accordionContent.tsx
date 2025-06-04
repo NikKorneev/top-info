@@ -55,7 +55,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3 }}
 							exit={{ opacity: 0, y: -100 }}
-							className="font-bold text-white text-2xl uppercase  pt-6 px-4 line-clamp-1 max-md:text-xl"
+							className="font-bold text-white text-2xl uppercase font-martian  pt-6 px-4 line-clamp-1 max-md:text-xl"
 						>
 							{title}
 						</motion.h3>
@@ -67,13 +67,13 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ delay: 0.5 }}
 					exit={{ opacity: 0, y: -100 }}
-					className="text-grayMain leading-[150%] font-openSans text-[18px] mt-3 px-4 pb-6 max-sm:text-[16px]"
+					className="text-grayMain leading-[150%] text-[18px] mt-3 px-4 pb-6 max-sm:text-[16px] font-roboto"
 				>
 					<Markdown
 						rehypePlugins={[rehypeRaw]}
 						components={{
 							p: ({ children }) => (
-								<p className="mb-4 text-grayMain leading-[150%] shadow-2xs ">
+								<p className="mb-4 leading-[150%] shadow-2xs">
 									{children}
 								</p>
 							),
@@ -81,7 +81,7 @@ const AccordionContent = ({ description, id, image, title }: Props) => {
 								<a
 									href={href}
 									target="_blank"
-									className="underline mb-2 text-grayMain cursor-pointer leading-[150%]"
+									className="underline mb-2 text-grayMain cursor-pointer leading-[150%] font-martian"
 								>
 									{children}
 								</a>

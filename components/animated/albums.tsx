@@ -53,7 +53,7 @@ const Albums = ({
 								className="object-cover h-[412px] max-lg:w-[200px] max-lg:h-full max-sm:w-full max-sm:h-[200px]"
 							/>
 						</div>
-						<div className=" album-card px-[30px] py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
+						<div className=" album-card px-[30px] font-martian py-[20px] flex flex-col max-sm:px-[15px] col-span-2">
 							<h5 className="text-mainRed text-[36px] font-martian font-extrabold">
 								{albums[0].title}
 							</h5>
@@ -67,7 +67,7 @@ const Albums = ({
 									year: "numeric",
 								})}
 							</p>
-							<p className="xl:max-w-[70%] font-openSans text-[20px]  text-[#BFBFBF] mt-2 max-lg:text-[16px]">
+							<p className="xl:max-w-[70%] font-roboto text-[20px]  text-[#BFBFBF] mt-2 max-lg:text-[16px]">
 								{albums[0].promoDescription}
 							</p>
 							<Link
@@ -159,7 +159,7 @@ const Albums = ({
 											year: "numeric",
 										})}
 									</p>
-									<p className=" font-openSans text-[#BFBFBF] text-[18px] mt-2 max-lg:text-[16px] px-[30px] max-sm:px-[15px]">
+									<p className=" font-roboto text-[#BFBFBF] text-[18px] mt-2 max-lg:text-[16px] px-[30px] max-sm:px-[15px]">
 										{selected.promoDescription}
 									</p>
 

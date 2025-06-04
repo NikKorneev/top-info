@@ -37,7 +37,7 @@ const NewQuote = () => {
 				scrollTrigger: {
 					trigger: container,
 					start: "top top",
-					end: "+=1800px",
+					end: "+=1500px",
 					scrub: 2,
 					pin: expander.current,
 					onUpdate: (self) => {
@@ -54,20 +54,16 @@ const NewQuote = () => {
 			const fadeInText = gsap.timeline({
 				scrollTrigger: {
 					trigger: container,
-					start: "+=1800", // запускается после первой
+					start: "+=1500", // запускается после первой
 					end: "bottom bottom",
 					scrub: 2,
 					pin: expander.current,
 				},
 			});
 
-			fadeInText.to(
-				expander.current,
-				{
-					opacity: 0.2,
-				},
-				"<+0.2"
-			);
+			fadeInText.to(expander.current, {
+				opacity: 0.2,
+			});
 
 			// ✍️ Таймлайн текста и затемнения
 			tl.to(
@@ -150,7 +146,7 @@ const NewQuote = () => {
 	return (
 		<section
 			ref={containerRef}
-			className="min-h-[3200px]  relative overflow-hidden"
+			className="min-h-[2500px]  relative overflow-hidden"
 		>
 			<div
 				ref={expander}

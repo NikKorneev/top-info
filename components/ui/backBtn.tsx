@@ -22,9 +22,9 @@ const BackBtn = () => {
 				size={40}
 				className="text-mainYellow transition-colors group-hover:text-grayMain"
 			/>
-			<p className="text-mainYellow text-[20px] transition-colors group-hover:text-grayMain">
+			<span className="text-mainYellow text-[20px] transition-colors group-hover:text-grayMain">
 				{t("back")}
-			</p>
+			</span>
 		</motion.div>
 	);
 };

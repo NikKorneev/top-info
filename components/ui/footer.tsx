@@ -83,12 +83,12 @@ const Footer = () => {
 
 				<div className="w-full h-[1px] bg-white/10 my-10" />
 
-				<div className="font-inter">
-					<p className="text-sm text-[#73757B]">
+				<div className="">
+					<p className="text-sm text-[#73757B] font-martian">
 						<Link href="/privacy">{t("privacy")}</Link> |{" "}
 						<Link href="/credits">{t("credits")}</Link>
 					</p>
-					<p className="text-sm text-[#73757B] w-full md:w-2/3 mt-7 mb-10">
+					<p className="text-sm text-[#73757B] w-full md:w-2/3 mt-7 mb-10 font-roboto">
 						{t("rights")}
 					</p>
 				</div>
