@@ -141,7 +141,7 @@ html {
 		}
 	}
 	.menu-item.active {
-		color: var(--color-mainYellow);
+		color: #dc2b46;
 	}
 	.text-gradient {
 		background: linear-gradient(
