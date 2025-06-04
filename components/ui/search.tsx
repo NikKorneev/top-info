@@ -70,23 +70,28 @@ const Search = () => {
 							exit={{ opacity: 0 }}
 							className="relative left-[50%] translate-x-[-50%] z-50 inline-flex flex-col pt-10 items-center overflow-scroll"
 						>
-							{items?.map((item) => (
-								<Link
-									onClick={() => setOpened(false)}
-									href={setLink(item)}
-									key={item._id}
-									className="bg-white flex justify-between w-[45vw] max-md:w-[90vw] py-5 px-4 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all"
-								>
-									<p>{item.title || item.name}</p>
-									<p>
-										{item._type == "duoMember"
-											? "bio"
-											: item._type == "interestingFact"
-												? "fact"
-												: item._type}
-									</p>
-								</Link>
-							))}
+							{items.length > 0 ? (
+								items?.map((item) => (
+									<Link
+										onClick={() => setOpened(false)}
+										href={setLink(item)}
+										key={item._id}
+										className="bg-white flex justify-between w-[45vw] max-md:w-[90vw] py-5 px-4 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all"
+									>
+										<p>{item.title || item.name}</p>
+										<p>
+											{item._type == "duoMember"
+												? "bio"
+												: item._type ==
+													  "interestingFact"
+													? "fact"
+													: item._type}
+										</p>
+									</Link>
+								))
+							) : query.length > 0 ? (
+								<p className="text-xl text-white">No results</p>
+							) : null}
 						</motion.div>
 
 						<motion.div
