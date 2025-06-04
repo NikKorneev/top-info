@@ -124,7 +124,7 @@ const About = ({ title, p1, btn, p2, subtitle }: Props) => {
 					<h2 className="font-extrabold text-5xl text-mainRed uppercase font-martian max-sm:text-4xl">
 						{title}
 					</h2>
-					<div className="flex flex-col gap-4 font-roboto text-[19px]  leading-[150%] text-[#C5C5C5] mb-auto max-xl:text-[16px] max-sm:text-sm">
+					<div className="flex flex-col gap-4 font-roboto text-[19px]  leading-[150%] text-[#C5C5C5] mb-auto max-xl:text-[16px] ">
 						<p>{p1}</p>
 						<p>{p2}</p>
 					</div>
