@@ -140,6 +140,9 @@ html {
 			transform: scaleX(100%);
 		}
 	}
+	.menu-item.active {
+		color: var(--color-mainYellow);
+	}
 	.text-gradient {
 		background: linear-gradient(
 			0deg,

@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "./localeSwitcher";
@@ -11,6 +11,7 @@ type Props = {
 
 const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 	const t = useTranslations("Header");
+	const pathname = usePathname();
 	return (
 		<ul
 			className={clsx(
@@ -18,7 +19,7 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 				className
 			)}
 		>
-			<li className="menu-item">
+			<li className={clsx("menu-item", pathname === "/" && "active")}>
 				<Link
 					scroll={true}
 					href="/"
@@ -27,7 +28,9 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					{t("main")}
 				</Link>
 			</li>
-			<li className="menu-item">
+			<li
+				className={clsx("menu-item", pathname === "/story" && "active")}
+			>
 				<Link
 					scroll={true}
 					href="/story"
@@ -37,7 +40,12 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 				</Link>
 			</li>
 
-			<li className="menu-item">
+			<li
+				className={clsx(
+					"menu-item",
+					pathname.includes("albums") && "active"
+				)}
+			>
 				<Link
 					scroll={true}
 					href="/albums"
@@ -46,7 +54,12 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					{t("albums")}
 				</Link>
 			</li>
-			<li className="menu-item">
+			<li
+				className={clsx(
+					"menu-item",
+					pathname.includes("duo") && "active"
+				)}
+			>
 				<Link
 					scroll={true}
 					href="/duo/tyler-joseph"
@@ -55,7 +68,12 @@ const Navmenu = ({ className, setMenuIsOpened }: Props) => {
 					{t("bio")}
 				</Link>
 			</li>
-			<li className="menu-item">
+			<li
+				className={clsx(
+					"menu-item",
+					pathname.includes("updates") && "active"
+				)}
+			>
 				<Link
 					scroll={true}
 					href="/updates"
