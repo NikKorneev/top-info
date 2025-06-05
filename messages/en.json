@@ -279,7 +279,8 @@
 		"send": "Send",
 		"success": "Message sent",
 		"error": "Try later",
-		"loading": "Sending..."
+		"loading": "Sending...",
+		"aggrement": "By clicking send button, you agree with <link>privacy policy</link>"
 	},
 	"News": {
 		"t": "News",

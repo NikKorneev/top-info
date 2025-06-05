@@ -1,4 +1,5 @@
 "use client";
+import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
 import { useTranslations } from "next-intl";
@@ -94,6 +95,7 @@ const ContactModal = () => {
 										className="w-full p-2 h-24  border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-black dark:text-white"
 									></textarea>
 								</div>
+
 								<button
 									type="submit"
 									disabled={isLoading}
@@ -106,6 +108,20 @@ const ContactModal = () => {
 									{!isLoading && success && t("success")}
 									{isLoading && t("loading")}
 								</button>
+								<div>
+									<span className="text-[12px]">
+										{t.rich("aggrement", {
+											link: (chunks) => (
+												<Link
+													href="/privacy"
+													className="underline"
+												>
+													{chunks}
+												</Link>
+											),
+										})}
+									</span>
+								</div>
 							</form>
 						</motion.div>
 						<div
