@@ -1,15 +1,17 @@
-import Albums from "@/components/animated/albums";
 import { getAlbums } from "@/lib/api";
 import { getTranslations } from "next-intl/server";
-import About from "./components/about";
+import dynamic from "next/dynamic";
 import Background from "./components/background";
 import Btn from "./components/button";
-import Duo from "./components/duo";
-import Info from "./components/info";
-import LastSong from "./components/lastSong";
 import MainTitle from "./components/mainTitle";
-import ParticipantSection from "./components/participant";
-import Quote from "./components/quote";
+
+const Albums = dynamic(() => import("@/components/animated/albums"));
+const ParticipantSection = dynamic(() => import("./components/participant"));
+const Quote = dynamic(() => import("./components/quote"));
+const LastSong = dynamic(() => import("./components/lastSong"));
+const Info = dynamic(() => import("./components/info"));
+const Duo = dynamic(() => import("./components/duo"));
+const About = dynamic(() => import("./components/about"));
 
 type Props = {
 	params: Promise<{ locale: string }>;

@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /privacy
+Disallow: /credits
+
+Sitemap: https://acme.com/sitemap.xml

@@ -96,8 +96,9 @@ const Albums = ({
 										item.albumCover ||
 										"/img/clancyAlbumCover.png"
 									}
-									loading="eager"
+									loading="lazy"
 									fill
+									quality={70}
 									alt="albums"
 									className="object-cover  group-hover:scale-[90%]  transition-transform hover:mask-alpha group-hover:mask-b-from-45%"
 								/>

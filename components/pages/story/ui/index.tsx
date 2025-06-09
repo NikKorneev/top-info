@@ -1,16 +1,28 @@
 import Accordion from "@/components/animated/accordion";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import SectionBanner from "./components/banner";
-import NewQuote from "./components/newQuote";
-import SectionAdmire from "./components/SectionAdmire";
-import SectionClancyStory from "./components/SectionClancyStory";
-import SectionContract from "./components/SectionContract";
-import SectionDuoCreation from "./components/SectionDuoCreation";
-import SectionExpand from "./components/SectionExpand";
-import SectionFirstAlbum from "./components/SectionFirstAlbum";
-import SectionFirstMembers from "./components/SectionFirstMembers";
-import SectionName from "./components/SectionName";
-import SectionSecondAlbum from "./components/SectionSecondAlbum";
+
+const NewQuote = dynamic(() => import("./components/newQuote"));
+const SectionAdmire = dynamic(() => import("./components/SectionAdmire"));
+const SectionClancyStory = dynamic(
+	() => import("./components/SectionClancyStory")
+);
+const SectionContract = dynamic(() => import("./components/SectionContract"));
+const SectionDuoCreation = dynamic(
+	() => import("./components/SectionDuoCreation")
+);
+const SectionExpand = dynamic(() => import("./components/SectionExpand"));
+const SectionFirstAlbum = dynamic(
+	() => import("./components/SectionFirstAlbum")
+);
+const SectionFirstMembers = dynamic(
+	() => import("./components/SectionFirstMembers")
+);
+const SectionName = dynamic(() => import("./components/SectionName"));
+const SectionSecondAlbum = dynamic(
+	() => import("./components/SectionSecondAlbum")
+);
 
 const StoryPage = ({ id, locale }: { id: number; locale: "en" | "ru" }) => {
 	const t = useTranslations("StoryPage");
