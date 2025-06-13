@@ -1,4 +1,6 @@
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface NewsCardProps {
 	title: string;
@@ -15,19 +17,22 @@ export default function NewsCard({
 	date,
 	slug,
 }: NewsCardProps) {
+	const t = useTranslations("News");
 	return (
 		<div className="bg-neutral-900 rounded-xs overflow-hidden shadow-md transition hover:shadow-xl break-inside-avoid font-martian">
 			<Link href={`/updates/${slug}`} className="block group">
-				<div className="aspect-video overflow-hidden">
-					<img
+				<div className="aspect-video overflow-hidden relative">
+					<Image
 						src={image}
+						quality={50}
+						fill
 						alt={title}
 						className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
 					/>
 				</div>
 				<div className="p-4">
 					<time className="text-xs text-gray-400">
-						{new Date(date).toLocaleDateString("en-US", {
+						{new Date(date).toLocaleDateString(t("locale"), {
 							year: "numeric",
 							month: "long",
 							day: "numeric",
