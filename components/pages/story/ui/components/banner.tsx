@@ -56,9 +56,9 @@ const Banner = () => {
 					src={"/img/story-back.jpg"}
 					alt={"story banner"}
 					fill
-					priority
+					
 					loading="eager"
-					quality={100}
+					quality={80}
 					className="object-cover w-full h-full z-0   "
 				/>
 			</motion.div>
