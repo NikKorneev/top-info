@@ -96,7 +96,7 @@ const Albums = ({
 										item.albumCover ||
 										"/img/clancyAlbumCover.png"
 									}
-									loading="lazy"
+									loading="eager"
 									fill
 									quality={70}
 									alt="albums"
