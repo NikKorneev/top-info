@@ -49,7 +49,7 @@ const Info = ({ card1, card2, card3, card4, card5 }: Props) => {
 				animate={false}
 				subtitle={card3.title}
 				description={card3.descr}
-				title={"7"}
+				title={"8"}
 			/>
 
 			<InfoCard

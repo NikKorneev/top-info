@@ -74,8 +74,8 @@
 			"subtitle": "Click on the cover to learn album details"
 		},
 		"LastWork": {
-			"title": "Latest Work",
-			"url": "https://www.youtube.com/embed/XCz7WUotXs8?si=Az6-AaM8QqJOLVvw"
+			"title": "Last music video",
+			"url": "https://www.youtube.com/embed/5Ozjel72yjQ?si=mzqdOns6HNiKdxnR"
 		}
 	},
 	"StoryPage": {
@@ -183,11 +183,17 @@
 			"d3-1": "May 2021",
 			"q3": "Much of who we are as people, and much of who we are as a band, stems from our personal insecurity about ourselves, our music, or how we present ourselves to the world.",
 			"a2": "Josh Dun",
-			"p3-1": "The Clancy album is the culmination of the band's decade-long journey. This is not just a musical release, but the final chapter of the narrative that began in Trench and continued in Scaled and Icy. Everything converges here: images, symbols, musical ideas and internal monologues.",
+			"p3-1": "The Clancy album is the culmination of the band's decade-long journey. This is not just a musical release, but the pre-final chapter of the narrative that began in Trench and continued in Scaled and Icy. Everything converges here: images, symbols, musical ideas and internal monologues.",
 			"p3-2": "Quotes, metaphors, references to past albums — everything is woven into the poetics that fans love to decipher.",
 			"p3-3": "Clancy sounds like a synthesis of raw, live drums, deep bass, alternative rock, rap, and even industrial.",
 			"p3-4": "This is an album not about victory, but about the ability not to give up. This is the sound of a person who has learned to look fear in the face — and not look away. This is the end of the story. And the beginning of yourself.",
-			"d4-1": "May 2024"
+			"d4-1": "May 2024",
+
+			"q4": "...I think that it’s hopefully collecting the right data to create the right songs and put together the right setlist to play a show, and just making something that that we love, that you know that the people really love. I think it’ll be our best album.",
+			"p4-1": "Breach continued the narrative arcs established in their previous works, particularly Blurryface (2015), Trench (2018), Scaled and Icy (2021), and Clancy. ",
+
+			"p4-2": "The duo stated that the album would serve as the final installment in their decade-long lore first established in Blurryface, alluding to 'Paladin Strait' — the closing track of Clancy whose music video had acted as a cliff-hanger.",
+			"d5-1": "September 2025"
 		},
 		"Accordion": "Interesting Facts",
 		"Expand": "All Albums"
