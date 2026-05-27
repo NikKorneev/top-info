@@ -1,6 +1,6 @@
 # Twenty One Pilots Wiki
 
-Information website about musical duo Twenty One Pilots — a thematic analogue of Wikipedia with a catalog of albums, songs, and biographies of participants including internationalization (en/ru) build with Next.js 15, React 18, TypeScript.
+An information website about musical duo Twenty One Pilots — albums, songs, and band member biographies with multilingual support (en/ru) and rich animations. Built with Next.js 15, React 18, TypeScript, GSAP and Framer Motion.
 
 **[→ Live Demo](https://top-info.vercel.app/)**
 
